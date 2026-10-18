@@ -47,7 +47,7 @@ jobs:
         run: python -u gerar_videos_caderno_juh.py
 
       - name: Salvar cópia no Google Drive
-        if: ${{ secrets.GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON != '' && vars.GOOGLE_DRIVE_FOLDER_ID != '' }}
+        if: ${{ vars.GOOGLE_DRIVE_FOLDER_ID != '' }}
         env:
           GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON }}
           GOOGLE_DRIVE_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_FOLDER_ID }}
