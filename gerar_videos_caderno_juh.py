@@ -563,17 +563,17 @@ def aplicar_traco_rosa(img, strokes, progresso):
 
         d.line(
             [(x1, y1), (x_atual, y1)],
-            fill=(255, 75, 160, 165),
+            fill=ROSA + (165,),
             width=16,
         )
         rr = 8
         d.ellipse(
             [x1 - rr, y1 - rr, x1 + rr, y1 + rr],
-            fill=(255, 75, 160, 165),
+            fill=ROSA + (165,),
         )
         d.ellipse(
             [x_atual - rr, y1 - rr, x_atual + rr, y1 + rr],
-            fill=(255, 75, 160, 165),
+            fill=ROSA + (165,),
         )
 
         tip_x, tip_y = x_atual, y1
@@ -855,4 +855,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
