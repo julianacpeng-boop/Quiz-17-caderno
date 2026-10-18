@@ -221,6 +221,20 @@ def fit_text(draw, texto, max_width, max_lines, max_size, min_size, bold=True):
     return f, wrap_pixels(draw, texto, f, max_width)[:max_lines]
 
 
+def fit_question_text(draw, texto, max_width, max_size=46, min_size=22):
+    """Ajusta o tamanho para caber a pergunta completa, sem cortar palavras."""
+    for size in range(max_size, min_size - 1, -2):
+        f = fonte(size, bold=True)
+        lines = wrap_pixels(draw, texto, f, max_width)
+        line_height = text_line_height(draw, f) + 10
+        # Mantém perguntas compridas completas e deixa as opções descerem se preciso.
+        if len(lines) * line_height <= 350:
+            return f, lines
+
+    f = fonte(min_size, bold=True)
+    return f, wrap_pixels(draw, texto, f, max_width)
+
+
 def text_line_height(draw, font):
     bb = draw.textbbox((0, 0), "Ag", font=font)
     return bb[3] - bb[1]
@@ -450,14 +464,10 @@ def desenhar_pergunta_e_opcoes(tema, numero, pergunta):
     imagem_path = resolver_imagem_pergunta(pergunta)
     tem_imagem = imagem_path is not None
     qmaxw = 420 if tem_imagem else PAGE_RIGHT - qx - 35
-    qfont, qlines = fit_text(
+    qfont, qlines = fit_question_text(
         draw,
         pergunta["pergunta"],
         max_width=qmaxw,
-        max_lines=5 if tem_imagem else 3,
-        max_size=46,
-        min_size=34,
-        bold=True,
     )
     qlh = text_line_height(draw, qfont) + 12
 
