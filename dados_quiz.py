@@ -1,218 +1,82 @@
-QUIZZES = {'Eleições 2026: como funciona o segundo turno?': [{'pergunta': 'Na eleição para presidente, o que pode levar a um '
-                                                                'segundo turno?',
-                                                    'alternativas': ['Ninguém obter maioria absoluta dos votos válidos',
-                                                                     'A votação terminar empatada em todos os estados',
-                                                                     'Mais da metade dos eleitores votar em branco'],
-                                                    'correta': 0,
-                                                    'imagem': 'tema01_pergunta01.png'},
-                                                   {'pergunta': 'Quem disputa o segundo turno quando ele é necessário?',
-                                                    'alternativas': ['Todas as candidaturas que receberam votos',
-                                                                     'As duas candidaturas mais votadas no primeiro '
-                                                                     'turno',
-                                                                     'As candidaturas escolhidas por sorteio'],
-                                                    'correta': 1,
-                                                    'imagem': 'tema01_pergunta02.png'},
-                                                   {'pergunta': 'Para vencer no primeiro turno para presidente, qual '
-                                                                'resultado é necessário?',
-                                                    'alternativas': ['Ter a maior votação, mesmo abaixo da metade',
-                                                                     'Receber a maioria dos votos brancos e nulos',
-                                                                     'Obter mais da metade dos votos válidos'],
-                                                    'correta': 2,
-                                                    'imagem': 'tema01_pergunta03.png'}],
- 'Redes sociais e eleições: alcance e desinformação': [{'pergunta': 'O que um sistema de recomendação costuma usar '
-                                                                    'para selecionar publicações?',
-                                                        'alternativas': ['A ordem alfabética dos autores',
-                                                                         'Sinais de interesse e interação',
-                                                                         'A idade de cada aparelho'],
-                                                        'correta': 1,
-                                                        'imagem': 'tema02_pergunta01.png'},
-                                                       {'pergunta': 'Antes de repassar uma notícia eleitoral, qual '
-                                                                    'atitude ajuda a evitar desinformação?',
-                                                        'alternativas': ['Acreditar no título sem abrir a publicação',
-                                                                         'Compartilhar se muitas pessoas já enviaram',
-                                                                         'Conferir a origem e comparar com fontes '
-                                                                         'confiáveis'],
-                                                        'correta': 2,
-                                                        'imagem': 'tema02_pergunta02.png'},
-                                                       {'pergunta': 'Uma publicação política paga deve ser entendida '
-                                                                    'como o quê?',
-                                                        'alternativas': ['Conteúdo patrocinado, que merece '
-                                                                         'identificação clara',
-                                                                         'Uma notícia automaticamente verificada',
-                                                                         'Uma mensagem oficial da Justiça Eleitoral'],
-                                                        'correta': 0,
-                                                        'imagem': 'tema02_pergunta03.png'}],
- 'Pré-história: como viviam os primeiros seres humanos?': [{'pergunta': 'Como os grupos humanos conseguiam alimento '
-                                                                        'durante boa parte da Pré-história?',
-                                                            'alternativas': ['Cultivando apenas em grandes fazendas',
-                                                                             'Comprando em mercados',
-                                                                             'Caçando, pescando e coletando'],
-                                                            'correta': 2,
-                                                            'imagem': 'tema03_pergunta01.png'},
-                                                           {'pergunta': 'O que ajudou muitos grupos humanos a cozinhar '
-                                                                        'e se aquecer?',
-                                                            'alternativas': ['O domínio do fogo',
-                                                                             'A invenção da eletricidade',
-                                                                             'A construção de motores'],
-                                                            'correta': 0,
-                                                            'imagem': 'tema03_pergunta02.png'},
-                                                           {'pergunta': 'Qual mudança marcou o início da vida agrícola '
-                                                                        'em várias sociedades?',
-                                                            'alternativas': ['A fabricação de moedas',
-                                                                             'O cultivo de plantas e a criação de '
-                                                                             'animais',
-                                                                             'A navegação a vapor'],
-                                                            'correta': 1,
-                                                            'imagem': 'tema03_pergunta03.png'}],
- 'Dinossauros: espécies e mistérios da extinção': [{'pergunta': 'Há cerca de quantos milhões de anos ocorreu a '
-                                                                'extinção dos dinossauros não avianos?',
-                                                    'alternativas': ['66 milhões', '6 milhões', '660 mil'],
-                                                    'correta': 0,
-                                                    'imagem': 'tema04_pergunta01.png'},
-                                                   {'pergunta': 'Qual grupo atual descende de dinossauros terópodes?',
-                                                    'alternativas': ['Os anfíbios', 'As aves', 'Os insetos'],
-                                                    'correta': 1,
-                                                    'imagem': 'tema04_pergunta02.png'},
-                                                   {'pergunta': 'O que os paleontólogos estudam para conhecer '
-                                                                'dinossauros?',
-                                                    'alternativas': ['Manuscritos medievais', 'Satélites', 'Fósseis'],
-                                                    'correta': 2,
-                                                    'imagem': 'tema04_pergunta03.png'}],
- 'Egito Antigo: faraós, pirâmides e grandes construções': [{'pergunta': 'Qual rio foi essencial para a agricultura e o '
-                                                                        'transporte no Egito Antigo?',
-                                                            'alternativas': ['Tigre', 'Nilo', 'Danúbio'],
-                                                            'correta': 1,
-                                                            'imagem': 'tema05_pergunta01.png'},
-                                                           {'pergunta': 'Quem governava o Egito Antigo e também tinha '
-                                                                        'papel religioso?',
-                                                            'alternativas': ['O cavaleiro medieval',
-                                                                             'O cônsul romano',
-                                                                             'O faraó'],
-                                                            'correta': 2,
-                                                            'imagem': 'tema05_pergunta02.png'},
-                                                           {'pergunta': 'Para que serviam principalmente muitas '
-                                                                        'pirâmides egípcias?',
-                                                            'alternativas': ['Como tumbas reais',
-                                                                             'Como arenas esportivas',
-                                                                             'Como portos para navios'],
-                                                            'correta': 0,
-                                                            'imagem': 'tema05_pergunta03.png'}],
- 'Aviação: curiosidades sobre aviões e segurança de voo': [{'pergunta': 'Qual parte do avião produz grande parte da '
-                                                                        'sustentação durante o voo?',
-                                                            'alternativas': ['A cauda sozinha',
-                                                                             'O trem de pouso',
-                                                                             'As asas'],
-                                                            'correta': 2,
-                                                            'imagem': 'tema06_pergunta01.png'},
-                                                           {'pergunta': 'Que instrumento indica a altitude do avião?',
-                                                            'alternativas': ['Altímetro',
-                                                                             'Higrômetro',
-                                                                             'Bússola marítima'],
-                                                            'correta': 0,
-                                                            'imagem': 'tema06_pergunta02.png'},
-                                                           {'pergunta': 'Para que servem os gravadores conhecidos como '
-                                                                        'caixas-pretas?',
-                                                            'alternativas': ['Controlar a abertura das portas',
-                                                                             'Registrar dados do voo e áudio da cabine',
-                                                                             'Substituir o radar do aeroporto'],
-                                                            'correta': 1,
-                                                            'imagem': 'tema06_pergunta03.png'}],
- 'Múmias egípcias: rituais e crenças sobre a vida após a morte': [{'pergunta': 'Qual era um dos objetivos da '
-                                                                               'mumificação no Egito Antigo?',
-                                                                   'alternativas': ['Preservar o corpo para a vida '
-                                                                                    'após a morte',
-                                                                                    'Preparar o corpo para uma viagem '
-                                                                                    'marítima',
-                                                                                    'Evitar que a pessoa fosse '
-                                                                                    'lembrada'],
-                                                                   'correta': 0,
-                                                                   'imagem': 'tema07_pergunta01.png'},
-                                                                  {'pergunta': 'Como se chamavam os recipientes usados '
-                                                                               'para guardar alguns órgãos retirados?',
-                                                                   'alternativas': ['Ânforas de vinho',
-                                                                                    'Vasos canópicos',
-                                                                                    'Urnas eleitorais'],
-                                                                   'correta': 1,
-                                                                   'imagem': 'tema07_pergunta02.png'},
-                                                                  {'pergunta': 'Que material mineral ajudava a retirar '
-                                                                               'a umidade do corpo no processo de '
-                                                                               'mumificação?',
-                                                                   'alternativas': ['Cobre', 'Granito', 'Natrão'],
-                                                                   'correta': 2,
-                                                                   'imagem': 'tema07_pergunta03.png'}],
- 'Hieróglifos: como os antigos egípcios escreviam?': [{'pergunta': 'O que eram os hieróglifos no Egito Antigo?',
-                                                       'alternativas': ['Um calendário de plantio',
-                                                                        'Um sistema de escrita',
-                                                                        'Um tipo de embarcação'],
-                                                       'correta': 1,
-                                                       'imagem': 'tema08_pergunta01.png'},
-                                                      {'pergunta': 'Como era chamado o profissional que dominava a '
-                                                                   'escrita e registrava documentos?',
-                                                       'alternativas': ['Artesão de navios', 'Cartógrafo', 'Escriba'],
-                                                       'correta': 2,
-                                                       'imagem': 'tema08_pergunta02.png'},
-                                                      {'pergunta': 'Qual achado ajudou estudiosos a decifrar os '
-                                                                   'hieróglifos?',
-                                                       'alternativas': ['A Pedra de Roseta',
-                                                                        'O Código de Hamurábi',
-                                                                        'A Coluna de Trajano'],
-                                                       'correta': 0,
-                                                       'imagem': 'tema08_pergunta03.png'}],
- 'Vida às margens do Nilo: costumes e trabalho no Egito Antigo': [{'pergunta': 'O que as cheias anuais do Nilo '
-                                                                               'deixavam nas terras próximas ao rio?',
-                                                                   'alternativas': ['Neve para armazenar água',
-                                                                                    'Camadas de sal que impediam a '
-                                                                                    'plantação',
-                                                                                    'Lodo fértil para o cultivo'],
-                                                                   'correta': 2,
-                                                                   'imagem': 'tema09_pergunta01.png'},
-                                                                  {'pergunta': 'Qual planta do Nilo era usada para '
-                                                                               'produzir um material de escrita?',
-                                                                   'alternativas': ['Papiro', 'Algodão', 'Centeio'],
-                                                                   'correta': 0,
-                                                                   'imagem': 'tema09_pergunta02.png'},
-                                                                  {'pergunta': 'Como os egípcios antigos aproveitavam '
-                                                                               'o Nilo no cotidiano?',
-                                                                   'alternativas': ['Para obter petróleo',
-                                                                                    'Para transporte, pesca e '
-                                                                                    'irrigação',
-                                                                                    'Para construir estradas '
-                                                                                    'subterrâneas'],
-                                                                   'correta': 1,
-                                                                   'imagem': 'tema09_pergunta03.png'}]}
+QUIZZES = {
+    "Crase e acentuação": [
+        {"pergunta": "Em qual frase a crase está empregada corretamente?", "alternativas": ['Cheguei à escola antes do sinal.', 'Entreguei o livro à ele.', 'Vamos à pé para casa.'], "correta": 0, "imagem": "tema01_pergunta01.png"},
+        {"pergunta": "Qual palavra está escrita corretamente?", "alternativas": ["Ideia", "Idéia", "Idêia"], "correta": 0, "imagem": "tema01_pergunta02.png"},
+        {"pergunta": "Qual frase está escrita corretamente?", "alternativas": ["Começou à estudar cedo.", "Voltou à cidade ontem.", "Entregou o material a professora ontem."], "correta": 1, "imagem": "tema01_pergunta03.png"},
+    ],
+    "Concordância verbal": [
+        {"pergunta": "Qual frase apresenta concordância verbal correta?", "alternativas": ['Faz dois anos que estudo aqui.', 'Fazem dois anos que estudo aqui.', 'Fazem dois ano que estudo aqui.'], "correta": 0, "imagem": "tema02_pergunta01.png"},
+        {"pergunta": "Complete corretamente: ___ muitos livros nesta estante.", "alternativas": ["Existe", "Existem", "Existia"], "correta": 1, "imagem": "tema02_pergunta02.png"},
+        {"pergunta": "Qual opção concorda com o sujeito da frase?", "alternativas": ['A turma chegaram cedo.', 'A turma chegou cedo.', 'A turma chegamos cedo.'], "correta": 1, "imagem": "tema02_pergunta03.png"},
+    ],
+    "Palavras parecidas, sentidos diferentes": [
+        {"pergunta": "Qual verbo significa corrigir um texto ou uma informação?", "alternativas": ['Ratificar', 'Reivindicar', 'Retificar'], "correta": 2, "imagem": "tema03_pergunta01.png"},
+        {"pergunta": "Uma pessoa iminente é alguém ou algo que está...", "alternativas": ['Distante e improvável', 'Muito importante e ilustre', 'Prestes a acontecer'], "correta": 2, "imagem": "tema03_pergunta02.png"},
+        {"pergunta": "Qual palavra completa: “O cumprimento do atleta foi educado”?", "alternativas": ['Cumprimento', 'Comprimento', 'Comprimento-se'], "correta": 0, "imagem": "tema03_pergunta03.png"},
+    ],
+    "Porcentagem no cotidiano": [
+        {"pergunta": "Quanto é 25% de 200?", "alternativas": ['25', '75', '50'], "correta": 2, "imagem": "tema04_pergunta01.png"},
+        {"pergunta": "Uma blusa de R$ 80 recebeu desconto de 10%. Qual foi o valor do desconto?", "alternativas": ['R$ 8', 'R$ 10', 'R$ 18'], "correta": 0, "imagem": "tema04_pergunta02.png"},
+        {"pergunta": "Uma conta de R$ 100 aumentou 20%. Qual é o novo valor?", "alternativas": ['R$ 200', 'R$ 110', 'R$ 120'], "correta": 2, "imagem": "tema04_pergunta03.png"},
+    ],
+    "Frações e medidas": [
+        {"pergunta": "Quanto corresponde a 3/4 de um litro?", "alternativas": ['250 mL', '750 mL', '500 mL'], "correta": 1, "imagem": "tema05_pergunta01.png"},
+        {"pergunta": "Uma pizza foi dividida em 8 fatias iguais. Se 3 foram comidas, que fração restou?", "alternativas": ['5/8', '3/8', '5/3'], "correta": 0, "imagem": "tema05_pergunta02.png"},
+        {"pergunta": "Quantos centímetros há em 2,5 metros?", "alternativas": ['25 cm', '250 cm', '2.500 cm'], "correta": 1, "imagem": "tema05_pergunta03.png"},
+    ],
+    "Sequências numéricas e lógica": [
+        {"pergunta": "Qual número completa a sequência: 2, 5, 8, 11, ___?", "alternativas": ['12', '14', '13'], "correta": 1, "imagem": "tema06_pergunta01.png"},
+        {"pergunta": "Qual número vem a seguir: 1, 2, 4, 8, ___?", "alternativas": ['10', '16', '12'], "correta": 1, "imagem": "tema06_pergunta02.png"},
+        {"pergunta": "Ana é mais velha que Bia. Bia é mais velha que Caio. Quem é o mais novo?", "alternativas": ['Ana', 'Bia', 'Caio'], "correta": 2, "imagem": "tema06_pergunta03.png"},
+    ],
+    "Religiões do mundo e tradições": [
+        {"pergunta": "Como se chama a peregrinação a Meca realizada por muçulmanos que têm condições de fazê-la?", "alternativas": ['Pessach', 'Diwali', 'Hajj'], "correta": 2, "imagem": "tema07_pergunta01.png"},
+        {"pergunta": "O que é o Ramadã na tradição islâmica?", "alternativas": ['Uma festa de ano-novo judaica', 'Um livro sagrado hindu', 'Um mês de jejum e reflexão'], "correta": 2, "imagem": "tema07_pergunta02.png"},
+        {"pergunta": "Qual tradição religiosa está associada à festa de Diwali?", "alternativas": ["Hinduísmo", "Xintoísmo", "Siquismo apenas"], "correta": 0, "imagem": "tema07_pergunta03.png"},
+    ],
+    "Lugares sagrados pelo mundo": [
+        {"pergunta": "Em qual cidade fica o Muro das Lamentações?", "alternativas": ['Cairo', 'Jerusalém', 'Atenas'], "correta": 1, "imagem": "tema08_pergunta01.png"},
+        {"pergunta": "A cidade de Varanasi, importante centro de peregrinação hindu, fica em qual país?", "alternativas": ['Peru', 'Índia', 'Marrocos'], "correta": 1, "imagem": "tema08_pergunta02.png"},
+        {"pergunta": "Qual cidade é considerada sagrada por cristãos, judeus e muçulmanos?", "alternativas": ['Tóquio', 'Lisboa', 'Jerusalém'], "correta": 2, "imagem": "tema08_pergunta03.png"},
+    ],
+    "Histórias e personagens da Bíblia": [
+        {"pergunta": "Segundo os Evangelhos, em qual cidade Jesus nasceu?", "alternativas": ['Nazaré', 'Jericó', 'Belém'], "correta": 2, "imagem": "tema09_pergunta01.png"},
+        {"pergunta": "Quem, segundo a narrativa bíblica, conduziu os israelitas na saída do Egito?", "alternativas": ['Salomão', 'Moisés', 'Davi'], "correta": 1, "imagem": "tema09_pergunta02.png"},
+        {"pergunta": "Na história bíblica, qual personagem ficou conhecido por enfrentar Golias?", "alternativas": ['Jonas', 'Noé', 'Davi'], "correta": 2, "imagem": "tema09_pergunta03.png"},
+    ],
+    "Capitais e países do mundo": [
+        {"pergunta": "Qual é a capital do Chile?", "alternativas": ['Lima', 'Santiago', 'Quito'], "correta": 1, "imagem": "tema10_pergunta01.png"},
+        {"pergunta": "Tóquio é a capital de qual país?", "alternativas": ['Japão', 'China', 'Tailândia'], "correta": 0, "imagem": "tema10_pergunta02.png"},
+        {"pergunta": "Qual é a capital de Portugal?", "alternativas": ["Porto", "Lisboa", "Coimbra"], "correta": 1, "imagem": "tema10_pergunta03.png"},
+    ],
+    "Biomas brasileiros": [
+        {"pergunta": "Qual bioma brasileiro tem uma estação seca e outra chuvosa bem marcadas?", "alternativas": ['Cerrado', 'Pampa', 'Mata de Araucárias'], "correta": 0, "imagem": "tema11_pergunta01.png"},
+        {"pergunta": "Qual bioma é conhecido pelas cheias sazonais de grandes áreas?", "alternativas": ['Pampa', 'Caatinga', 'Pantanal'], "correta": 2, "imagem": "tema11_pergunta02.png"},
+        {"pergunta": "Em qual bioma brasileiro predomina uma paisagem de campos com gramíneas?", "alternativas": ['Pampa', 'Amazônia', 'Pantanal'], "correta": 0, "imagem": "tema11_pergunta03.png"},
+    ],
+    "Climas e fenômenos geográficos": [
+        {"pergunta": "Como costuma ser o clima equatorial durante boa parte do ano?", "alternativas": ['Quente e úmido', 'Frio e seco', 'Polar e ventoso'], "correta": 0, "imagem": "tema12_pergunta01.png"},
+        {"pergunta": "Qual instrumento mede a pressão atmosférica?", "alternativas": ['Barômetro', 'Termômetro', 'Anemômetro'], "correta": 0, "imagem": "tema12_pergunta02.png"},
+        {"pergunta": "Qual fenômeno ocorre quando o ar quente sobe e o ar frio desce, formando correntes?", "alternativas": ['Condensação', 'Erosão', 'Convecção'], "correta": 2, "imagem": "tema12_pergunta03.png"},
+    ],
+    "Corpo humano": [
+        {"pergunta": "Qual componente do sangue transporta a maior parte do oxigênio pelo corpo?", "alternativas": ['Plasma apenas', 'Hemácias', 'Plaquetas'], "correta": 1, "imagem": "tema13_pergunta01.png"},
+        {"pergunta": "Qual órgão ajuda a filtrar o sangue e produzir a urina?", "alternativas": ['Pulmões', 'Rins', 'Estômago'], "correta": 1, "imagem": "tema13_pergunta02.png"},
+        {"pergunta": "Em qual parte do sistema digestório ocorre a maior parte da absorção de nutrientes?", "alternativas": ['Boca', 'Esôfago', 'Intestino delgado'], "correta": 2, "imagem": "tema13_pergunta03.png"},
+    ],
+    "Sistema Solar": [
+        {"pergunta": "Qual planeta é conhecido por seu grande sistema de anéis?", "alternativas": ['Saturno', 'Mercúrio', 'Marte'], "correta": 0, "imagem": "tema14_pergunta01.png"},
+        {"pergunta": "Qual planeta fica mais próximo do Sol?", "alternativas": ['Mercúrio', 'Vênus', 'Terra'], "correta": 0, "imagem": "tema14_pergunta02.png"},
+        {"pergunta": "Qual é o maior planeta do Sistema Solar?", "alternativas": ['Netuno', 'Júpiter', 'Vênus'], "correta": 1, "imagem": "tema14_pergunta03.png"},
+    ],
+    "Ciência e meio ambiente": [
+        {"pergunta": "Qual fonte renovável gera eletricidade a partir do movimento do ar?", "alternativas": ['Gasolina', 'Carvão mineral', 'Energia eólica'], "correta": 2, "imagem": "tema15_pergunta01.png"},
+        {"pergunta": "Qual gás é absorvido pelas plantas durante a fotossíntese?", "alternativas": ['Hélio', 'Metano', 'Dióxido de carbono'], "correta": 2, "imagem": "tema15_pergunta02.png"},
+        {"pergunta": "O que significa reciclar um material?", "alternativas": ["Transformá-lo para que possa ser usado novamente", "Enterrá-lo sem separação", "Queimá-lo sempre"], "correta": 0, "imagem": "tema15_pergunta03.png"},
+    ],
+}
 
-LEGENDAS = {'Eleições 2026: como funciona o segundo turno?': 'Entenda o sistema eleitoral sem tomar partido. 🗳️ Teste seus '
-                                                  'conhecimentos e compartilhe sua pontuação.\n'
-                                                  '\n'
-                                                  '#Quiz #Eleicoes2026 #Cidadania #SegundoTurno #Conhecimento',
- 'Redes sociais e eleições: alcance e desinformação': 'Como circulam as informações nas redes durante as eleições? 📱 '
-                                                      'Responda e confira seu olhar crítico.\n'
-                                                      '\n'
-                                                      '#Quiz #RedesSociais #Eleicoes #Desinformacao #Midia',
- 'Pré-história: como viviam os primeiros seres humanos?': 'Uma viagem aos primeiros modos de vida humanos. 🪨 Quantas '
-                                                          'você acerta?\n'
-                                                          '\n'
-                                                          '#Quiz #PreHistoria #Historia #Curiosidades #Conhecimento',
- 'Dinossauros: espécies e mistérios da extinção': 'Teste o que você sabe sobre os dinossauros. 🦕 Conte quantas '
-                                                  'respostas acertou!\n'
-                                                  '\n'
-                                                  '#Quiz #Dinossauros #Paleontologia #Ciencia #Curiosidades',
- 'Egito Antigo: faraós, pirâmides e grandes construções': 'Explore as grandes construções e a história do Egito '
-                                                          'Antigo. 🏺\n'
-                                                          '\n'
-                                                          '#Quiz #EgitoAntigo #Historia #Faraos #Piramides',
- 'Aviação: curiosidades sobre aviões e segurança de voo': 'Prepare-se para um desafio nas alturas! ✈️ Teste seus '
-                                                          'conhecimentos sobre aviação.\n'
-                                                          '\n'
-                                                          '#Quiz #Aviacao #Avioes #Curiosidades #Seguranca',
- 'Múmias egípcias: rituais e crenças sobre a vida após a morte': 'Conheça as práticas e crenças ligadas às múmias '
-                                                                 'egípcias. ⚱️\n'
-                                                                 '\n'
-                                                                 '#Quiz #EgitoAntigo #Mumias #Historia #Curiosidades',
- 'Hieróglifos: como os antigos egípcios escreviam?': 'Descubra detalhes sobre a escrita no Egito Antigo. ✍️ Quantas '
-                                                     'você acerta?\n'
-                                                     '\n'
-                                                     '#Quiz #Hieroglifos #EgitoAntigo #Escrita #Historia',
- 'Vida às margens do Nilo: costumes e trabalho no Egito Antigo': 'Como o Nilo moldava o cotidiano no Egito Antigo? 🌾\n'
-                                                                 '\n'
-                                                                 '#Quiz #RioNilo #EgitoAntigo #Historia #Antiguidade'}
+LEGENDAS = {
+    tema: f"Quiz de {tema.lower()}! Responda antes do tempo acabar. #quiz #conhecimento #aprenda"
+    for tema in QUIZZES
+}
