@@ -35,4 +35,4 @@ QUIZZES = {
 
 O envio de MP4 e TXT usa o mesmo secret do Quiz-13: `RCLONE_DRIVE_TOKEN`. Cadastre no Quiz-17 o JSON completo do token rclone do Drive. Não precisa criar variável de pasta nem configurar outra chave.
 
-Depois de configurada a chave, cada execução salva os arquivos em `saida/Juh-Quiz-17/caderno/execucao-ID/`, na pasta-base do Drive já usada pelo Quiz-13. O artefato do GitHub também fica disponível para baixar.
+Enquanto a chave não estiver cadastrada, a cópia no Drive é pulada e os vídeos continuam disponíveis como artefato do GitHub. Depois de configurar `RCLONE_DRIVE_TOKEN`, cada execução salva os arquivos em `saida/Juh-Quiz-17/caderno/execucao-ID/`, na pasta-base do Drive já usada pelo Quiz-13.
