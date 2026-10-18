@@ -99,6 +99,41 @@ QUIZZES = {
         {"pergunta": "Para que serve principalmente um código QR?", "alternativas": ["Medir a temperatura", "Armazenar dados que podem ser lidos pela câmera", "Aumentar o volume do celular"], "correta": 1},
         {"pergunta": "Bluetooth é usado principalmente para conectar dispositivos a curta distância sem...", "alternativas": ["Tela", "Bateria", "Fio"], "correta": 2},
     ],
+    "Curiosidades surpreendentes sobre o corpo humano": [
+        {"pergunta": "Qual órgão bombeia o sangue para todo o corpo?", "alternativas": ["Pulmão", "Coração", "Estômago"], "correta": 1, "imagem": "corpo_03_corrida.png"},
+        {"pergunta": "Qual sentido nos permite perceber os sons?", "alternativas": ["Olfato", "Audição", "Paladar"], "correta": 1, "imagem": "corpo_01_escuta.png"},
+        {"pergunta": "Qual articulação permite dobrar o braço entre o ombro e o punho?", "alternativas": ["Cotovelo", "Joelho", "Tornozelo"], "correta": 0, "imagem": "corpo_02_alcance.png"},
+        {"pergunta": "Durante um exercício, o que costuma acontecer com a respiração?", "alternativas": ["Fica mais rápida", "Para completamente", "Fica mais lenta"], "correta": 0, "imagem": "corpo_04_bicicleta.png"},
+        {"pergunta": "Qual é um benefício dos alongamentos feitos com cuidado?", "alternativas": ["Ajudam na flexibilidade", "Aumentam a altura", "Fazem o coração parar"], "correta": 0, "imagem": "corpo_05_alongamento.png"},
+    ],
+    "Animais com habilidades surpreendentes": [
+        {"pergunta": "Quantos corações tem um polvo?", "alternativas": ["Um", "Dois", "Três"], "correta": 2},
+        {"pergunta": "Qual mamífero usa ecolocalização para se orientar?", "alternativas": ["Morcego", "Coala", "Panda"], "correta": 0},
+        {"pergunta": "Qual ave consegue voar para trás?", "alternativas": ["Pinguim", "Beija-flor", "Avestruz"], "correta": 1},
+        {"pergunta": "Qual animal pode soltar a cauda para escapar de um predador?", "alternativas": ["Lagartixa", "Tartaruga", "Capivara"], "correta": 0},
+        {"pergunta": "Qual anfíbio é conhecido pela capacidade de regenerar membros?", "alternativas": ["Sapo-cururu", "Axolote", "Salamandra-de-fogo"], "correta": 1},
+    ],
+    "Invenções que mudaram o mundo": [
+        {"pergunta": "Quem criou a World Wide Web, base de muitos sites que usamos?", "alternativas": ["Tim Berners-Lee", "Albert Einstein", "Louis Pasteur"], "correta": 0},
+        {"pergunta": "Que meio de transporte foi desenvolvido pelos irmãos Wright?", "alternativas": ["Submarino", "Avião", "Locomotiva"], "correta": 1},
+        {"pergunta": "Qual instrumento permite observar organismos muito pequenos?", "alternativas": ["Telescópio", "Bússola", "Microscópio"], "correta": 2},
+        {"pergunta": "Qual instrumento mede a temperatura?", "alternativas": ["Termômetro", "Barômetro", "Cronômetro"], "correta": 0},
+        {"pergunta": "Que invenção de Gutenberg facilitou a produção de livros na Europa?", "alternativas": ["Imprensa de tipos móveis", "Máquina fotográfica", "Telefone"], "correta": 0},
+    ],
+    "Mistérios e curiosidades do espaço": [
+        {"pergunta": "Qual planeta é conhecido por seus grandes anéis?", "alternativas": ["Mercúrio", "Saturno", "Marte"], "correta": 1},
+        {"pergunta": "O que é a Via Láctea?", "alternativas": ["Uma galáxia", "Uma estrela", "Um planeta"], "correta": 0},
+        {"pergunta": "Como se chama o fragmento espacial que chega à superfície da Terra?", "alternativas": ["Cometa", "Meteorito", "Nebulosa"], "correta": 1},
+        {"pergunta": "Qual é o satélite natural da Terra?", "alternativas": ["Fobos", "Europa", "Lua"], "correta": 2},
+        {"pergunta": "Qual é o maior planeta do Sistema Solar?", "alternativas": ["Júpiter", "Vênus", "Netuno"], "correta": 0},
+    ],
+    "Fenômenos curiosos da natureza": [
+        {"pergunta": "Qual inseto passa pelas fases de lagarta e crisálida antes da fase adulta?", "alternativas": ["Borboleta", "Formiga", "Libélula"], "correta": 0},
+        {"pergunta": "Qual gás as plantas absorvem durante a fotossíntese?", "alternativas": ["Oxigênio", "Gás carbônico", "Hélio"], "correta": 1},
+        {"pergunta": "Qual é a maior floresta tropical do mundo?", "alternativas": ["Floresta Amazônica", "Floresta Negra", "Floresta de Sherwood"], "correta": 0},
+        {"pergunta": "Como se chama a água em estado sólido?", "alternativas": ["Vapor", "Orvalho", "Gelo"], "correta": 2},
+        {"pergunta": "Qual astro exerce a maior influência nas marés da Terra?", "alternativas": ["Lua", "Marte", "Vênus"], "correta": 0},
+    ],
 }
 
 LEGENDAS = {
@@ -122,4 +157,10 @@ LEGENDAS = {
     "Folclore brasileiro: quem é quem?": "Saci, Curupira ou Iara? 🇧🇷 Veja quanto você lembra do nosso folclore!\n\n#Quiz #FolcloreBrasileiro #Cultura #Brasil #Curiosidades",
     "Recordes impressionantes da natureza": "Prepare-se para conhecer recordes incríveis da natureza! 🐋\n\n#Quiz #Natureza #Animais #Recordes #Curiosidades",
     "Tecnologia do dia a dia: você sabe?": "Você sabe o que significam essas tecnologias do dia a dia? 📱 Faça o quiz!\n\n#Quiz #Tecnologia #Curiosidades #Conhecimento #Desafio",
+    "Curiosidades surpreendentes sobre o corpo humano": "Seu corpo é cheio de detalhes incríveis! 🧠 Quantas você acerta?\n\n#Quiz #CorpoHumano #Curiosidades #Desafio",
+    "Animais com habilidades surpreendentes": "A natureza deu habilidades incríveis a esses animais! 🐙\n\n#Quiz #Animais #Natureza #Curiosidades",
+    "Invenções que mudaram o mundo": "Algumas invenções transformaram nossa vida! 💡 Teste seus conhecimentos.\n\n#Quiz #Invencoes #Historia #Conhecimento",
+    "Mistérios e curiosidades do espaço": "Uma viagem pelo espaço em cinco perguntas! 🚀\n\n#Quiz #Espaco #Astronomia #Curiosidades",
+    "Fenômenos curiosos da natureza": "A natureza sempre surpreende! 🌿 Quantas você sabe?\n\n#Quiz #Natureza #MeioAmbiente #Curiosidades",
 }
+
