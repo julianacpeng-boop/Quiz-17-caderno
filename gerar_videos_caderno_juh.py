@@ -37,10 +37,8 @@ PALETAS = {
     "violeta": (143, 105, 190),
     "amarelo": (211, 159, 47),
 }
-LAYOUT = os.getenv("JUH_LAYOUT", "coral").strip().lower()
-if LAYOUT not in PALETAS:
-    raise ValueError(f"JUH_LAYOUT inválido: {LAYOUT}. Use {', '.join(PALETAS)}.")
-ROSA = PALETAS[LAYOUT]
+LAYOUT_ATUAL = "verde"
+ROSA = PALETAS[LAYOUT_ATUAL]
 AMARELO = (255, 215, 25)
 PRETO = (18, 18, 22)
 BRANCO = (255, 255, 255)
@@ -644,6 +642,12 @@ def desenhar_contagem(img, numero, cy=1465):
 # ============================================================
 
 def gerar_video_tema(indice_tema, tema, perguntas, legenda):
+    global LAYOUT_ATUAL, ROSA
+    ciclo = tuple(PALETAS)
+    LAYOUT_ATUAL = ciclo[((indice_tema - 1) // 3) % len(ciclo)]
+    ROSA = PALETAS[LAYOUT_ATUAL]
+    print(f"🎨 Cor do caderno: {LAYOUT_ATUAL}", flush=True)
+
     pasta = SAIDA / f"{indice_tema:02d}_{slug(tema)}"
     if pasta.exists():
         shutil.rmtree(pasta)
