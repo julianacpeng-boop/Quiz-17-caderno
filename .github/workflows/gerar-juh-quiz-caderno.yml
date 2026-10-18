@@ -2,18 +2,6 @@ name: Gerar Juh Quiz - Caderno
 
 on:
   workflow_dispatch:
-    inputs:
-      layout:
-        description: "Escolha a cor da folha"
-        required: true
-        type: choice
-        default: coral
-        options:
-          - verde
-          - azul
-          - coral
-          - violeta
-          - amarelo
 
 permissions:
   contents: read
@@ -22,8 +10,6 @@ jobs:
   gerar:
     runs-on: ubuntu-latest
     timeout-minutes: 360
-    env:
-      JUH_LAYOUT: ${{ inputs.layout }}
 
     steps:
       - name: Baixar repositorio
@@ -35,10 +21,10 @@ jobs:
           python-version: "3.11"
           cache: "pip"
 
-      - name: Instalar FFmpeg e fontes
+      - name: Instalar FFmpeg, fontes e rclone
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y ffmpeg fonts-dejavu-core fonts-liberation2 fontconfig
+          sudo apt-get install -y ffmpeg fonts-dejavu-core fonts-liberation2 fontconfig rclone
 
       - name: Instalar bibliotecas
         run: pip install -r requirements.txt
@@ -46,19 +32,27 @@ jobs:
       - name: Gerar videos
         run: python -u gerar_videos_caderno_juh.py
 
-      - name: Salvar cópia no Google Drive
-        if: ${{ vars.GOOGLE_DRIVE_FOLDER_ID != '' }}
+      - name: Salvar MP4 e TXT no Google Drive
         env:
-          GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON }}
-          GOOGLE_DRIVE_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_FOLDER_ID }}
+          RCLONE_CONFIG_DESTINO_TYPE: drive
+          RCLONE_CONFIG_DESTINO_TOKEN: ${{ secrets.RCLONE_DRIVE_TOKEN }}
+          RCLONE_CONFIG_DESTINO_ROOT_FOLDER_ID: 1IeWfSGxVOgY4nwLQwGxzPZMqRCO81i8B
         run: |
-          pip install google-api-python-client google-auth
-          python -u subir_videos_drive.py
+          if [ -z "$RCLONE_CONFIG_DESTINO_TOKEN" ]; then
+            echo "Cadastre o secret RCLONE_DRIVE_TOKEN para enviar os arquivos ao Drive."
+            exit 1
+          fi
+          destino="destino:saida/Juh-Quiz-17/caderno/execucao-${GITHUB_RUN_ID}"
+          rclone copy output_juh_caderno "$destino" \
+            --include "/*.mp4" \
+            --include "/*.txt" \
+            --exclude "*" \
+            --verbose
 
       - name: Guardar videos e legendas no GitHub
         uses: actions/upload-artifact@v4
         with:
-          name: JUH-QUIZ-CADERNO-${{ inputs.layout }}-${{ github.run_number }}
+          name: JUH-QUIZ-CADERNO-${{ github.run_number }}
           path: |
             output_juh_caderno/*.mp4
             output_juh_caderno/*.txt
