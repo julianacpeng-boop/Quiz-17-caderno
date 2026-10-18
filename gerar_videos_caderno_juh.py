@@ -1,4 +1,5 @@
 from pathlib import Path
+import argparse
 import asyncio
 import math
 import os
@@ -24,6 +25,7 @@ ANIM_FPS = 20
 FUNDO = Path("assets/template_educativo_juh_quiz.png")
 IMAGENS_DIR = Path("imagens_perguntas")
 SAIDA = Path("output_juh_caderno")
+DRIVE_BASE = "destino:saida/Juh-Quiz-17/caderno"
 
 VOICE = "pt-BR-AntonioNeural"
 VOICE_RATE = "+10%"
@@ -641,7 +643,7 @@ def desenhar_contagem(img, numero, cy=1465):
 # GERAÇÃO
 # ============================================================
 
-def gerar_video_tema(indice_tema, tema, perguntas, legenda):
+def gerar_video_tema(indice_tema, tema, perguntas, legenda, lote_drive=None):
     global LAYOUT_ATUAL, ROSA
     ciclo = tuple(PALETAS)
     LAYOUT_ATUAL = ciclo[((indice_tema - 1) // 3) % len(ciclo)]
@@ -812,10 +814,15 @@ def gerar_video_tema(indice_tema, tema, perguntas, legenda):
     arquivo_legenda = saida.with_suffix(".txt")
     arquivo_legenda.write_text(legenda.strip() + "\n", encoding="utf-8")
 
-    print(f"\n✅ Gerado: {saida}", flush=True)
+    print(f"\n✅ Gerado: {saida}", flush=True); [executar(["rclone", "copyto", str(arquivo), f"{DRIVE_BASE}/execucao-{lote_drive}/{arquivo.name}"]) for arquivo in (saida, arquivo_legenda)] if lote_drive is not None else None
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Gera vídeos Juh Quiz - Caderno.")
+    parser.add_argument("--enviar-drive", action="store_true", help="envia cada MP4 e TXT assim que um tema termina")
+    parser.add_argument("--lote", default=None, help="identificador da pasta dessa execução no Drive")
+    args = parser.parse_args()
+    lote_drive = (args.lote or "manual") if args.enviar_drive else None
     if not QUIZZES:
         raise RuntimeError("O dicionário QUIZZES está vazio.")
 
@@ -841,7 +848,7 @@ def main():
         if not legenda:
             raise ValueError(f'Não há legenda cadastrada para o tema "{tema}".')
 
-        gerar_video_tema(indice, tema, perguntas, legenda)
+        gerar_video_tema(indice, tema, perguntas, legenda, lote_drive)
 
     print("\n🎉 Todos os vídeos foram gerados.", flush=True)
 
