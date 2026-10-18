@@ -235,6 +235,18 @@ def fit_question_text(draw, texto, max_width, max_size=46, min_size=22):
     return f, wrap_pixels(draw, texto, f, max_width)
 
 
+def fit_theme_text(draw, texto, max_width=850, max_size=52, min_size=30):
+    """Encaixa o nome inteiro do tema em até duas linhas."""
+    for size in range(max_size, min_size - 1, -2):
+        f = fonte(size, bold=True)
+        lines = wrap_pixels(draw, texto, f, max_width)
+        if len(lines) <= 2:
+            return f, lines
+
+    f = fonte(min_size, bold=True)
+    return f, wrap_pixels(draw, texto, f, max_width)
+
+
 def text_line_height(draw, font):
     bb = draw.textbbox((0, 0), "Ag", font=font)
     return bb[3] - bb[1]
@@ -412,29 +424,27 @@ def desenhar_lapis(img, x, y, angle=-8):
 
 def desenhar_tema(img, tema):
     draw = ImageDraw.Draw(img)
-    f, lines = fit_text(
-        draw, tema.upper(),
-        max_width=700,
-        max_lines=1,
-        max_size=55,
-        min_size=35,
-        bold=True,
-    )
-    txt = lines[0]
-    bb = draw.textbbox((0, 0), txt, font=f)
-    tw = bb[2] - bb[0]
-    x = (W - tw) // 2
-
-    pad_x = 24
-    pad_y = 10
+    f, lines = fit_theme_text(draw, tema.upper())
+    line_gap = 5
+    line_boxes = [draw.textbbox((0, 0), line, font=f) for line in lines]
+    widths = [bb[2] - bb[0] for bb in line_boxes]
+    heights = [bb[3] - bb[1] for bb in line_boxes]
+    pad_x = 28
+    pad_y = 12
+    block_h = sum(heights) + line_gap * (len(lines) - 1)
+    box_w = max(widths)
     draw.rounded_rectangle(
-        [x - pad_x, THEME_Y - pad_y, x + tw + pad_x, THEME_Y + (bb[3] - bb[1]) + pad_y],
+        [W // 2 - box_w // 2 - pad_x, THEME_Y - pad_y,
+         W // 2 + box_w // 2 + pad_x, THEME_Y + block_h + pad_y],
         radius=18,
         fill=(247, 247, 244),
         outline=ROSA,
         width=3,
     )
-    draw.text((x, THEME_Y), txt, font=f, fill=ROSA)
+    y = THEME_Y
+    for line, width, height in zip(lines, widths, heights):
+        draw.text((W // 2 - width // 2, y), line, font=f, fill=ROSA)
+        y += height + line_gap
 
 
 def desenhar_pergunta_e_opcoes(tema, numero, pergunta):
@@ -822,7 +832,10 @@ def gerar_video_tema(indice_tema, tema, perguntas, legenda, lote_drive=None):
     saida = SAIDA / f"{indice_tema:02d}_{slug(tema)}.mp4"
     concatenar(clipes, saida)
     arquivo_legenda = saida.with_suffix(".txt")
-    arquivo_legenda.write_text(legenda.strip() + "\n", encoding="utf-8")
+    arquivo_legenda.write_text(
+        f"CAPA_SEGUNDOS=2\n\n{legenda.strip()}\n",
+        encoding="utf-8",
+    )
 
     print(f"\n✅ Gerado: {saida}", flush=True); [executar(["rclone", "copyto", str(arquivo), f"{DRIVE_BASE}/execucao-{lote_drive}/{arquivo.name}"]) for arquivo in (saida, arquivo_legenda)] if lote_drive is not None else None
 
