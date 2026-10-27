@@ -1,586 +1,415 @@
 # -*- coding: utf-8 -*-
-# Juh Quiz 17 — 15 NOVOS temas / 45 perguntas, 3 por tema.
-# Revisado de acordo com os nomes REAIS presentes no GitHub em imagens_perguntas/.
-# Aviso: em 27 imagens o nome no GitHub começa com file_..., por isso não altere essas referências.
-# O gerador lê o campo "imagem" e procura o arquivo em imagens_perguntas/.
-# O gerador acrescenta CAPA_SEGUNDOS=2 aos arquivos TXT automaticamente.
-# Legendas presentes em cada pergunta e no dicionário LEGENDAS.
+# 15 temas, 45 perguntas e 4 hashtags por legenda.
+QUIZZES = {'Português: pontuação': [{'pergunta': 'Qual sinal encerra uma pergunta?',
+                           'alternativas': ['Ponto final', 'Ponto de interrogação', 'Vírgula'],
+                           'correta': 1,
+                           'imagem': 'tema01_pergunta01.png',
+                           'imagem_path': 'imagens_perguntas/tema01_pergunta01.png',
+                           'legenda': 'Teste seus conhecimentos sobre pontuação! Quantas você consegue '
+                                      'acertar?\n'
+                                      '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                          {'pergunta': 'Qual sinal pode indicar uma pausa breve?',
+                           'alternativas': ['Vírgula', 'Interrogação', 'Travessão'],
+                           'correta': 0,
+                           'imagem': 'tema01_pergunta02.png',
+                           'imagem_path': 'imagens_perguntas/tema01_pergunta02.png',
+                           'legenda': 'Teste seus conhecimentos sobre pontuação! Quantas você consegue '
+                                      'acertar?\n'
+                                      '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                          {'pergunta': 'Qual sinal encerra uma frase exclamativa?',
+                           'alternativas': ['Dois-pontos', 'Ponto final', 'Ponto de exclamação'],
+                           'correta': 2,
+                           'imagem': 'tema01_pergunta03.png',
+                           'imagem_path': 'imagens_perguntas/tema01_pergunta03.png',
+                           'legenda': 'Teste seus conhecimentos sobre pontuação! Quantas você consegue '
+                                      'acertar?\n'
+                                      '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Matemática: operações': [{'pergunta': 'Quanto é 7 vezes 8?',
+                            'alternativas': ['54', '56', '64'],
+                            'correta': 1,
+                            'imagem': 'tema02_pergunta01.png',
+                            'imagem_path': 'imagens_perguntas/tema02_pergunta01.png',
+                            'legenda': 'Teste seus conhecimentos sobre operações! Quantas você consegue '
+                                       'acertar?\n'
+                                       '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                           {'pergunta': 'Quanto é 96 dividido por 3?',
+                            'alternativas': ['32', '30', '33'],
+                            'correta': 0,
+                            'imagem': 'tema02_pergunta02.png',
+                            'imagem_path': 'imagens_perguntas/tema02_pergunta02.png',
+                            'legenda': 'Teste seus conhecimentos sobre operações! Quantas você consegue '
+                                       'acertar?\n'
+                                       '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                           {'pergunta': 'Quanto é 125 mais 75?',
+                            'alternativas': ['190', '210', '200'],
+                            'correta': 2,
+                            'imagem': 'tema02_pergunta03.png',
+                            'imagem_path': 'imagens_perguntas/tema02_pergunta03.png',
+                            'legenda': 'Teste seus conhecimentos sobre operações! Quantas você consegue '
+                                       'acertar?\n'
+                                       '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Biologia: plantas': [{'pergunta': 'Qual parte da planta absorve água do solo?',
+                        'alternativas': ['Raiz', 'Flor', 'Fruto'],
+                        'correta': 0,
+                        'imagem': 'tema03_pergunta01.png',
+                        'imagem_path': 'imagens_perguntas/tema03_pergunta01.png',
+                        'legenda': 'Teste seus conhecimentos sobre plantas! Quantas você consegue acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                       {'pergunta': 'Qual processo permite que a planta produza alimento usando luz?',
+                        'alternativas': ['Digestão', 'Fotossíntese', 'Respiração pulmonar'],
+                        'correta': 1,
+                        'imagem': 'tema03_pergunta02.png',
+                        'imagem_path': 'imagens_perguntas/tema03_pergunta02.png',
+                        'legenda': 'Teste seus conhecimentos sobre plantas! Quantas você consegue acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                       {'pergunta': 'Qual estrutura pode proteger as sementes?',
+                        'alternativas': ['Raiz', 'Caule', 'Fruto'],
+                        'correta': 2,
+                        'imagem': 'tema03_pergunta03.png',
+                        'imagem_path': 'imagens_perguntas/tema03_pergunta03.png',
+                        'legenda': 'Teste seus conhecimentos sobre plantas! Quantas você consegue acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Química: estados físicos': [{'pergunta': 'Em qual estado a água tem forma própria?',
+                               'alternativas': ['Líquido', 'Sólido', 'Gasoso'],
+                               'correta': 1,
+                               'imagem': 'tema04_pergunta01.png',
+                               'imagem_path': 'imagens_perguntas/tema04_pergunta01.png',
+                               'legenda': 'Teste seus conhecimentos sobre estados físicos! Quantas você '
+                                          'consegue acertar?\n'
+                                          '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                              {'pergunta': 'Como se chama a passagem do líquido para o gasoso?',
+                               'alternativas': ['Evaporação', 'Solidificação', 'Fusão'],
+                               'correta': 0,
+                               'imagem': 'tema04_pergunta02.png',
+                               'imagem_path': 'imagens_perguntas/tema04_pergunta02.png',
+                               'legenda': 'Teste seus conhecimentos sobre estados físicos! Quantas você '
+                                          'consegue acertar?\n'
+                                          '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                              {'pergunta': 'Como se chama a passagem do sólido para o líquido?',
+                               'alternativas': ['Condensação', 'Evaporação', 'Fusão'],
+                               'correta': 2,
+                               'imagem': 'tema04_pergunta03.png',
+                               'imagem_path': 'imagens_perguntas/tema04_pergunta03.png',
+                               'legenda': 'Teste seus conhecimentos sobre estados físicos! Quantas você '
+                                          'consegue acertar?\n'
+                                          '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Física: luz e som': [{'pergunta': 'Qual sentido usamos para perceber sons?',
+                        'alternativas': ['Visão', 'Audição', 'Paladar'],
+                        'correta': 1,
+                        'imagem': 'tema05_pergunta01.png',
+                        'imagem_path': 'imagens_perguntas/tema05_pergunta01.png',
+                        'legenda': 'Teste seus conhecimentos sobre luz e som! Quantas você consegue '
+                                   'acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                       {'pergunta': 'Qual objeto produz luz própria?',
+                        'alternativas': ['Lua', 'Espelho', 'Sol'],
+                        'correta': 2,
+                        'imagem': 'tema05_pergunta02.png',
+                        'imagem_path': 'imagens_perguntas/tema05_pergunta02.png',
+                        'legenda': 'Teste seus conhecimentos sobre luz e som! Quantas você consegue '
+                                   'acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                       {'pergunta': 'O som consegue se propagar no vácuo?',
+                        'alternativas': ['Não', 'Sim, sempre', 'Somente à noite'],
+                        'correta': 0,
+                        'imagem': 'tema05_pergunta03.png',
+                        'imagem_path': 'imagens_perguntas/tema05_pergunta03.png',
+                        'legenda': 'Teste seus conhecimentos sobre luz e som! Quantas você consegue '
+                                   'acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'História: Brasil colonial': [{'pergunta': 'Qual foi a primeira capital do Brasil?',
+                                'alternativas': ['Rio de Janeiro', 'Salvador', 'Brasília'],
+                                'correta': 1,
+                                'imagem': 'tema06_pergunta01.png',
+                                'imagem_path': 'imagens_perguntas/tema06_pergunta01.png',
+                                'legenda': 'Teste seus conhecimentos sobre Brasil colonial! Quantas você '
+                                           'consegue acertar?\n'
+                                           '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                               {'pergunta': 'Qual produto foi muito cultivado nos engenhos coloniais?',
+                                'alternativas': ['Cana-de-açúcar', 'Trigo', 'Café'],
+                                'correta': 0,
+                                'imagem': 'tema06_pergunta02.png',
+                                'imagem_path': 'imagens_perguntas/tema06_pergunta02.png',
+                                'legenda': 'Teste seus conhecimentos sobre Brasil colonial! Quantas você '
+                                           'consegue acertar?\n'
+                                           '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                               {'pergunta': 'Quem vivia no território brasileiro antes da colonização '
+                                            'portuguesa?',
+                                'alternativas': ['Somente europeus',
+                                                 'Somente africanos',
+                                                 'Diversos povos indígenas'],
+                                'correta': 2,
+                                'imagem': 'tema06_pergunta03.png',
+                                'imagem_path': 'imagens_perguntas/tema06_pergunta03.png',
+                                'legenda': 'Teste seus conhecimentos sobre Brasil colonial! Quantas você '
+                                           'consegue acertar?\n'
+                                           '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Geografia: clima e tempo': [{'pergunta': 'O que descreve as condições atmosféricas de um momento?',
+                               'alternativas': ['Clima', 'Tempo', 'Relevo'],
+                               'correta': 1,
+                               'imagem': 'tema07_pergunta01.png',
+                               'imagem_path': 'imagens_perguntas/tema07_pergunta01.png',
+                               'legenda': 'Teste seus conhecimentos sobre clima e tempo! Quantas você '
+                                          'consegue acertar?\n'
+                                          '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                              {'pergunta': 'Qual instrumento mede a temperatura do ar?',
+                               'alternativas': ['Termômetro', 'Bússola', 'Régua'],
+                               'correta': 0,
+                               'imagem': 'tema07_pergunta02.png',
+                               'imagem_path': 'imagens_perguntas/tema07_pergunta02.png',
+                               'legenda': 'Teste seus conhecimentos sobre clima e tempo! Quantas você '
+                                          'consegue acertar?\n'
+                                          '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                              {'pergunta': 'O que é uma previsão do tempo?',
+                               'alternativas': ['Um mapa de estradas',
+                                                'Uma lista de cidades',
+                                                'Uma estimativa das condições atmosféricas'],
+                               'correta': 2,
+                               'imagem': 'tema07_pergunta03.png',
+                               'imagem_path': 'imagens_perguntas/tema07_pergunta03.png',
+                               'legenda': 'Teste seus conhecimentos sobre clima e tempo! Quantas você '
+                                          'consegue acertar?\n'
+                                          '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Ciências: alimentação': [{'pergunta': 'Qual nutriente é uma fonte importante de energia?',
+                            'alternativas': ['Carboidrato', 'Água', 'Mineral'],
+                            'correta': 0,
+                            'imagem': 'tema08_pergunta01.png',
+                            'imagem_path': 'imagens_perguntas/tema08_pergunta01.png',
+                            'legenda': 'Teste seus conhecimentos sobre alimentação! Quantas você consegue '
+                                       'acertar?\n'
+                                       '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                           {'pergunta': 'Qual hábito ajuda na hidratação?',
+                            'alternativas': ['Evitar líquidos',
+                                             'Beber água regularmente',
+                                             'Comer apenas doces'],
+                            'correta': 1,
+                            'imagem': 'tema08_pergunta02.png',
+                            'imagem_path': 'imagens_perguntas/tema08_pergunta02.png',
+                            'legenda': 'Teste seus conhecimentos sobre alimentação! Quantas você consegue '
+                                       'acertar?\n'
+                                       '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                           {'pergunta': 'Qual prática ajuda na higiene dos alimentos?',
+                            'alternativas': ['Deixar expostos',
+                                             'Usar utensílios sujos',
+                                             'Lavar frutas e verduras'],
+                            'correta': 2,
+                            'imagem': 'tema08_pergunta03.png',
+                            'imagem_path': 'imagens_perguntas/tema08_pergunta03.png',
+                            'legenda': 'Teste seus conhecimentos sobre alimentação! Quantas você consegue '
+                                       'acertar?\n'
+                                       '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Literatura: narrativas': [{'pergunta': 'Quem conta a história em um texto narrativo?',
+                             'alternativas': ['Narrador', 'Leitor', 'Ilustrador'],
+                             'correta': 0,
+                             'imagem': 'tema09_pergunta01.png',
+                             'imagem_path': 'imagens_perguntas/tema09_pergunta01.png',
+                             'legenda': 'Teste seus conhecimentos sobre narrativas! Quantas você consegue '
+                                        'acertar?\n'
+                                        '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                            {'pergunta': 'Como se chama o lugar onde a história acontece?',
+                             'alternativas': ['Título', 'Espaço', 'Rima'],
+                             'correta': 1,
+                             'imagem': 'tema09_pergunta02.png',
+                             'imagem_path': 'imagens_perguntas/tema09_pergunta02.png',
+                             'legenda': 'Teste seus conhecimentos sobre narrativas! Quantas você consegue '
+                                        'acertar?\n'
+                                        '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                            {'pergunta': 'Como se chama o conjunto de acontecimentos de uma história?',
+                             'alternativas': ['Capa', 'Autor', 'Enredo'],
+                             'correta': 2,
+                             'imagem': 'tema09_pergunta03.png',
+                             'imagem_path': 'imagens_perguntas/tema09_pergunta03.png',
+                             'legenda': 'Teste seus conhecimentos sobre narrativas! Quantas você consegue '
+                                        'acertar?\n'
+                                        '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Inglês: cotidiano': [{'pergunta': 'Como se diz gato em inglês?',
+                        'alternativas': ['Dog', 'Cat', 'Bird'],
+                        'correta': 1,
+                        'imagem': 'tema10_pergunta01.png',
+                        'imagem_path': 'imagens_perguntas/tema10_pergunta01.png',
+                        'legenda': 'Teste seus conhecimentos sobre cotidiano! Quantas você consegue '
+                                   'acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                       {'pergunta': 'O que significa book em português?',
+                        'alternativas': ['Livro', 'Mesa', 'Escola'],
+                        'correta': 0,
+                        'imagem': 'tema10_pergunta02.png',
+                        'imagem_path': 'imagens_perguntas/tema10_pergunta02.png',
+                        'legenda': 'Teste seus conhecimentos sobre cotidiano! Quantas você consegue '
+                                   'acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                       {'pergunta': 'Como se diz água em inglês?',
+                        'alternativas': ['Milk', 'Bread', 'Water'],
+                        'correta': 2,
+                        'imagem': 'tema10_pergunta03.png',
+                        'imagem_path': 'imagens_perguntas/tema10_pergunta03.png',
+                        'legenda': 'Teste seus conhecimentos sobre cotidiano! Quantas você consegue '
+                                   'acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Artes: música': [{'pergunta': 'Qual elemento da música está relacionado à duração dos sons?',
+                    'alternativas': ['Cor', 'Ritmo', 'Textura'],
+                    'correta': 1,
+                    'imagem': 'tema11_pergunta01.png',
+                    'imagem_path': 'imagens_perguntas/tema11_pergunta01.png',
+                    'legenda': 'Teste seus conhecimentos sobre música! Quantas você consegue acertar?\n'
+                               '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                   {'pergunta': 'Qual instrumento possui teclas?',
+                    'alternativas': ['Piano', 'Tambor', 'Violão'],
+                    'correta': 0,
+                    'imagem': 'tema11_pergunta02.png',
+                    'imagem_path': 'imagens_perguntas/tema11_pergunta02.png',
+                    'legenda': 'Teste seus conhecimentos sobre música! Quantas você consegue acertar?\n'
+                               '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                   {'pergunta': 'Como se chama a pessoa que compõe uma música?',
+                    'alternativas': ['Pintor', 'Atleta', 'Compositor'],
+                    'correta': 2,
+                    'imagem': 'tema11_pergunta03.png',
+                    'imagem_path': 'imagens_perguntas/tema11_pergunta03.png',
+                    'legenda': 'Teste seus conhecimentos sobre música! Quantas você consegue acertar?\n'
+                               '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Educação física: esportes': [{'pergunta': 'Em qual esporte se usa uma cesta?',
+                                'alternativas': ['Futebol', 'Basquete', 'Natação'],
+                                'correta': 1,
+                                'imagem': 'tema12_pergunta01.png',
+                                'imagem_path': 'imagens_perguntas/tema12_pergunta01.png',
+                                'legenda': 'Teste seus conhecimentos sobre esportes! Quantas você consegue '
+                                           'acertar?\n'
+                                           '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                               {'pergunta': 'Qual atividade acontece na água?',
+                                'alternativas': ['Natação', 'Corrida', 'Ciclismo'],
+                                'correta': 0,
+                                'imagem': 'tema12_pergunta02.png',
+                                'imagem_path': 'imagens_perguntas/tema12_pergunta02.png',
+                                'legenda': 'Teste seus conhecimentos sobre esportes! Quantas você consegue '
+                                           'acertar?\n'
+                                           '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                               {'pergunta': 'Qual hábito é importante antes de exercícios?',
+                                'alternativas': ['Ignorar o corpo',
+                                                 'Ficar sem água',
+                                                 'Preparar o corpo com aquecimento'],
+                                'correta': 2,
+                                'imagem': 'tema12_pergunta03.png',
+                                'imagem_path': 'imagens_perguntas/tema12_pergunta03.png',
+                                'legenda': 'Teste seus conhecimentos sobre esportes! Quantas você consegue '
+                                           'acertar?\n'
+                                           '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Filosofia: convivência': [{'pergunta': 'O que significa empatia?',
+                             'alternativas': ['Ignorar os outros',
+                                              'Buscar compreender o outro',
+                                              'Impor uma opinião'],
+                             'correta': 1,
+                             'imagem': 'tema13_pergunta01.png',
+                             'imagem_path': 'imagens_perguntas/tema13_pergunta01.png',
+                             'legenda': 'Teste seus conhecimentos sobre convivência! Quantas você consegue '
+                                        'acertar?\n'
+                                        '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                            {'pergunta': 'Qual atitude favorece o diálogo?',
+                             'alternativas': ['Ouvir com respeito', 'Interromper sempre', 'Ofender'],
+                             'correta': 0,
+                             'imagem': 'tema13_pergunta02.png',
+                             'imagem_path': 'imagens_perguntas/tema13_pergunta02.png',
+                             'legenda': 'Teste seus conhecimentos sobre convivência! Quantas você consegue '
+                                        'acertar?\n'
+                                        '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                            {'pergunta': 'O que é uma escolha ética?',
+                             'alternativas': ['Escolha feita sem pensar',
+                                              'Escolha sempre mais rápida',
+                                              'Escolha que considera consequências e respeito'],
+                             'correta': 2,
+                             'imagem': 'tema13_pergunta03.png',
+                             'imagem_path': 'imagens_perguntas/tema13_pergunta03.png',
+                             'legenda': 'Teste seus conhecimentos sobre convivência! Quantas você consegue '
+                                        'acertar?\n'
+                                        '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Sociologia: sociedade': [{'pergunta': 'O que é cultura?',
+                            'alternativas': ['Somente comidas',
+                                             'Hábitos e conhecimentos compartilhados',
+                                             'Apenas roupas'],
+                            'correta': 1,
+                            'imagem': 'tema14_pergunta01.png',
+                            'imagem_path': 'imagens_perguntas/tema14_pergunta01.png',
+                            'legenda': 'Teste seus conhecimentos sobre sociedade! Quantas você consegue '
+                                       'acertar?\n'
+                                       '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                           {'pergunta': 'Qual atitude respeita a diversidade?',
+                            'alternativas': ['Valorizar diferenças', 'Zombar de costumes', 'Excluir pessoas'],
+                            'correta': 0,
+                            'imagem': 'tema14_pergunta02.png',
+                            'imagem_path': 'imagens_perguntas/tema14_pergunta02.png',
+                            'legenda': 'Teste seus conhecimentos sobre sociedade! Quantas você consegue '
+                                       'acertar?\n'
+                                       '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                           {'pergunta': 'O que é convivência social?',
+                            'alternativas': ['Viver sem contato',
+                                             'Evitar todas as regras',
+                                             'Relacionar-se com outras pessoas'],
+                            'correta': 2,
+                            'imagem': 'tema14_pergunta03.png',
+                            'imagem_path': 'imagens_perguntas/tema14_pergunta03.png',
+                            'legenda': 'Teste seus conhecimentos sobre sociedade! Quantas você consegue '
+                                       'acertar?\n'
+                                       '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Informática: segurança digital': [{'pergunta': 'Uma senha forte deve ter:',
+                                     'alternativas': ['Só o nome',
+                                                      'Combinação variada de caracteres',
+                                                      'A data de nascimento'],
+                                     'correta': 1,
+                                     'imagem': 'tema15_pergunta01.png',
+                                     'imagem_path': 'imagens_perguntas/tema15_pergunta01.png',
+                                     'legenda': 'Teste seus conhecimentos sobre segurança digital! Quantas '
+                                                'você consegue acertar?\n'
+                                                '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                    {'pergunta': 'O que fazer diante de um link suspeito?',
+                                     'alternativas': ['Verificar antes de clicar',
+                                                      'Compartilhar imediatamente',
+                                                      'Informar a senha'],
+                                     'correta': 0,
+                                     'imagem': 'tema15_pergunta02.png',
+                                     'imagem_path': 'imagens_perguntas/tema15_pergunta02.png',
+                                     'legenda': 'Teste seus conhecimentos sobre segurança digital! Quantas '
+                                                'você consegue acertar?\n'
+                                                '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                    {'pergunta': 'Para que serve a autenticação em duas etapas?',
+                                     'alternativas': ['Apagar arquivos',
+                                                      'Aumentar o volume',
+                                                      'Adicionar uma camada de segurança'],
+                                     'correta': 2,
+                                     'imagem': 'tema15_pergunta03.png',
+                                     'imagem_path': 'imagens_perguntas/tema15_pergunta03.png',
+                                     'legenda': 'Teste seus conhecimentos sobre segurança digital! Quantas '
+                                                'você consegue acertar?\n'
+                                                '#JuhQuiz #Quiz #Aprendizado #Desafio'}]}
 
-QUIZZES = {'Português: acentuação gráfica e sílaba tônica': [{'pergunta': 'Qual destas palavras é proparoxítona?',
-                                                    'alternativas': ['Médico', 'Papel', 'Café'],
-                                                    'correta': 0,
-                                                    'imagem': 'tema01_pergunta01.png',
-                                                    'imagem_path': 'imagens_perguntas/tema01_pergunta01.png',
-                                                    'legenda': 'Você sabe tudo sobre acentuação? Teste '
-                                                               'seus conhecimentos em três desafios '
-                                                               'rápidos!\n'
-                                                               '#JuhQuiz #Português #Acentuação #Quiz'},
-                                                   {'pergunta': 'Em uma palavra oxítona, qual sílaba é '
-                                                                'pronunciada com mais força?',
-                                                    'alternativas': ['A penúltima',
-                                                                     'A última',
-                                                                     'A antepenúltima'],
-                                                    'correta': 1,
-                                                    'imagem': 'tema01_pergunta02.png',
-                                                    'imagem_path': 'imagens_perguntas/tema01_pergunta02.png',
-                                                    'legenda': 'Você sabe tudo sobre acentuação? Teste '
-                                                               'seus conhecimentos em três desafios '
-                                                               'rápidos!\n'
-                                                               '#JuhQuiz #Português #Acentuação #Quiz'},
-                                                   {'pergunta': 'Qual palavra está acentuada '
-                                                                'corretamente?',
-                                                    'alternativas': ['Onibus', 'Ônibús', 'Ônibus'],
-                                                    'correta': 2,
-                                                    'imagem': 'tema01_pergunta03.png',
-                                                    'imagem_path': 'imagens_perguntas/tema01_pergunta03.png',
-                                                    'legenda': 'Você sabe tudo sobre acentuação? Teste '
-                                                               'seus conhecimentos em três desafios '
-                                                               'rápidos!\n'
-                                                               '#JuhQuiz #Português #Acentuação '
-                                                               '#Quiz'}],
- 'Matemática: porcentagem, descontos e aumentos': [{'pergunta': 'Um tênis de R$ 150 recebeu 10% de '
-                                                                'desconto. Qual é o preço final?',
-                                                    'alternativas': ['R$ 135', 'R$ 140', 'R$ 165'],
-                                                    'correta': 0,
-                                                    'imagem': 'tema02_pergunta01.png',
-                                                    'imagem_path': 'imagens_perguntas/tema02_pergunta01.png',
-                                                    'legenda': 'Você consegue calcular porcentagens '
-                                                               'sem se confundir? Desafie sua '
-                                                               'matemática!\n'
-                                                               '#JuhQuiz #Matemática #Porcentagem '
-                                                               '#Quiz'},
-                                                   {'pergunta': 'Uma mochila de R$ 80 sofreu aumento '
-                                                                'de 25%. Qual é o novo preço?',
-                                                    'alternativas': ['R$ 90', 'R$ 100', 'R$ 105'],
-                                                    'correta': 1,
-                                                    'imagem': 'tema02_pergunta02.png',
-                                                    'imagem_path': 'imagens_perguntas/tema02_pergunta02.png',
-                                                    'legenda': 'Você consegue calcular porcentagens '
-                                                               'sem se confundir? Desafie sua '
-                                                               'matemática!\n'
-                                                               '#JuhQuiz #Matemática #Porcentagem '
-                                                               '#Quiz'},
-                                                   {'pergunta': 'Quanto é 25% de 200?',
-                                                    'alternativas': ['25', '75', '50'],
-                                                    'correta': 2,
-                                                    'imagem': 'tema02_pergunta03.png',
-                                                    'imagem_path': 'imagens_perguntas/tema02_pergunta03.png',
-                                                    'legenda': 'Você consegue calcular porcentagens '
-                                                               'sem se confundir? Desafie sua '
-                                                               'matemática!\n'
-                                                               '#JuhQuiz #Matemática #Porcentagem '
-                                                               '#Quiz'}],
- 'Biologia: sistema digestório e suas funções': [{'pergunta': 'Qual substância ajuda a quebrar '
-                                                              'proteínas no estômago?',
-                                                  'alternativas': ['Pepsina', 'Bile', 'Insulina'],
-                                                  'correta': 0,
-                                                  'imagem': 'tema03_pergunta01.png',
-                                                  'imagem_path': 'imagens_perguntas/tema03_pergunta01.png',
-                                                  'legenda': 'Da primeira mordida à absorção dos '
-                                                             'nutrientes: quanto você sabe sobre '
-                                                             'digestão?\n'
-                                                             '#JuhQuiz #Biologia #SistemaDigestório '
-                                                             '#Quiz'},
-                                                 {'pergunta': 'Qual é uma função principal do '
-                                                              'intestino delgado?',
-                                                  'alternativas': ['Produzir urina',
-                                                                   'Absorver nutrientes',
-                                                                   'Bombear sangue'],
-                                                  'correta': 1,
-                                                  'imagem': 'tema03_pergunta02.png',
-                                                  'imagem_path': 'imagens_perguntas/tema03_pergunta02.png',
-                                                  'legenda': 'Da primeira mordida à absorção dos '
-                                                             'nutrientes: quanto você sabe sobre '
-                                                             'digestão?\n'
-                                                             '#JuhQuiz #Biologia #SistemaDigestório '
-                                                             '#Quiz'},
-                                                 {'pergunta': 'Qual órgão produz a bile, que auxilia a '
-                                                              'digestão das gorduras?',
-                                                  'alternativas': ['Estômago', 'Pâncreas', 'Fígado'],
-                                                  'correta': 2,
-                                                  'imagem': 'tema03_pergunta03.png',
-                                                  'imagem_path': 'imagens_perguntas/tema03_pergunta03.png',
-                                                  'legenda': 'Da primeira mordida à absorção dos '
-                                                             'nutrientes: quanto você sabe sobre '
-                                                             'digestão?\n'
-                                                             '#JuhQuiz #Biologia #SistemaDigestório '
-                                                             '#Quiz'}],
- 'Química: misturas homogêneas e heterogêneas': [{'pergunta': 'Uma mistura homogênea apresenta qual '
-                                                              'característica?',
-                                                  'alternativas': ['Aspecto uniforme, com uma fase '
-                                                                   'visível',
-                                                                   'Duas fases sempre visíveis',
-                                                                   'Somente um elemento químico'],
-                                                  'correta': 0,
-                                                  'imagem': 'file_000000004074820e88b0658d4b42d80b.png',
-                                                  'imagem_path': 'imagens_perguntas/file_000000004074820e88b0658d4b42d80b.png',
-                                                  'legenda': 'Como diferenciar misturas e reconhecer '
-                                                             'técnicas de separação? Teste seus '
-                                                             'conhecimentos!\n'
-                                                             '#JuhQuiz #Química #Misturas #Quiz'},
-                                                 {'pergunta': 'A mistura de água com areia, sem '
-                                                              'dissolver a areia, é classificada como:',
-                                                  'alternativas': ['Homogênea',
-                                                                   'Heterogênea',
-                                                                   'Substância pura'],
-                                                  'correta': 1,
-                                                  'imagem': 'file_00000000b79c820e85d2ad8674f5f4a5.png',
-                                                  'imagem_path': 'imagens_perguntas/file_00000000b79c820e85d2ad8674f5f4a5.png',
-                                                  'legenda': 'Como diferenciar misturas e reconhecer '
-                                                             'técnicas de separação? Teste seus '
-                                                             'conhecimentos!\n'
-                                                             '#JuhQuiz #Química #Misturas #Quiz'},
-                                                 {'pergunta': 'Para recuperar o sal dissolvido na '
-                                                              'água, qual processo simples pode ser '
-                                                              'usado?',
-                                                  'alternativas': ['Peneiração',
-                                                                   'Catação',
-                                                                   'Evaporação da água'],
-                                                  'correta': 2,
-                                                  'imagem': 'file_00000000ed54820e9ef1093dce662663.png',
-                                                  'imagem_path': 'imagens_perguntas/file_00000000ed54820e9ef1093dce662663.png',
-                                                  'legenda': 'Como diferenciar misturas e reconhecer '
-                                                             'técnicas de separação? Teste seus '
-                                                             'conhecimentos!\n'
-                                                             '#JuhQuiz #Química #Misturas #Quiz'}],
- 'Física: energia cinética, potencial e transformações': [{'pergunta': 'Como se chama a energia '
-                                                                       'associada ao movimento de um '
-                                                                       'corpo?',
-                                                           'alternativas': ['Energia cinética',
-                                                                            'Energia nuclear',
-                                                                            'Energia química'],
-                                                           'correta': 0,
-                                                           'imagem': 'file_00000000aa5c820eacf1a3319f5f20ef.png',
-                                                           'imagem_path': 'imagens_perguntas/file_00000000aa5c820eacf1a3319f5f20ef.png',
-                                                           'legenda': 'Movimento, altura e '
-                                                                      'eletricidade: descubra as '
-                                                                      'diferentes formas de energia!\n'
-                                                                      '#JuhQuiz #Física #Energia '
-                                                                      '#Quiz'},
-                                                          {'pergunta': 'Uma bola parada no alto de uma '
-                                                                       'rampa possui energia '
-                                                                       'relacionada à altura. Qual?',
-                                                           'alternativas': ['Energia sonora',
-                                                                            'Energia potencial '
-                                                                            'gravitacional',
-                                                                            'Energia luminosa'],
-                                                           'correta': 1,
-                                                           'imagem': 'file_000000002458820ebc4262f42cef12ff.png',
-                                                           'imagem_path': 'imagens_perguntas/file_000000002458820ebc4262f42cef12ff.png',
-                                                           'legenda': 'Movimento, altura e '
-                                                                      'eletricidade: descubra as '
-                                                                      'diferentes formas de energia!\n'
-                                                                      '#JuhQuiz #Física #Energia '
-                                                                      '#Quiz'},
-                                                          {'pergunta': 'Em um ventilador ligado, a '
-                                                                       'energia elétrica é '
-                                                                       'transformada principalmente '
-                                                                       'em:',
-                                                           'alternativas': ['Energia nuclear',
-                                                                            'Energia gravitacional',
-                                                                            'Energia de movimento'],
-                                                           'correta': 2,
-                                                           'imagem': 'file_0000000004c4820eb632c42a6dec4d92.png',
-                                                           'imagem_path': 'imagens_perguntas/file_0000000004c4820eb632c42a6dec4d92.png',
-                                                           'legenda': 'Movimento, altura e '
-                                                                      'eletricidade: descubra as '
-                                                                      'diferentes formas de energia!\n'
-                                                                      '#JuhQuiz #Física #Energia '
-                                                                      '#Quiz'}],
- 'História: abolição da escravidão e Lei Áurea': [{'pergunta': 'Em qual ano foi assinada a Lei Áurea, '
-                                                               'que aboliu legalmente a escravidão no '
-                                                               'Brasil?',
-                                                   'alternativas': ['1888', '1822', '1889'],
-                                                   'correta': 0,
-                                                   'imagem': 'file_000000008a08820eba65bcf0b42ef0b8.png',
-                                                   'imagem_path': 'imagens_perguntas/file_000000008a08820eba65bcf0b42ef0b8.png',
-                                                   'legenda': 'Três perguntas para recordar '
-                                                              'acontecimentos fundamentais da história '
-                                                              'do Brasil.\n'
-                                                              '#JuhQuiz #História #LeiÁurea #Brasil'},
-                                                  {'pergunta': 'Quem assinou a Lei Áurea em 13 de maio '
-                                                               'de 1888?',
-                                                   'alternativas': ['Dom Pedro II',
-                                                                    'Princesa Isabel',
-                                                                    'Dom João VI'],
-                                                   'correta': 1,
-                                                   'imagem': 'file_000000008df4820ea43fa9b6c5c56310.png',
-                                                   'imagem_path': 'imagens_perguntas/file_000000008df4820ea43fa9b6c5c56310.png',
-                                                   'legenda': 'Três perguntas para recordar '
-                                                              'acontecimentos fundamentais da história '
-                                                              'do Brasil.\n'
-                                                              '#JuhQuiz #História #LeiÁurea #Brasil'},
-                                                  {'pergunta': 'Qual lei de 1871 previa liberdade para '
-                                                               'filhos de mulheres escravizadas '
-                                                               'nascidos após sua promulgação, sob '
-                                                               'condições previstas na lei?',
-                                                   'alternativas': ['Lei dos Sexagenários',
-                                                                    'Lei Eusébio de Queirós',
-                                                                    'Lei do Ventre Livre'],
-                                                   'correta': 2,
-                                                   'imagem': 'file_000000000bc8820ea10a9e01089457d5.png',
-                                                   'imagem_path': 'imagens_perguntas/file_000000000bc8820ea10a9e01089457d5.png',
-                                                   'legenda': 'Três perguntas para recordar '
-                                                              'acontecimentos fundamentais da história '
-                                                              'do Brasil.\n'
-                                                              '#JuhQuiz #História #LeiÁurea #Brasil'}],
- 'Geografia: biomas brasileiros e suas características': [{'pergunta': 'Qual bioma ocupa grande parte '
-                                                                       'da região Norte do Brasil?',
-                                                           'alternativas': ['Amazônia',
-                                                                            'Caatinga',
-                                                                            'Pampa'],
-                                                           'correta': 0,
-                                                           'imagem': 'file_00000000bf90820e9b64bcc7b060a7b1.png',
-                                                           'imagem_path': 'imagens_perguntas/file_00000000bf90820e9b64bcc7b060a7b1.png',
-                                                           'legenda': 'Você reconhece os biomas do '
-                                                                      'Brasil? Explore as paisagens e '
-                                                                      'seus ambientes!\n'
-                                                                      '#JuhQuiz #Geografia #Biomas '
-                                                                      '#Brasil'},
-                                                          {'pergunta': 'Qual bioma tem muitas espécies '
-                                                                       'adaptadas ao clima semiárido e '
-                                                                       'à estiagem?',
-                                                           'alternativas': ['Pantanal',
-                                                                            'Caatinga',
-                                                                            'Mata Atlântica'],
-                                                           'correta': 1,
-                                                           'imagem': 'file_00000000f958820eb5fd6fd49bdbd3c2.png',
-                                                           'imagem_path': 'imagens_perguntas/file_00000000f958820eb5fd6fd49bdbd3c2.png',
-                                                           'legenda': 'Você reconhece os biomas do '
-                                                                      'Brasil? Explore as paisagens e '
-                                                                      'seus ambientes!\n'
-                                                                      '#JuhQuiz #Geografia #Biomas '
-                                                                      '#Brasil'},
-                                                          {'pergunta': 'Qual bioma possui extensas '
-                                                                       'áreas de planície que alagam '
-                                                                       'em períodos de cheia?',
-                                                           'alternativas': ['Cerrado',
-                                                                            'Pampa',
-                                                                            'Pantanal'],
-                                                           'correta': 2,
-                                                           'imagem': 'file_00000000d2a0820e9ebd34a3c9411038.png',
-                                                           'imagem_path': 'imagens_perguntas/file_00000000d2a0820e9ebd34a3c9411038.png',
-                                                           'legenda': 'Você reconhece os biomas do '
-                                                                      'Brasil? Explore as paisagens e '
-                                                                      'seus ambientes!\n'
-                                                                      '#JuhQuiz #Geografia #Biomas '
-                                                                      '#Brasil'}],
- 'Ciências: ciclo da água e estados físicos': [{'pergunta': 'Quando a água líquida passa para o estado '
-                                                            'gasoso, ocorre:',
-                                                'alternativas': ['Vaporização',
-                                                                 'Solidificação',
-                                                                 'Fusão'],
-                                                'correta': 0,
-                                                'imagem': 'file_000000001db4820e92e1902368613e1b.png',
-                                                'imagem_path': 'imagens_perguntas/file_000000001db4820e92e1902368613e1b.png',
-                                                'legenda': 'Evaporação, nuvens e chuva: acompanhe o '
-                                                           'ciclo da água em três desafios!\n'
-                                                           '#JuhQuiz #Ciências #CicloDaÁgua #Quiz'},
-                                               {'pergunta': 'Como se chama a passagem de vapor de água '
-                                                            'para gotículas de água líquida?',
-                                                'alternativas': ['Sublimação', 'Condensação', 'Fusão'],
-                                                'correta': 1,
-                                                'imagem': 'file_00000000f658820e82b4af089776150a.png',
-                                                'imagem_path': 'imagens_perguntas/file_00000000f658820e82b4af089776150a.png',
-                                                'legenda': 'Evaporação, nuvens e chuva: acompanhe o '
-                                                           'ciclo da água em três desafios!\n'
-                                                           '#JuhQuiz #Ciências #CicloDaÁgua #Quiz'},
-                                               {'pergunta': 'Qual etapa do ciclo da água faz a água '
-                                                            'das nuvens chegar à superfície como '
-                                                            'chuva?',
-                                                'alternativas': ['Infiltração',
-                                                                 'Evaporação',
-                                                                 'Precipitação'],
-                                                'correta': 2,
-                                                'imagem': 'file_000000000f64820ebce9c8c8f0551186.png',
-                                                'imagem_path': 'imagens_perguntas/file_000000000f64820ebce9c8c8f0551186.png',
-                                                'legenda': 'Evaporação, nuvens e chuva: acompanhe o '
-                                                           'ciclo da água em três desafios!\n'
-                                                           '#JuhQuiz #Ciências #CicloDaÁgua #Quiz'}],
- 'Literatura: poema, conto e crônica': [{'pergunta': 'Qual gênero literário costuma apresentar versos '
-                                                     'e estrofes?',
-                                         'alternativas': ['Poema', 'Conto', 'Crônica'],
-                                         'correta': 0,
-                                         'imagem': 'file_000000008888820e9893b62525c589c3.png',
-                                         'imagem_path': 'imagens_perguntas/file_000000008888820e9893b62525c589c3.png',
-                                         'legenda': 'Você sabe distinguir os gêneros literários? Leia, '
-                                                    'pense e participe!\n'
-                                                    '#JuhQuiz #Literatura #Leitura #Quiz'},
-                                        {'pergunta': 'Qual gênero é uma narrativa geralmente curta, '
-                                                     'com personagens e enredo?',
-                                         'alternativas': ['Poema', 'Conto', 'Notícia'],
-                                         'correta': 1,
-                                         'imagem': 'file_000000004890820ebaa6b1ea55313e91.png',
-                                         'imagem_path': 'imagens_perguntas/file_000000004890820ebaa6b1ea55313e91.png',
-                                         'legenda': 'Você sabe distinguir os gêneros literários? Leia, '
-                                                    'pense e participe!\n'
-                                                    '#JuhQuiz #Literatura #Leitura #Quiz'},
-                                        {'pergunta': 'Qual gênero frequentemente retrata uma cena '
-                                                     'cotidiana de forma pessoal e reflexiva?',
-                                         'alternativas': ['Bula', 'Receita', 'Crônica'],
-                                         'correta': 2,
-                                         'imagem': 'file_0000000047e4820eb88ed0a04df9a429.png',
-                                         'imagem_path': 'imagens_perguntas/file_0000000047e4820eb88ed0a04df9a429.png',
-                                         'legenda': 'Você sabe distinguir os gêneros literários? Leia, '
-                                                    'pense e participe!\n'
-                                                    '#JuhQuiz #Literatura #Leitura #Quiz'}],
- 'Inglês: verbos e expressões do cotidiano': [{'pergunta': "Como se diz 'Bom dia' em inglês?",
-                                               'alternativas': ['Good morning',
-                                                                'Good night',
-                                                                'Good evening'],
-                                               'correta': 0,
-                                               'imagem': 'file_00000000d78c820e9cb7800d513884f9.png',
-                                               'imagem_path': 'imagens_perguntas/file_00000000d78c820e9cb7800d513884f9.png',
-                                               'legenda': 'Do cumprimento à rotina diária: pratique '
-                                                          'inglês de um jeito leve!\n'
-                                                          '#JuhQuiz #Inglês #Vocabulário #Quiz'},
-                                              {'pergunta': "Qual expressão em inglês significa 'Eu vou "
-                                                           "à escola'?",
-                                               'alternativas': ['I go to bed',
-                                                                'I go to school',
-                                                                'I go home'],
-                                               'correta': 1,
-                                               'imagem': 'file_000000004a3c820eb2361e0154360ac7.png',
-                                               'imagem_path': 'imagens_perguntas/file_000000004a3c820eb2361e0154360ac7.png',
-                                               'legenda': 'Do cumprimento à rotina diária: pratique '
-                                                          'inglês de um jeito leve!\n'
-                                                          '#JuhQuiz #Inglês #Vocabulário #Quiz'},
-                                              {'pergunta': 'Qual expressão em inglês pode ser usada '
-                                                           'para agradecer alguém?',
-                                               'alternativas': ['See you', 'Excuse me', 'Thank you'],
-                                               'correta': 2,
-                                               'imagem': 'file_000000003cb4820ebf9b0396dbf5e6aa.png',
-                                               'imagem_path': 'imagens_perguntas/file_000000003cb4820ebf9b0396dbf5e6aa.png',
-                                               'legenda': 'Do cumprimento à rotina diária: pratique '
-                                                          'inglês de um jeito leve!\n'
-                                                          '#JuhQuiz #Inglês #Vocabulário #Quiz'}],
- 'Artes: cores primárias, secundárias e misturas': [{'pergunta': 'Na pintura tradicional ensinada na '
-                                                                 'escola, quais são as cores '
-                                                                 'primárias?',
-                                                     'alternativas': ['Vermelho, amarelo e azul',
-                                                                      'Verde, laranja e roxo',
-                                                                      'Preto, branco e cinza'],
-                                                     'correta': 0,
-                                                     'imagem': 'file_00000000e7cc820e867e8160a3bb14ad.png',
-                                                     'imagem_path': 'imagens_perguntas/file_00000000e7cc820e867e8160a3bb14ad.png',
-                                                     'legenda': 'Entre pincéis e tintas, teste o que '
-                                                                'você sabe sobre a teoria das cores!\n'
-                                                                '#JuhQuiz #Artes #Cores #Quiz'},
-                                                    {'pergunta': 'Ao misturar tintas vermelha e '
-                                                                 'amarela, qual cor costuma surgir?',
-                                                     'alternativas': ['Roxo', 'Laranja', 'Azul'],
-                                                     'correta': 1,
-                                                     'imagem': 'file_00000000f03c820eb306387fc2a52465.png',
-                                                     'imagem_path': 'imagens_perguntas/file_00000000f03c820eb306387fc2a52465.png',
-                                                     'legenda': 'Entre pincéis e tintas, teste o que '
-                                                                'você sabe sobre a teoria das cores!\n'
-                                                                '#JuhQuiz #Artes #Cores #Quiz'},
-                                                    {'pergunta': 'Como são chamadas as cores obtidas '
-                                                                 'pela mistura de duas cores '
-                                                                 'primárias?',
-                                                     'alternativas': ['Neutras',
-                                                                      'Monocromáticas',
-                                                                      'Secundárias'],
-                                                     'correta': 2,
-                                                     'imagem': 'file_00000000ae04820e9c4a3012c4bf6f74.png',
-                                                     'imagem_path': 'imagens_perguntas/file_00000000ae04820e9c4a3012c4bf6f74.png',
-                                                     'legenda': 'Entre pincéis e tintas, teste o que '
-                                                                'você sabe sobre a teoria das cores!\n'
-                                                                '#JuhQuiz #Artes #Cores #Quiz'}],
- 'Educação Física: esportes olímpicos e regras': [{'pergunta': 'No voleibol, qual é a principal função '
-                                                               'da rede?',
-                                                   'alternativas': ['Separar os lados da quadra',
-                                                                    'Marcar a linha de chegada',
-                                                                    'Determinar o tempo de jogo'],
-                                                   'correta': 0,
-                                                   'imagem': 'file_000000003224820e8fa279e05477f2ff.png',
-                                                   'imagem_path': 'imagens_perguntas/file_000000003224820e8fa279e05477f2ff.png',
-                                                   'legenda': 'Voleibol, basquete e natação: mostre '
-                                                              'seus conhecimentos sobre esportes!\n'
-                                                              '#JuhQuiz #EducaçãoFísica #Olimpíadas '
-                                                              '#Quiz'},
-                                                  {'pergunta': 'No basquete, quantos pontos vale um '
-                                                               'lance livre convertido?',
-                                                   'alternativas': ['2 pontos', '1 ponto', '3 pontos'],
-                                                   'correta': 1,
-                                                   'imagem': 'file_00000000b348820eb78a6539bd5616e7.png',
-                                                   'imagem_path': 'imagens_perguntas/file_00000000b348820eb78a6539bd5616e7.png',
-                                                   'legenda': 'Voleibol, basquete e natação: mostre '
-                                                              'seus conhecimentos sobre esportes!\n'
-                                                              '#JuhQuiz #EducaçãoFísica #Olimpíadas '
-                                                              '#Quiz'},
-                                                  {'pergunta': 'Qual estilo de natação usa movimentos '
-                                                               'alternados dos braços e batimentos '
-                                                               'alternados das pernas, com o corpo '
-                                                               'voltado para baixo?',
-                                                   'alternativas': ['Peito', 'Borboleta', 'Crawl'],
-                                                   'correta': 2,
-                                                   'imagem': 'file_000000007f08820eb4c702f405d0a492.png',
-                                                   'imagem_path': 'imagens_perguntas/file_000000007f08820eb4c702f405d0a492.png',
-                                                   'legenda': 'Voleibol, basquete e natação: mostre '
-                                                              'seus conhecimentos sobre esportes!\n'
-                                                              '#JuhQuiz #EducaçãoFísica #Olimpíadas '
-                                                              '#Quiz'}],
- 'Filosofia: ética, moral e escolhas': [{'pergunta': 'Qual é um tema central estudado pela ética?',
-                                         'alternativas': ['Reflexão sobre a conduta humana',
-                                                          'Composição de rochas',
-                                                          'Movimento dos planetas'],
-                                         'correta': 0,
-                                         'imagem': 'tema13_pergunta01.png',
-                                         'imagem_path': 'imagens_perguntas/tema13_pergunta01.png',
-                                         'legenda': 'Quando o assunto é fazer escolhas, você sabe '
-                                                    'diferenciar ética e moral?\n'
-                                                    '#JuhQuiz #Filosofia #Ética #Quiz'},
-                                        {'pergunta': 'O princípio de justiça se relaciona com qual '
-                                                     'atitude?',
-                                         'alternativas': ['Conceder privilégios sem critério',
-                                                          'Buscar tratamento justo e equitativo',
-                                                          'Ignorar os direitos das pessoas'],
-                                         'correta': 1,
-                                         'imagem': 'tema13_pergunta02.png',
-                                         'imagem_path': 'imagens_perguntas/tema13_pergunta02.png',
-                                         'legenda': 'Quando o assunto é fazer escolhas, você sabe '
-                                                    'diferenciar ética e moral?\n'
-                                                    '#JuhQuiz #Filosofia #Ética #Quiz'},
-                                        {'pergunta': 'Qual atitude demonstra respeito em uma '
-                                                     'discussão?',
-                                         'alternativas': ['Espalhar boatos',
-                                                          'Interromper quem discorda',
-                                                          'Ouvir opiniões diferentes com respeito'],
-                                         'correta': 2,
-                                         'imagem': 'tema13_pergunta03.png',
-                                         'imagem_path': 'imagens_perguntas/tema13_pergunta03.png',
-                                         'legenda': 'Quando o assunto é fazer escolhas, você sabe '
-                                                    'diferenciar ética e moral?\n'
-                                                    '#JuhQuiz #Filosofia #Ética #Quiz'}],
- 'Sociologia: cultura, diversidade e identidade': [{'pergunta': 'O que significa diversidade cultural?',
-                                                    'alternativas': ['Existência de diferentes '
-                                                                     'costumes e tradições',
-                                                                     'Obrigação de seguir uma única '
-                                                                     'tradição',
-                                                                     'Ausência de diferenças entre '
-                                                                     'grupos'],
-                                                    'correta': 0,
-                                                    'imagem': 'tema14_pergunta01.png',
-                                                    'imagem_path': 'imagens_perguntas/tema14_pergunta01.png',
-                                                    'legenda': 'Costumes, tradições e diferenças '
-                                                               'culturais: um quiz sobre convivência!\n'
-                                                               '#JuhQuiz #Sociologia #Cultura '
-                                                               '#Diversidade'},
-                                                   {'pergunta': 'Qual opção é um exemplo de patrimônio '
-                                                                'cultural imaterial?',
-                                                    'alternativas': ['Uma ponte histórica',
-                                                                     'Uma dança tradicional '
-                                                                     'transmitida entre gerações',
-                                                                     'Um prédio antigo'],
-                                                    'correta': 1,
-                                                    'imagem': 'tema14_pergunta02.png',
-                                                    'imagem_path': 'imagens_perguntas/tema14_pergunta02.png',
-                                                    'legenda': 'Costumes, tradições e diferenças '
-                                                               'culturais: um quiz sobre convivência!\n'
-                                                               '#JuhQuiz #Sociologia #Cultura '
-                                                               '#Diversidade'},
-                                                   {'pergunta': 'Qual atitude favorece o respeito à '
-                                                                'diversidade cultural?',
-                                                    'alternativas': ['Proibir manifestações culturais',
-                                                                     'Tratar uma cultura como superior',
-                                                                     'Valorizar costumes e modos de '
-                                                                     'vida diferentes'],
-                                                    'correta': 2,
-                                                    'imagem': 'tema14_pergunta03.png',
-                                                    'imagem_path': 'imagens_perguntas/tema14_pergunta03.png',
-                                                    'legenda': 'Costumes, tradições e diferenças '
-                                                               'culturais: um quiz sobre convivência!\n'
-                                                               '#JuhQuiz #Sociologia #Cultura '
-                                                               '#Diversidade'}],
- 'Informática: segurança digital, senhas e golpes': [{'pergunta': 'Qual prática ajuda a criar uma '
-                                                                  'senha mais segura?',
-                                                      'alternativas': ['Usar uma senha longa e '
-                                                                       'exclusiva',
-                                                                       'Usar só a data de nascimento',
-                                                                       'Repetir a mesma senha em todos '
-                                                                       'os sites'],
-                                                      'correta': 0,
-                                                      'imagem': 'tema15_pergunta01.png',
-                                                      'imagem_path': 'imagens_perguntas/tema15_pergunta01.png',
-                                                      'legenda': 'Você navega com segurança? Três '
-                                                                 'perguntas sobre proteção no mundo '
-                                                                 'digital!\n'
-                                                                 '#JuhQuiz #Informática '
-                                                                 '#SegurançaDigital #Quiz'},
-                                                     {'pergunta': 'Ao receber uma mensagem suspeita '
-                                                                  'pedindo dados bancários, o mais '
-                                                                  'seguro é:',
-                                                      'alternativas': ['Enviar os dados imediatamente',
-                                                                       'Não clicar no link e verificar '
-                                                                       'o remetente por canal oficial',
-                                                                       'Instalar o arquivo anexo'],
-                                                      'correta': 1,
-                                                      'imagem': 'tema15_pergunta02.png',
-                                                      'imagem_path': 'imagens_perguntas/tema15_pergunta02.png',
-                                                      'legenda': 'Você navega com segurança? Três '
-                                                                 'perguntas sobre proteção no mundo '
-                                                                 'digital!\n'
-                                                                 '#JuhQuiz #Informática '
-                                                                 '#SegurançaDigital #Quiz'},
-                                                     {'pergunta': 'Qual prática ajuda a recuperar '
-                                                                  'arquivos importantes após uma '
-                                                                  'falha?',
-                                                      'alternativas': ['Compartilhar senhas',
-                                                                       'Desativar a proteção do '
-                                                                       'dispositivo',
-                                                                       'Manter cópias de segurança'],
-                                                      'correta': 2,
-                                                      'imagem': 'tema15_pergunta03.png',
-                                                      'imagem_path': 'imagens_perguntas/tema15_pergunta03.png',
-                                                      'legenda': 'Você navega com segurança? Três '
-                                                                 'perguntas sobre proteção no mundo '
-                                                                 'digital!\n'
-                                                                 '#JuhQuiz #Informática '
-                                                                 '#SegurançaDigital #Quiz'}]}
-
-LEGENDAS = {'Português: acentuação gráfica e sílaba tônica': 'Você sabe tudo sobre acentuação? Teste seus '
-                                                  'conhecimentos em três desafios rápidos!\n'
-                                                  '#JuhQuiz #Português #Acentuação #Quiz',
- 'Matemática: porcentagem, descontos e aumentos': 'Você consegue calcular porcentagens sem se '
-                                                  'confundir? Desafie sua matemática!\n'
-                                                  '#JuhQuiz #Matemática #Porcentagem #Quiz',
- 'Biologia: sistema digestório e suas funções': 'Da primeira mordida à absorção dos nutrientes: quanto '
-                                                'você sabe sobre digestão?\n'
-                                                '#JuhQuiz #Biologia #SistemaDigestório #Quiz',
- 'Química: misturas homogêneas e heterogêneas': 'Como diferenciar misturas e reconhecer técnicas de '
-                                                'separação? Teste seus conhecimentos!\n'
-                                                '#JuhQuiz #Química #Misturas #Quiz',
- 'Física: energia cinética, potencial e transformações': 'Movimento, altura e eletricidade: descubra '
-                                                         'as diferentes formas de energia!\n'
-                                                         '#JuhQuiz #Física #Energia #Quiz',
- 'História: abolição da escravidão e Lei Áurea': 'Três perguntas para recordar acontecimentos '
-                                                 'fundamentais da história do Brasil.\n'
-                                                 '#JuhQuiz #História #LeiÁurea #Brasil',
- 'Geografia: biomas brasileiros e suas características': 'Você reconhece os biomas do Brasil? Explore '
-                                                         'as paisagens e seus ambientes!\n'
-                                                         '#JuhQuiz #Geografia #Biomas #Brasil',
- 'Ciências: ciclo da água e estados físicos': 'Evaporação, nuvens e chuva: acompanhe o ciclo da água '
-                                              'em três desafios!\n'
-                                              '#JuhQuiz #Ciências #CicloDaÁgua #Quiz',
- 'Literatura: poema, conto e crônica': 'Você sabe distinguir os gêneros literários? Leia, pense e '
-                                       'participe!\n'
-                                       '#JuhQuiz #Literatura #Leitura #Quiz',
- 'Inglês: verbos e expressões do cotidiano': 'Do cumprimento à rotina diária: pratique inglês de um '
-                                             'jeito leve!\n'
-                                             '#JuhQuiz #Inglês #Vocabulário #Quiz',
- 'Artes: cores primárias, secundárias e misturas': 'Entre pincéis e tintas, teste o que você sabe '
-                                                   'sobre a teoria das cores!\n'
-                                                   '#JuhQuiz #Artes #Cores #Quiz',
- 'Educação Física: esportes olímpicos e regras': 'Voleibol, basquete e natação: mostre seus '
-                                                 'conhecimentos sobre esportes!\n'
-                                                 '#JuhQuiz #EducaçãoFísica #Olimpíadas #Quiz',
- 'Filosofia: ética, moral e escolhas': 'Quando o assunto é fazer escolhas, você sabe diferenciar ética '
-                                       'e moral?\n'
-                                       '#JuhQuiz #Filosofia #Ética #Quiz',
- 'Sociologia: cultura, diversidade e identidade': 'Costumes, tradições e diferenças culturais: um quiz '
-                                                  'sobre convivência!\n'
-                                                  '#JuhQuiz #Sociologia #Cultura #Diversidade',
- 'Informática: segurança digital, senhas e golpes': 'Você navega com segurança? Três perguntas sobre '
-                                                    'proteção no mundo digital!\n'
-                                                    '#JuhQuiz #Informática #SegurançaDigital #Quiz'}
+LEGENDAS = {'Português: pontuação': 'Teste seus conhecimentos sobre pontuação! Quantas você consegue acertar?\n'
+                         '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Matemática: operações': 'Teste seus conhecimentos sobre operações! Quantas você consegue acertar?\n'
+                          '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Biologia: plantas': 'Teste seus conhecimentos sobre plantas! Quantas você consegue acertar?\n'
+                      '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Química: estados físicos': 'Teste seus conhecimentos sobre estados físicos! Quantas você consegue '
+                             'acertar?\n'
+                             '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Física: luz e som': 'Teste seus conhecimentos sobre luz e som! Quantas você consegue acertar?\n'
+                      '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'História: Brasil colonial': 'Teste seus conhecimentos sobre Brasil colonial! Quantas você consegue '
+                              'acertar?\n'
+                              '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Geografia: clima e tempo': 'Teste seus conhecimentos sobre clima e tempo! Quantas você consegue acertar?\n'
+                             '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Ciências: alimentação': 'Teste seus conhecimentos sobre alimentação! Quantas você consegue acertar?\n'
+                          '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Literatura: narrativas': 'Teste seus conhecimentos sobre narrativas! Quantas você consegue acertar?\n'
+                           '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Inglês: cotidiano': 'Teste seus conhecimentos sobre cotidiano! Quantas você consegue acertar?\n'
+                      '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Artes: música': 'Teste seus conhecimentos sobre música! Quantas você consegue acertar?\n'
+                  '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Educação física: esportes': 'Teste seus conhecimentos sobre esportes! Quantas você consegue acertar?\n'
+                              '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Filosofia: convivência': 'Teste seus conhecimentos sobre convivência! Quantas você consegue acertar?\n'
+                           '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Sociologia: sociedade': 'Teste seus conhecimentos sobre sociedade! Quantas você consegue acertar?\n'
+                          '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Informática: segurança digital': 'Teste seus conhecimentos sobre segurança digital! Quantas você consegue '
+                                   'acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'}
