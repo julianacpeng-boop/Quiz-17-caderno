@@ -1,546 +1,528 @@
 # -*- coding: utf-8 -*-
-"""Quiz 17 — 15 temas, 45 perguntas e ilustrações PNG com transparência."""
+"""Quiz 17 — 15 novos temas, 45 perguntas e ilustrações PNG transparentes."""
 
-QUIZZES = {'Alimentação saudável': [{'pergunta': 'Por que é recomendado variar os alimentos ao longo da '
-                                       'semana?',
-                           'alternativas': ['Para obter diferentes nutrientes',
-                                            'Para comer sempre a mesma coisa',
-                                            'Para substituir todas as refeições por doces'],
-                           'correta': 0,
-                           'imagem': 'tema01_pergunta01.png',
-                           'imagem_path': 'imagens_perguntas/tema01_pergunta01.png',
-                           'legenda': 'Teste seus conhecimentos sobre alimentação saudável! '
-                                      'Quantas você consegue acertar?\n'
-                                      '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                          {'pergunta': 'O que é útil observar ao comparar produtos embalados?',
-                           'alternativas': ['Apenas a cor da embalagem',
-                                            'A lista de ingredientes e as informações nutricionais',
-                                            'Somente o tamanho do pacote'],
-                           'correta': 1,
-                           'imagem': 'tema01_pergunta02.png',
-                           'imagem_path': 'imagens_perguntas/tema01_pergunta02.png',
-                           'legenda': 'Teste seus conhecimentos sobre alimentação saudável! '
-                                      'Quantas você consegue acertar?\n'
-                                      '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                          {'pergunta': 'Qual cuidado deve vir antes de preparar um lanche?',
-                           'alternativas': ['Lavar as mãos e usar uma superfície limpa',
-                                            'Deixar os alimentos no chão',
-                                            'Usar utensílios sujos'],
-                           'correta': 0,
-                           'imagem': 'tema01_pergunta03.png',
-                           'imagem_path': 'imagens_perguntas/tema01_pergunta03.png',
-                           'legenda': 'Teste seus conhecimentos sobre alimentação saudável! '
-                                      'Quantas você consegue acertar?\n'
-                                      '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Água e consumo consciente': [{'pergunta': 'Qual atitude ajuda a reduzir o desperdício de água em '
-                                            'casa?',
-                                'alternativas': ['Deixar a torneira aberta sem necessidade',
-                                                 'Fechar a torneira durante tarefas em que a água '
-                                                 'não é usada',
-                                                 'Lavar a calçada todos os dias com mangueira'],
-                                'correta': 1,
-                                'imagem': 'tema02_pergunta01.png',
-                                'imagem_path': 'imagens_perguntas/tema02_pergunta01.png',
-                                'legenda': 'Teste seus conhecimentos sobre água e consumo '
-                                           'consciente! Quantas você consegue acertar?\n'
-                                           '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                               {'pergunta': 'A água da chuva armazenada de forma adequada pode ser '
-                                            'usada para:',
-                                'alternativas': ['Regar plantas',
-                                                 'Beber sem tratamento',
-                                                 'Preparar remédios'],
-                                'correta': 0,
-                                'imagem': 'tema02_pergunta02.png',
-                                'imagem_path': 'imagens_perguntas/tema02_pergunta02.png',
-                                'legenda': 'Teste seus conhecimentos sobre água e consumo '
-                                           'consciente! Quantas você consegue acertar?\n'
-                                           '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                               {'pergunta': 'Por que é importante evitar jogar lixo em rios e '
-                                            'córregos?',
-                                'alternativas': ['Porque pode prejudicar a água e os seres vivos',
-                                                 'Porque aumenta a quantidade de peixes',
-                                                 'Porque deixa a água potável automaticamente'],
-                                'correta': 0,
-                                'imagem': 'tema02_pergunta03.png',
-                                'imagem_path': 'imagens_perguntas/tema02_pergunta03.png',
-                                'legenda': 'Teste seus conhecimentos sobre água e consumo '
-                                           'consciente! Quantas você consegue acertar?\n'
-                                           '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Meio ambiente e reciclagem': [{'pergunta': 'O que significa separar resíduos para a coleta '
-                                             'seletiva?',
-                                 'alternativas': ['Misturar todo o lixo',
-                                                  'Agrupar materiais conforme o tipo',
-                                                  'Enterrar embalagens no jardim'],
-                                 'correta': 1,
-                                 'imagem': 'tema03_pergunta01.png',
-                                 'imagem_path': 'imagens_perguntas/tema03_pergunta01.png',
-                                 'legenda': 'Teste seus conhecimentos sobre meio ambiente e '
-                                            'reciclagem! Quantas você consegue acertar?\n'
-                                            '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                {'pergunta': 'Qual prática ajuda a diminuir o uso de embalagens '
-                                             'descartáveis?',
-                                 'alternativas': ['Levar uma sacola reutilizável',
-                                                  'Pedir uma sacola nova para cada item',
-                                                  'Usar copos descartáveis em casa'],
-                                 'correta': 0,
-                                 'imagem': 'tema03_pergunta02.png',
-                                 'imagem_path': 'imagens_perguntas/tema03_pergunta02.png',
-                                 'legenda': 'Teste seus conhecimentos sobre meio ambiente e '
-                                            'reciclagem! Quantas você consegue acertar?\n'
-                                            '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                {'pergunta': 'O que pode acontecer quando resíduos são descartados '
-                                             'nas ruas?',
-                                 'alternativas': ['Podem entupir bueiros e chegar a cursos d’água',
-                                                  'Desaparecem sem deixar efeito',
-                                                  'Transformam-se sempre em adubo'],
-                                 'correta': 0,
-                                 'imagem': 'tema03_pergunta03.png',
-                                 'imagem_path': 'imagens_perguntas/tema03_pergunta03.png',
-                                 'legenda': 'Teste seus conhecimentos sobre meio ambiente e '
-                                            'reciclagem! Quantas você consegue acertar?\n'
-                                            '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Animais e seus habitats': [{'pergunta': 'O que é um habitat?',
-                              'alternativas': ['O lugar onde um ser vivo encontra condições para '
-                                               'viver',
-                                               'O nome dado ao som de um animal',
-                                               'Uma espécie de alimento industrializado'],
-                              'correta': 0,
-                              'imagem': 'tema04_pergunta01.png',
-                              'imagem_path': 'imagens_perguntas/tema04_pergunta01.png',
-                              'legenda': 'Teste seus conhecimentos sobre animais e seus habitats! '
-                                         'Quantas você consegue acertar?\n'
-                                         '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                             {'pergunta': 'Por que a destruição de florestas pode ameaçar animais?',
-                              'alternativas': ['Porque reduz abrigo e recursos de que eles '
-                                               'precisam',
-                                               'Porque aumenta todos os habitats',
-                                               'Porque ensina os animais a viver em qualquer '
-                                               'lugar'],
-                              'correta': 0,
-                              'imagem': 'tema04_pergunta02.png',
-                              'imagem_path': 'imagens_perguntas/tema04_pergunta02.png',
-                              'legenda': 'Teste seus conhecimentos sobre animais e seus habitats! '
-                                         'Quantas você consegue acertar?\n'
-                                         '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                             {'pergunta': 'Como se chama a relação em que um animal caça outro '
-                                          'para se alimentar?',
-                              'alternativas': ['Polinização', 'Predação', 'Germinação'],
-                              'correta': 1,
-                              'imagem': 'tema04_pergunta03.png',
-                              'imagem_path': 'imagens_perguntas/tema04_pergunta03.png',
-                              'legenda': 'Teste seus conhecimentos sobre animais e seus habitats! '
-                                         'Quantas você consegue acertar?\n'
-                                         '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Plantas e cuidados com a natureza': [{'pergunta': 'O que uma semente precisa para começar a '
-                                                    'germinar?',
-                                        'alternativas': ['Condições adequadas, como água, ar e '
-                                                         'temperatura',
-                                                         'Tinta e plástico',
-                                                         'Som alto e luz artificial constante'],
-                                        'correta': 0,
-                                        'imagem': 'tema05_pergunta01.png',
-                                        'imagem_path': 'imagens_perguntas/tema05_pergunta01.png',
-                                        'legenda': 'Teste seus conhecimentos sobre plantas e '
-                                                   'cuidados com a natureza! Quantas você consegue '
-                                                   'acertar?\n'
-                                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                       {'pergunta': 'Qual é uma forma cuidadosa de regar uma '
-                                                    'planta em vaso?',
-                                        'alternativas': ['Verificar se o solo precisa de água e '
-                                                         'regar sem encharcar',
-                                                         'Manter o vaso sempre cheio de água',
-                                                         'Arrancar as folhas para estimular o '
-                                                         'crescimento'],
-                                        'correta': 0,
-                                        'imagem': 'tema05_pergunta02.png',
-                                        'imagem_path': 'imagens_perguntas/tema05_pergunta02.png',
-                                        'legenda': 'Teste seus conhecimentos sobre plantas e '
-                                                   'cuidados com a natureza! Quantas você consegue '
-                                                   'acertar?\n'
-                                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                       {'pergunta': 'Por que as árvores são importantes em áreas '
-                                                    'urbanas?',
-                                        'alternativas': ['Oferecem sombra e ajudam a melhorar o '
-                                                         'ambiente',
-                                                         'Impedem toda chuva de cair',
-                                                         'Eliminam a necessidade de cuidar das '
-                                                         'ruas'],
-                                        'correta': 0,
-                                        'imagem': 'tema05_pergunta03.png',
-                                        'imagem_path': 'imagens_perguntas/tema05_pergunta03.png',
-                                        'legenda': 'Teste seus conhecimentos sobre plantas e '
-                                                   'cuidados com a natureza! Quantas você consegue '
-                                                   'acertar?\n'
-                                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Corpo humano e hábitos de saúde': [{'pergunta': 'Qual hábito ajuda a reduzir a transmissão de '
-                                                  'microrganismos?',
-                                      'alternativas': ['Higienizar as mãos em momentos importantes',
-                                                       'Compartilhar copos sem lavar',
-                                                       'Tossir nas mãos e tocar objetos'],
-                                      'correta': 0,
-                                      'imagem': 'tema06_pergunta01.png',
-                                      'imagem_path': 'imagens_perguntas/tema06_pergunta01.png',
-                                      'legenda': 'Teste seus conhecimentos sobre corpo humano e '
-                                                 'hábitos de saúde! Quantas você consegue '
-                                                 'acertar?\n'
-                                                 '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                     {'pergunta': 'Por que o sono adequado é importante?',
-                                      'alternativas': ['Ajuda o corpo a descansar e manter suas '
-                                                       'funções',
-                                                       'Substitui a alimentação',
-                                                       'Evita a necessidade de beber água'],
-                                      'correta': 0,
-                                      'imagem': 'tema06_pergunta02.png',
-                                      'imagem_path': 'imagens_perguntas/tema06_pergunta02.png',
-                                      'legenda': 'Teste seus conhecimentos sobre corpo humano e '
-                                                 'hábitos de saúde! Quantas você consegue '
-                                                 'acertar?\n'
-                                                 '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                     {'pergunta': 'O que é uma atitude segura ao praticar '
-                                                  'atividade física?',
-                                      'alternativas': ['Respeitar os limites do corpo e se '
-                                                       'hidratar',
-                                                       'Continuar mesmo com dor intensa',
-                                                       'Evitar qualquer pausa em dias quentes'],
-                                      'correta': 0,
-                                      'imagem': 'tema06_pergunta03.png',
-                                      'imagem_path': 'imagens_perguntas/tema06_pergunta03.png',
-                                      'legenda': 'Teste seus conhecimentos sobre corpo humano e '
-                                                 'hábitos de saúde! Quantas você consegue '
-                                                 'acertar?\n'
-                                                 '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Segurança no trânsito': [{'pergunta': 'Onde uma pessoa deve atravessar uma rua sempre que '
-                                        'possível?',
-                            'alternativas': ['Na faixa de pedestres, observando o trânsito',
-                                             'Entre carros estacionados sem olhar',
-                                             'Em qualquer ponto correndo'],
-                            'correta': 0,
-                            'imagem': 'tema07_pergunta01.png',
-                            'imagem_path': 'imagens_perguntas/tema07_pergunta01.png',
-                            'legenda': 'Teste seus conhecimentos sobre segurança no trânsito! '
-                                       'Quantas você consegue acertar?\n'
-                                       '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                           {'pergunta': 'O que o uso do cinto de segurança faz?',
-                            'alternativas': ['Ajuda a proteger os ocupantes do veículo',
-                                             'Aumenta a velocidade do carro',
-                                             'Substitui os freios'],
-                            'correta': 0,
-                            'imagem': 'tema07_pergunta02.png',
-                            'imagem_path': 'imagens_perguntas/tema07_pergunta02.png',
-                            'legenda': 'Teste seus conhecimentos sobre segurança no trânsito! '
-                                       'Quantas você consegue acertar?\n'
-                                       '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                           {'pergunta': 'Ao andar de bicicleta à noite, o que melhora a '
-                                        'visibilidade?',
-                            'alternativas': ['Usar itens refletivos e iluminação',
-                                             'Vestir roupa escura e retirar os refletores',
-                                             'Pedalar sem observar a via'],
-                            'correta': 0,
-                            'imagem': 'tema07_pergunta03.png',
-                            'imagem_path': 'imagens_perguntas/tema07_pergunta03.png',
-                            'legenda': 'Teste seus conhecimentos sobre segurança no trânsito! '
-                                       'Quantas você consegue acertar?\n'
-                                       '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Meios de transporte': [{'pergunta': 'Qual característica é comum ao transporte coletivo?',
-                          'alternativas': ['Leva várias pessoas em um mesmo veículo',
-                                           'Transporta apenas uma pessoa por viagem',
-                                           'Não precisa de trajetos'],
-                          'correta': 0,
-                          'imagem': 'tema08_pergunta01.png',
-                          'imagem_path': 'imagens_perguntas/tema08_pergunta01.png',
-                          'legenda': 'Teste seus conhecimentos sobre meios de transporte! Quantas '
-                                     'você consegue acertar?\n'
-                                     '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                         {'pergunta': 'Qual opção costuma ser adequada para percursos curtos e '
-                                      'seguros?',
-                          'alternativas': ['Caminhar', 'Usar um avião', 'Viajar de navio'],
-                          'correta': 0,
-                          'imagem': 'tema08_pergunta02.png',
-                          'imagem_path': 'imagens_perguntas/tema08_pergunta02.png',
-                          'legenda': 'Teste seus conhecimentos sobre meios de transporte! Quantas '
-                                     'você consegue acertar?\n'
-                                     '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                         {'pergunta': 'O que pode ajudar a reduzir o impacto ambiental de '
-                                      'deslocamentos urbanos?',
-                          'alternativas': ['Compartilhar viagens ou usar transporte coletivo',
-                                           'Fazer cada trajeto em um carro separado',
-                                           'Manter o motor ligado durante paradas longas'],
-                          'correta': 0,
-                          'imagem': 'tema08_pergunta03.png',
-                          'imagem_path': 'imagens_perguntas/tema08_pergunta03.png',
-                          'legenda': 'Teste seus conhecimentos sobre meios de transporte! Quantas '
-                                     'você consegue acertar?\n'
-                                     '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Profissões e cotidiano': [{'pergunta': 'Qual profissional costuma planejar e construir projetos '
-                                         'de edifícios?',
-                             'alternativas': ['Arquiteto', 'Carteiro', 'Padeiro'],
-                             'correta': 0,
-                             'imagem': 'tema09_pergunta01.png',
-                             'imagem_path': 'imagens_perguntas/tema09_pergunta01.png',
-                             'legenda': 'Teste seus conhecimentos sobre profissões e cotidiano! '
+QUIZZES = {'Biomas brasileiros': [{'pergunta': 'O que caracteriza um bioma?',
+                         'alternativas': ['Um conjunto de ecossistemas com clima, vegetação e '
+                                          'seres vivos relacionados',
+                                          'Uma cidade com muitos bairros',
+                                          'Um tipo de mapa rodoviário'],
+                         'correta': 0,
+                         'imagem': 'tema01_pergunta01.png',
+                         'imagem_path': 'imagens_perguntas/tema01_pergunta01.png',
+                         'legenda': 'Teste seus conhecimentos sobre biomas brasileiros! Quantas '
+                                    'você consegue acertar?\n'
+                                    '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                        {'pergunta': 'Qual bioma brasileiro é conhecido por áreas que podem ficar '
+                                     'alagadas em certas épocas?',
+                         'alternativas': ['Pampa', 'Pantanal', 'Caatinga'],
+                         'correta': 1,
+                         'imagem': 'tema01_pergunta02.png',
+                         'imagem_path': 'imagens_perguntas/tema01_pergunta02.png',
+                         'legenda': 'Teste seus conhecimentos sobre biomas brasileiros! Quantas '
+                                    'você consegue acertar?\n'
+                                    '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                        {'pergunta': 'Que característica ajuda muitas plantas da Caatinga a viver '
+                                     'em períodos secos?',
+                         'alternativas': ['Armazenar ou economizar água',
+                                          'Crescer somente debaixo d’água',
+                                          'Produzir neve'],
+                         'correta': 0,
+                         'imagem': 'tema01_pergunta03.png',
+                         'imagem_path': 'imagens_perguntas/tema01_pergunta03.png',
+                         'legenda': 'Teste seus conhecimentos sobre biomas brasileiros! Quantas '
+                                    'você consegue acertar?\n'
+                                    '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Sistema Solar e exploração espacial': [{'pergunta': 'Qual astro está no centro do Sistema Solar?',
+                                          'alternativas': ['A Lua', 'O Sol', 'A Terra'],
+                                          'correta': 1,
+                                          'imagem': 'tema02_pergunta01.png',
+                                          'imagem_path': 'imagens_perguntas/tema02_pergunta01.png',
+                                          'legenda': 'Teste seus conhecimentos sobre sistema solar '
+                                                     'e exploração espacial! Quantas você consegue '
+                                                     'acertar?\n'
+                                                     '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                         {'pergunta': 'Como se chama o movimento da Terra ao redor '
+                                                      'do Sol?',
+                                          'alternativas': ['Translação', 'Reflexão', 'Vibração'],
+                                          'correta': 0,
+                                          'imagem': 'tema02_pergunta02.png',
+                                          'imagem_path': 'imagens_perguntas/tema02_pergunta02.png',
+                                          'legenda': 'Teste seus conhecimentos sobre sistema solar '
+                                                     'e exploração espacial! Quantas você consegue '
+                                                     'acertar?\n'
+                                                     '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                         {'pergunta': 'Para que os astronautas usam trajes '
+                                                      'espaciais?',
+                                          'alternativas': ['Para ajudar a protegê-los e permitir '
+                                                           'atividades no espaço',
+                                                           'Para aumentar a gravidade',
+                                                           'Para produzir oxigênio em qualquer '
+                                                           'lugar sem equipamento'],
+                                          'correta': 0,
+                                          'imagem': 'tema02_pergunta03.png',
+                                          'imagem_path': 'imagens_perguntas/tema02_pergunta03.png',
+                                          'legenda': 'Teste seus conhecimentos sobre sistema solar '
+                                                     'e exploração espacial! Quantas você consegue '
+                                                     'acertar?\n'
+                                                     '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Oceanos e vida marinha': [{'pergunta': 'Qual é o maior oceano da Terra?',
+                             'alternativas': ['Atlântico', 'Índico', 'Pacífico'],
+                             'correta': 2,
+                             'imagem': 'tema03_pergunta01.png',
+                             'imagem_path': 'imagens_perguntas/tema03_pergunta01.png',
+                             'legenda': 'Teste seus conhecimentos sobre oceanos e vida marinha! '
                                         'Quantas você consegue acertar?\n'
                                         '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                            {'pergunta': 'Quem geralmente auxilia no cuidado e na orientação sobre '
-                                         'medicamentos?',
-                             'alternativas': ['Farmacêutico', 'Jardineiro', 'Motorista'],
+                            {'pergunta': 'O que os recifes de coral oferecem a muitos seres '
+                                         'marinhos?',
+                             'alternativas': ['Abrigo e áreas de alimentação',
+                                              'Ar para respirar fora da água',
+                                              'Água doce para todos os oceanos'],
                              'correta': 0,
-                             'imagem': 'tema09_pergunta02.png',
-                             'imagem_path': 'imagens_perguntas/tema09_pergunta02.png',
-                             'legenda': 'Teste seus conhecimentos sobre profissões e cotidiano! '
+                             'imagem': 'tema03_pergunta02.png',
+                             'imagem_path': 'imagens_perguntas/tema03_pergunta02.png',
+                             'legenda': 'Teste seus conhecimentos sobre oceanos e vida marinha! '
                                         'Quantas você consegue acertar?\n'
                                         '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                            {'pergunta': 'Qual atividade faz parte do trabalho de um bombeiro?',
-                             'alternativas': ['Atender emergências e combater incêndios',
-                                              'Consertar livros na biblioteca',
-                                              'Preparar plantas para o plantio'],
+                            {'pergunta': 'Como o lixo plástico pode afetar a vida marinha?',
+                             'alternativas': ['Pode ser ingerido ou causar ferimentos em animais',
+                                              'Transforma a água salgada em água potável',
+                                              'Serve sempre de alimento seguro'],
                              'correta': 0,
-                             'imagem': 'tema09_pergunta03.png',
-                             'imagem_path': 'imagens_perguntas/tema09_pergunta03.png',
-                             'legenda': 'Teste seus conhecimentos sobre profissões e cotidiano! '
+                             'imagem': 'tema03_pergunta03.png',
+                             'imagem_path': 'imagens_perguntas/tema03_pergunta03.png',
+                             'legenda': 'Teste seus conhecimentos sobre oceanos e vida marinha! '
                                         'Quantas você consegue acertar?\n'
                                         '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Comunicação e meios de informação': [{'pergunta': 'Para que serve o título de uma notícia?',
-                                        'alternativas': ['Apresentar de forma breve o assunto '
-                                                         'principal',
-                                                         'Substituir todos os detalhes do texto',
-                                                         'Informar sempre a opinião do leitor'],
+ 'Relevo e formação das paisagens': [{'pergunta': 'Como chamamos uma área de terreno geralmente '
+                                                  'elevada e relativamente plana?',
+                                      'alternativas': ['Planície', 'Planalto', 'Praia'],
+                                      'correta': 1,
+                                      'imagem': 'tema04_pergunta01.png',
+                                      'imagem_path': 'imagens_perguntas/tema04_pergunta01.png',
+                                      'legenda': 'Teste seus conhecimentos sobre relevo e formação '
+                                                 'das paisagens! Quantas você consegue acertar?\n'
+                                                 '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                     {'pergunta': 'Qual processo pode desgastar rochas e '
+                                                  'transportar sedimentos?',
+                                      'alternativas': ['Erosão', 'Fotossíntese', 'Condensação'],
+                                      'correta': 0,
+                                      'imagem': 'tema04_pergunta02.png',
+                                      'imagem_path': 'imagens_perguntas/tema04_pergunta02.png',
+                                      'legenda': 'Teste seus conhecimentos sobre relevo e formação '
+                                                 'das paisagens! Quantas você consegue acertar?\n'
+                                                 '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                     {'pergunta': 'O que é uma planície?',
+                                      'alternativas': ['Uma área de relevo mais baixo e '
+                                                       'relativamente plana',
+                                                       'Uma cadeia de vulcões sempre ativos',
+                                                       'Uma camada de nuvens'],
+                                      'correta': 0,
+                                      'imagem': 'tema04_pergunta03.png',
+                                      'imagem_path': 'imagens_perguntas/tema04_pergunta03.png',
+                                      'legenda': 'Teste seus conhecimentos sobre relevo e formação '
+                                                 'das paisagens! Quantas você consegue acertar?\n'
+                                                 '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Fontes de energia renovável': [{'pergunta': 'Qual fonte aproveita a força dos ventos para gerar '
+                                              'eletricidade?',
+                                  'alternativas': ['Energia eólica',
+                                                   'Energia sonora',
+                                                   'Energia geotérmica'],
+                                  'correta': 0,
+                                  'imagem': 'tema05_pergunta01.png',
+                                  'imagem_path': 'imagens_perguntas/tema05_pergunta01.png',
+                                  'legenda': 'Teste seus conhecimentos sobre fontes de energia '
+                                             'renovável! Quantas você consegue acertar?\n'
+                                             '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                 {'pergunta': 'Qual recurso natural é captado por painéis solares?',
+                                  'alternativas': ['Luz do Sol', 'Sal marinho', 'Areia congelada'],
+                                  'correta': 0,
+                                  'imagem': 'tema05_pergunta02.png',
+                                  'imagem_path': 'imagens_perguntas/tema05_pergunta02.png',
+                                  'legenda': 'Teste seus conhecimentos sobre fontes de energia '
+                                             'renovável! Quantas você consegue acertar?\n'
+                                             '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                 {'pergunta': 'O que torna uma fonte de energia renovável?',
+                                  'alternativas': ['Pode se recompor naturalmente em escala de '
+                                                   'tempo humana',
+                                                   'Existe apenas em uma pilha descartável',
+                                                   'Acaba sempre após um único uso'],
+                                  'correta': 0,
+                                  'imagem': 'tema05_pergunta03.png',
+                                  'imagem_path': 'imagens_perguntas/tema05_pergunta03.png',
+                                  'legenda': 'Teste seus conhecimentos sobre fontes de energia '
+                                             'renovável! Quantas você consegue acertar?\n'
+                                             '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Mapas e orientação geográfica': [{'pergunta': 'Para que serve uma legenda em um mapa?',
+                                    'alternativas': ['Explicar o significado de símbolos e cores',
+                                                     'Mostrar a previsão do tempo de todos os dias',
+                                                     'Medir a profundidade dos oceanos '
+                                                     'diretamente'],
+                                    'correta': 0,
+                                    'imagem': 'tema06_pergunta01.png',
+                                    'imagem_path': 'imagens_perguntas/tema06_pergunta01.png',
+                                    'legenda': 'Teste seus conhecimentos sobre mapas e orientação '
+                                               'geográfica! Quantas você consegue acertar?\n'
+                                               '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                   {'pergunta': 'Qual instrumento tradicional ajuda a encontrar '
+                                                'direções?',
+                                    'alternativas': ['Bússola', 'Termômetro', 'Cronômetro'],
+                                    'correta': 0,
+                                    'imagem': 'tema06_pergunta02.png',
+                                    'imagem_path': 'imagens_perguntas/tema06_pergunta02.png',
+                                    'legenda': 'Teste seus conhecimentos sobre mapas e orientação '
+                                               'geográfica! Quantas você consegue acertar?\n'
+                                               '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                   {'pergunta': 'Em um mapa, para que serve a escala?',
+                                    'alternativas': ['Relacionar distâncias representadas às '
+                                                     'distâncias reais',
+                                                     'Indicar o idioma falado em cada lugar',
+                                                     'Mostrar a idade das montanhas'],
+                                    'correta': 0,
+                                    'imagem': 'tema06_pergunta03.png',
+                                    'imagem_path': 'imagens_perguntas/tema06_pergunta03.png',
+                                    'legenda': 'Teste seus conhecimentos sobre mapas e orientação '
+                                               'geográfica! Quantas você consegue acertar?\n'
+                                               '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Folclore brasileiro': [{'pergunta': 'O que as lendas populares costumam transmitir?',
+                          'alternativas': ['Histórias e crenças passadas entre gerações',
+                                           'Instruções para consertar aparelhos',
+                                           'Regras de cálculo de impostos'],
+                          'correta': 0,
+                          'imagem': 'tema07_pergunta01.png',
+                          'imagem_path': 'imagens_perguntas/tema07_pergunta01.png',
+                          'legenda': 'Teste seus conhecimentos sobre folclore brasileiro! Quantas '
+                                     'você consegue acertar?\n'
+                                     '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                         {'pergunta': 'Quem é o personagem conhecido por usar um gorro vermelho e '
+                                      'ter uma perna só?',
+                          'alternativas': ['Saci', 'Curupira', 'Boitatá'],
+                          'correta': 0,
+                          'imagem': 'tema07_pergunta02.png',
+                          'imagem_path': 'imagens_perguntas/tema07_pergunta02.png',
+                          'legenda': 'Teste seus conhecimentos sobre folclore brasileiro! Quantas '
+                                     'você consegue acertar?\n'
+                                     '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                         {'pergunta': 'Qual personagem do folclore é frequentemente associado à '
+                                      'proteção das matas?',
+                          'alternativas': ['Curupira', 'Cuca', 'Boto-cor-de-rosa'],
+                          'correta': 0,
+                          'imagem': 'tema07_pergunta03.png',
+                          'imagem_path': 'imagens_perguntas/tema07_pergunta03.png',
+                          'legenda': 'Teste seus conhecimentos sobre folclore brasileiro! Quantas '
+                                     'você consegue acertar?\n'
+                                     '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Monumentos e patrimônios mundiais': [{'pergunta': 'O que significa preservar um patrimônio '
+                                                    'histórico?',
+                                        'alternativas': ['Cuidar para que seu valor cultural e '
+                                                         'histórico permaneça',
+                                                         'Pintá-lo sem autorização',
+                                                         'Substituí-lo por uma construção igual '
+                                                         'sem registro'],
                                         'correta': 0,
-                                        'imagem': 'tema10_pergunta01.png',
-                                        'imagem_path': 'imagens_perguntas/tema10_pergunta01.png',
-                                        'legenda': 'Teste seus conhecimentos sobre comunicação e '
-                                                   'meios de informação! Quantas você consegue '
+                                        'imagem': 'tema08_pergunta01.png',
+                                        'imagem_path': 'imagens_perguntas/tema08_pergunta01.png',
+                                        'legenda': 'Teste seus conhecimentos sobre monumentos e '
+                                                   'patrimônios mundiais! Quantas você consegue '
                                                    'acertar?\n'
                                                    '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                       {'pergunta': 'O que é importante fazer antes de '
-                                                    'compartilhar uma informação recebida pela '
-                                                    'internet?',
-                                        'alternativas': ['Conferir a fonte e buscar confirmação',
-                                                         'Repassar imediatamente',
-                                                         'Apagar o nome do autor e compartilhar'],
+                                       {'pergunta': 'Qual construção antiga no Egito é conhecida '
+                                                    'por suas grandes estruturas em forma de '
+                                                    'pirâmide?',
+                                        'alternativas': ['Pirâmides de Gizé',
+                                                         'Torre Eiffel',
+                                                         'Coliseu'],
                                         'correta': 0,
-                                        'imagem': 'tema10_pergunta02.png',
-                                        'imagem_path': 'imagens_perguntas/tema10_pergunta02.png',
-                                        'legenda': 'Teste seus conhecimentos sobre comunicação e '
-                                                   'meios de informação! Quantas você consegue '
+                                        'imagem': 'tema08_pergunta02.png',
+                                        'imagem_path': 'imagens_perguntas/tema08_pergunta02.png',
+                                        'legenda': 'Teste seus conhecimentos sobre monumentos e '
+                                                   'patrimônios mundiais! Quantas você consegue '
                                                    'acertar?\n'
                                                    '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                       {'pergunta': 'Qual recurso permite conversar com alguém em '
-                                                    'tempo real pela internet?',
-                                        'alternativas': ['Chamada de vídeo',
-                                                         'Cartaz impresso',
-                                                         'Carta sem endereço'],
+                                       {'pergunta': 'Por que monumentos históricos precisam de '
+                                                    'manutenção?',
+                                        'alternativas': ['Para reduzir danos causados pelo tempo e '
+                                                         'pelo uso',
+                                                         'Para impedir que as pessoas conheçam sua '
+                                                         'história',
+                                                         'Para apagar todos os registros do '
+                                                         'passado'],
                                         'correta': 0,
-                                        'imagem': 'tema10_pergunta03.png',
-                                        'imagem_path': 'imagens_perguntas/tema10_pergunta03.png',
-                                        'legenda': 'Teste seus conhecimentos sobre comunicação e '
-                                                   'meios de informação! Quantas você consegue '
+                                        'imagem': 'tema08_pergunta03.png',
+                                        'imagem_path': 'imagens_perguntas/tema08_pergunta03.png',
+                                        'legenda': 'Teste seus conhecimentos sobre monumentos e '
+                                                   'patrimônios mundiais! Quantas você consegue '
                                                    'acertar?\n'
                                                    '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Dinheiro e educação financeira': [{'pergunta': 'O que é um orçamento pessoal?',
-                                     'alternativas': ['Um planejamento de receitas e despesas',
-                                                      'Uma lista de desejos sem valores',
-                                                      'Um comprovante de identidade'],
-                                     'correta': 0,
-                                     'imagem': 'tema11_pergunta01.png',
-                                     'imagem_path': 'imagens_perguntas/tema11_pergunta01.png',
-                                     'legenda': 'Teste seus conhecimentos sobre dinheiro e '
-                                                'educação financeira! Quantas você consegue '
-                                                'acertar?\n'
-                                                '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                    {'pergunta': 'Se uma pessoa quer guardar dinheiro para um '
-                                                 'objetivo, o que pode ajudar?',
-                                     'alternativas': ['Definir uma meta e reservar uma quantia '
-                                                      'possível',
-                                                      'Gastar todo o valor assim que recebe',
-                                                      'Ignorar quanto recebe e quanto gasta'],
-                                     'correta': 0,
-                                     'imagem': 'tema11_pergunta02.png',
-                                     'imagem_path': 'imagens_perguntas/tema11_pergunta02.png',
-                                     'legenda': 'Teste seus conhecimentos sobre dinheiro e '
-                                                'educação financeira! Quantas você consegue '
-                                                'acertar?\n'
-                                                '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                    {'pergunta': 'Antes de comprar um produto, por que comparar '
-                                                 'preços pode ser útil?',
-                                     'alternativas': ['Para avaliar opções e escolher com mais '
-                                                      'informação',
-                                                      'Para garantir que o produto nunca terá '
-                                                      'defeitos',
-                                                      'Para evitar verificar a qualidade'],
-                                     'correta': 0,
-                                     'imagem': 'tema11_pergunta03.png',
-                                     'imagem_path': 'imagens_perguntas/tema11_pergunta03.png',
-                                     'legenda': 'Teste seus conhecimentos sobre dinheiro e '
-                                                'educação financeira! Quantas você consegue '
-                                                'acertar?\n'
-                                                '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Invenções que mudaram o mundo': [{'pergunta': 'Qual invenção permitiu registrar e reproduzir '
-                                                'textos em grande quantidade?',
-                                    'alternativas': ['Imprensa', 'Bússola', 'Termômetro'],
+ 'Cinema e animação': [{'pergunta': 'Como se chama a sequência de imagens que cria a impressão de '
+                                    'movimento?',
+                        'alternativas': ['Animação', 'Legenda', 'Cenário'],
+                        'correta': 0,
+                        'imagem': 'tema09_pergunta01.png',
+                        'imagem_path': 'imagens_perguntas/tema09_pergunta01.png',
+                        'legenda': 'Teste seus conhecimentos sobre cinema e animação! Quantas você '
+                                   'consegue acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                       {'pergunta': 'Qual profissional costuma dirigir a realização de um filme?',
+                        'alternativas': ['Diretor ou diretora',
+                                         'Bilheteiro ou bilheteira',
+                                         'Espectador ou espectadora'],
+                        'correta': 0,
+                        'imagem': 'tema09_pergunta02.png',
+                        'imagem_path': 'imagens_perguntas/tema09_pergunta02.png',
+                        'legenda': 'Teste seus conhecimentos sobre cinema e animação! Quantas você '
+                                   'consegue acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                       {'pergunta': 'Para que serve o roteiro de um filme?',
+                        'alternativas': ['Organizar cenas, ações e diálogos da história',
+                                         'Ajustar o volume do projetor',
+                                         'Substituir todos os atores'],
+                        'correta': 0,
+                        'imagem': 'tema09_pergunta03.png',
+                        'imagem_path': 'imagens_perguntas/tema09_pergunta03.png',
+                        'legenda': 'Teste seus conhecimentos sobre cinema e animação! Quantas você '
+                                   'consegue acertar?\n'
+                                   '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Fotografia e linguagem visual': [{'pergunta': 'Como se chama a quantidade total de luz '
+                                                'registrada em uma fotografia?',
+                                    'alternativas': ['Exposição', 'Foco', 'Balanço de branco'],
                                     'correta': 0,
-                                    'imagem': 'tema12_pergunta01.png',
-                                    'imagem_path': 'imagens_perguntas/tema12_pergunta01.png',
-                                    'legenda': 'Teste seus conhecimentos sobre invenções que '
-                                               'mudaram o mundo! Quantas você consegue acertar?\n'
+                                    'imagem': 'tema10_pergunta01.png',
+                                    'imagem_path': 'imagens_perguntas/tema10_pergunta01.png',
+                                    'legenda': 'Teste seus conhecimentos sobre fotografia e '
+                                               'linguagem visual! Quantas você consegue acertar?\n'
                                                '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                   {'pergunta': 'Qual tecnologia possibilitou a comunicação por '
-                                                'voz a longas distâncias?',
-                                    'alternativas': ['Telefone', 'Lupa', 'Ampulheta'],
+                                   {'pergunta': 'O que significa enquadrar uma fotografia?',
+                                    'alternativas': ['Escolher o que aparece dentro dos limites da '
+                                                     'imagem',
+                                                     'Apagar a luz do ambiente',
+                                                     'Mudar o tamanho real dos objetos'],
                                     'correta': 0,
-                                    'imagem': 'tema12_pergunta02.png',
-                                    'imagem_path': 'imagens_perguntas/tema12_pergunta02.png',
-                                    'legenda': 'Teste seus conhecimentos sobre invenções que '
-                                               'mudaram o mundo! Quantas você consegue acertar?\n'
+                                    'imagem': 'tema10_pergunta02.png',
+                                    'imagem_path': 'imagens_perguntas/tema10_pergunta02.png',
+                                    'legenda': 'Teste seus conhecimentos sobre fotografia e '
+                                               'linguagem visual! Quantas você consegue acertar?\n'
                                                '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                   {'pergunta': 'O que uma vacina ajuda o organismo a fazer?',
-                                    'alternativas': ['Preparar uma resposta de defesa contra '
-                                                     'certas doenças',
-                                                     'Substituir todas as refeições',
-                                                     'Curar qualquer doença imediatamente'],
+                                   {'pergunta': 'Como uma fonte de luz lateral pode alterar uma '
+                                                'fotografia?',
+                                    'alternativas': ['Pode criar sombras e destacar texturas',
+                                                     'Faz os objetos desaparecerem',
+                                                     'Muda automaticamente a cor real dos objetos'],
                                     'correta': 0,
-                                    'imagem': 'tema12_pergunta03.png',
-                                    'imagem_path': 'imagens_perguntas/tema12_pergunta03.png',
-                                    'legenda': 'Teste seus conhecimentos sobre invenções que '
-                                               'mudaram o mundo! Quantas você consegue acertar?\n'
+                                    'imagem': 'tema10_pergunta03.png',
+                                    'imagem_path': 'imagens_perguntas/tema10_pergunta03.png',
+                                    'legenda': 'Teste seus conhecimentos sobre fotografia e '
+                                               'linguagem visual! Quantas você consegue acertar?\n'
                                                '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Cultura e festas brasileiras': [{'pergunta': 'O que pode fazer parte do patrimônio cultural de '
-                                               'uma comunidade?',
-                                   'alternativas': ['Festas, músicas, saberes e tradições',
-                                                    'Somente prédios novos',
-                                                    'Apenas produtos importados'],
+ 'Jogos de lógica e estratégia': [{'pergunta': 'Em qual jogo os participantes movimentam peças em '
+                                               'um tabuleiro de 64 casas?',
+                                   'alternativas': ['Xadrez', 'Dominó', 'Bingo'],
                                    'correta': 0,
-                                   'imagem': 'tema13_pergunta01.png',
-                                   'imagem_path': 'imagens_perguntas/tema13_pergunta01.png',
-                                   'legenda': 'Teste seus conhecimentos sobre cultura e festas '
-                                              'brasileiras! Quantas você consegue acertar?\n'
+                                   'imagem': 'tema11_pergunta01.png',
+                                   'imagem_path': 'imagens_perguntas/tema11_pergunta01.png',
+                                   'legenda': 'Teste seus conhecimentos sobre jogos de lógica e '
+                                              'estratégia! Quantas você consegue acertar?\n'
                                               '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                  {'pergunta': 'O frevo é uma manifestação cultural tradicional '
-                                               'associada a qual estado brasileiro?',
-                                   'alternativas': ['Pernambuco', 'Acre', 'Goiás'],
+                                  {'pergunta': 'O que ajuda a resolver um desafio de lógica?',
+                                   'alternativas': ['Analisar pistas e relações com atenção',
+                                                    'Escolher sem observar as regras',
+                                                    'Ignorar as informações disponíveis'],
                                    'correta': 0,
-                                   'imagem': 'tema13_pergunta02.png',
-                                   'imagem_path': 'imagens_perguntas/tema13_pergunta02.png',
-                                   'legenda': 'Teste seus conhecimentos sobre cultura e festas '
-                                              'brasileiras! Quantas você consegue acertar?\n'
+                                   'imagem': 'tema11_pergunta02.png',
+                                   'imagem_path': 'imagens_perguntas/tema11_pergunta02.png',
+                                   'legenda': 'Teste seus conhecimentos sobre jogos de lógica e '
+                                              'estratégia! Quantas você consegue acertar?\n'
                                               '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                                  {'pergunta': 'Por que as festas populares são importantes para '
-                                               'muitas comunidades?',
-                                   'alternativas': ['Ajudam a expressar e transmitir tradições',
-                                                    'Apagam todas as diferenças culturais',
-                                                    'Existem somente para vender alimentos'],
+                                  {'pergunta': 'Em um jogo de estratégia, por que planejar jogadas '
+                                               'pode ajudar?',
+                                   'alternativas': ['Porque permite considerar consequências e '
+                                                    'opções',
+                                                    'Porque elimina todas as regras',
+                                                    'Porque garante vitória sem tomar decisões'],
                                    'correta': 0,
-                                   'imagem': 'tema13_pergunta03.png',
-                                   'imagem_path': 'imagens_perguntas/tema13_pergunta03.png',
-                                   'legenda': 'Teste seus conhecimentos sobre cultura e festas '
-                                              'brasileiras! Quantas você consegue acertar?\n'
+                                   'imagem': 'tema11_pergunta03.png',
+                                   'imagem_path': 'imagens_perguntas/tema11_pergunta03.png',
+                                   'legenda': 'Teste seus conhecimentos sobre jogos de lógica e '
+                                              'estratégia! Quantas você consegue acertar?\n'
                                               '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Cidadania e convivência': [{'pergunta': 'Qual atitude demonstra respeito em uma conversa?',
-                              'alternativas': ['Escutar a outra pessoa sem interromper',
-                                               'Ridicularizar opiniões diferentes',
-                                               'Impedir todos de falar'],
-                              'correta': 0,
-                              'imagem': 'tema14_pergunta01.png',
-                              'imagem_path': 'imagens_perguntas/tema14_pergunta01.png',
-                              'legenda': 'Teste seus conhecimentos sobre cidadania e convivência! '
-                                         'Quantas você consegue acertar?\n'
-                                         '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                             {'pergunta': 'O que é um espaço público?',
-                              'alternativas': ['Um local destinado ao uso da comunidade',
-                                               'Um cômodo particular de uma casa',
-                                               'Um objeto de uso individual'],
-                              'correta': 0,
-                              'imagem': 'tema14_pergunta02.png',
-                              'imagem_path': 'imagens_perguntas/tema14_pergunta02.png',
-                              'legenda': 'Teste seus conhecimentos sobre cidadania e convivência! '
-                                         'Quantas você consegue acertar?\n'
-                                         '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                             {'pergunta': 'Como uma pessoa pode contribuir com decisões da '
-                                          'comunidade?',
-                              'alternativas': ['Participando de reuniões e expressando opiniões '
-                                               'com respeito',
-                                               'Ignorando os assuntos coletivos',
-                                               'Danificando espaços compartilhados'],
-                              'correta': 0,
-                              'imagem': 'tema14_pergunta03.png',
-                              'imagem_path': 'imagens_perguntas/tema14_pergunta03.png',
-                              'legenda': 'Teste seus conhecimentos sobre cidadania e convivência! '
-                                         'Quantas você consegue acertar?\n'
-                                         '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
- 'Tecnologia no dia a dia': [{'pergunta': 'Para que serve um aplicativo de mapas?',
-                              'alternativas': ['Ajudar a localizar lugares e planejar trajetos',
-                                               'Medir a temperatura do corpo',
-                                               'Substituir todos os documentos pessoais'],
-                              'correta': 0,
-                              'imagem': 'tema15_pergunta01.png',
-                              'imagem_path': 'imagens_perguntas/tema15_pergunta01.png',
-                              'legenda': 'Teste seus conhecimentos sobre tecnologia no dia a dia! '
-                                         'Quantas você consegue acertar?\n'
-                                         '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                             {'pergunta': 'O que é armazenamento em nuvem?',
-                              'alternativas': ['Guardar arquivos em serviços acessados pela '
-                                               'internet',
-                                               'Salvar dados apenas em papel',
-                                               'Desligar o acesso à rede'],
-                              'correta': 0,
-                              'imagem': 'tema15_pergunta02.png',
-                              'imagem_path': 'imagens_perguntas/tema15_pergunta02.png',
-                              'legenda': 'Teste seus conhecimentos sobre tecnologia no dia a dia! '
-                                         'Quantas você consegue acertar?\n'
-                                         '#JuhQuiz #Quiz #Aprendizado #Desafio'},
-                             {'pergunta': 'Por que é importante atualizar programas e aplicativos?',
-                              'alternativas': ['As atualizações podem corrigir problemas e '
-                                               'melhorar a segurança',
-                                               'Para compartilhar a senha com outras pessoas',
-                                               'Para apagar automaticamente todos os arquivos'],
-                              'correta': 0,
-                              'imagem': 'tema15_pergunta03.png',
-                              'imagem_path': 'imagens_perguntas/tema15_pergunta03.png',
-                              'legenda': 'Teste seus conhecimentos sobre tecnologia no dia a dia! '
-                                         'Quantas você consegue acertar?\n'
-                                         '#JuhQuiz #Quiz #Aprendizado #Desafio'}]}
+ 'Medidas e unidades do cotidiano': [{'pergunta': 'Qual unidade é mais adequada para medir o '
+                                                  'comprimento de uma sala?',
+                                      'alternativas': ['Metro', 'Litro', 'Quilograma'],
+                                      'correta': 0,
+                                      'imagem': 'tema12_pergunta01.png',
+                                      'imagem_path': 'imagens_perguntas/tema12_pergunta01.png',
+                                      'legenda': 'Teste seus conhecimentos sobre medidas e '
+                                                 'unidades do cotidiano! Quantas você consegue '
+                                                 'acertar?\n'
+                                                 '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                     {'pergunta': 'Qual instrumento é usado para medir a passagem '
+                                                  'do tempo em uma corrida?',
+                                      'alternativas': ['Cronômetro', 'Balança', 'Régua'],
+                                      'correta': 0,
+                                      'imagem': 'tema12_pergunta02.png',
+                                      'imagem_path': 'imagens_perguntas/tema12_pergunta02.png',
+                                      'legenda': 'Teste seus conhecimentos sobre medidas e '
+                                                 'unidades do cotidiano! Quantas você consegue '
+                                                 'acertar?\n'
+                                                 '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                     {'pergunta': 'Qual unidade costuma ser usada para indicar a '
+                                                  'massa de uma melancia?',
+                                      'alternativas': ['Quilograma', 'Metro', 'Segundo'],
+                                      'correta': 0,
+                                      'imagem': 'tema12_pergunta03.png',
+                                      'imagem_path': 'imagens_perguntas/tema12_pergunta03.png',
+                                      'legenda': 'Teste seus conhecimentos sobre medidas e '
+                                                 'unidades do cotidiano! Quantas você consegue '
+                                                 'acertar?\n'
+                                                 '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Geometria no dia a dia': [{'pergunta': 'Quantos lados tem um triângulo?',
+                             'alternativas': ['Três', 'Quatro', 'Cinco'],
+                             'correta': 0,
+                             'imagem': 'tema13_pergunta01.png',
+                             'imagem_path': 'imagens_perguntas/tema13_pergunta01.png',
+                             'legenda': 'Teste seus conhecimentos sobre geometria no dia a dia! '
+                                        'Quantas você consegue acertar?\n'
+                                        '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                            {'pergunta': 'Como se chama uma figura plana com quatro lados iguais e '
+                                         'quatro ângulos retos?',
+                             'alternativas': ['Quadrado', 'Triângulo', 'Círculo'],
+                             'correta': 0,
+                             'imagem': 'tema13_pergunta02.png',
+                             'imagem_path': 'imagens_perguntas/tema13_pergunta02.png',
+                             'legenda': 'Teste seus conhecimentos sobre geometria no dia a dia! '
+                                        'Quantas você consegue acertar?\n'
+                                        '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                            {'pergunta': 'O que é simetria em uma figura?',
+                             'alternativas': ['Uma correspondência equilibrada entre partes em '
+                                              'relação a um eixo ou ponto',
+                                              'Uma medida de temperatura',
+                                              'Um tipo de material transparente'],
+                             'correta': 0,
+                             'imagem': 'tema13_pergunta03.png',
+                             'imagem_path': 'imagens_perguntas/tema13_pergunta03.png',
+                             'legenda': 'Teste seus conhecimentos sobre geometria no dia a dia! '
+                                        'Quantas você consegue acertar?\n'
+                                        '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Eletricidade e circuitos básicos': [{'pergunta': 'O que precisa existir para a corrente elétrica '
+                                                   'circular em um circuito simples?',
+                                       'alternativas': ['Um caminho fechado',
+                                                        'Um caminho interrompido em todos os '
+                                                        'pontos',
+                                                        'Apenas uma lâmpada sem ligação'],
+                                       'correta': 0,
+                                       'imagem': 'tema14_pergunta01.png',
+                                       'imagem_path': 'imagens_perguntas/tema14_pergunta01.png',
+                                       'legenda': 'Teste seus conhecimentos sobre eletricidade e '
+                                                  'circuitos básicos! Quantas você consegue '
+                                                  'acertar?\n'
+                                                  '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                      {'pergunta': 'Qual material costuma conduzir bem a '
+                                                   'eletricidade?',
+                                       'alternativas': ['Cobre', 'Borracha', 'Madeira seca'],
+                                       'correta': 0,
+                                       'imagem': 'tema14_pergunta02.png',
+                                       'imagem_path': 'imagens_perguntas/tema14_pergunta02.png',
+                                       'legenda': 'Teste seus conhecimentos sobre eletricidade e '
+                                                  'circuitos básicos! Quantas você consegue '
+                                                  'acertar?\n'
+                                                  '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                      {'pergunta': 'Qual atitude é mais segura ao lidar com '
+                                                   'aparelhos elétricos?',
+                                       'alternativas': ['Manter as mãos secas e evitar fios '
+                                                        'danificados',
+                                                        'Puxar o fio para retirar o plugue',
+                                                        'Usar aparelhos perto de água'],
+                                       'correta': 0,
+                                       'imagem': 'tema14_pergunta03.png',
+                                       'imagem_path': 'imagens_perguntas/tema14_pergunta03.png',
+                                       'legenda': 'Teste seus conhecimentos sobre eletricidade e '
+                                                  'circuitos básicos! Quantas você consegue '
+                                                  'acertar?\n'
+                                                  '#JuhQuiz #Quiz #Aprendizado #Desafio'}],
+ 'Vulcões, terremotos e fenômenos da Terra': [{'pergunta': 'O que é um terremoto?',
+                                               'alternativas': ['Um tremor causado por movimentos '
+                                                                'na crosta terrestre',
+                                                                'Uma mudança diária na direção do '
+                                                                'vento',
+                                                                'A formação de uma nuvem de chuva'],
+                                               'correta': 0,
+                                               'imagem': 'tema15_pergunta01.png',
+                                               'imagem_path': 'imagens_perguntas/tema15_pergunta01.png',
+                                               'legenda': 'Teste seus conhecimentos sobre vulcões, '
+                                                          'terremotos e fenômenos da terra! '
+                                                          'Quantas você consegue acertar?\n'
+                                                          '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                              {'pergunta': 'O que pode sair de um vulcão durante '
+                                                           'uma erupção?',
+                                               'alternativas': ['Lava, gases e fragmentos de rocha',
+                                                                'Somente água potável',
+                                                                'Apenas cristais de gelo'],
+                                               'correta': 0,
+                                               'imagem': 'tema15_pergunta02.png',
+                                               'imagem_path': 'imagens_perguntas/tema15_pergunta02.png',
+                                               'legenda': 'Teste seus conhecimentos sobre vulcões, '
+                                                          'terremotos e fenômenos da terra! '
+                                                          'Quantas você consegue acertar?\n'
+                                                          '#JuhQuiz #Quiz #Aprendizado #Desafio'},
+                                              {'pergunta': 'Durante um tremor, qual atitude geral '
+                                                           'pode ajudar a reduzir riscos em um '
+                                                           'prédio?',
+                                               'alternativas': ['Afastar-se de janelas e proteger '
+                                                                'a cabeça, seguindo orientações '
+                                                                'locais',
+                                                                'Usar o elevador imediatamente',
+                                                                'Ficar junto a objetos que possam '
+                                                                'cair'],
+                                               'correta': 0,
+                                               'imagem': 'tema15_pergunta03.png',
+                                               'imagem_path': 'imagens_perguntas/tema15_pergunta03.png',
+                                               'legenda': 'Teste seus conhecimentos sobre vulcões, '
+                                                          'terremotos e fenômenos da terra! '
+                                                          'Quantas você consegue acertar?\n'
+                                                          '#JuhQuiz #Quiz #Aprendizado #Desafio'}]}
 
-LEGENDAS = {'Alimentação saudável': 'Teste seus conhecimentos sobre alimentação saudável! Quantas você '
-                         'consegue acertar?\n'
-                         '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Água e consumo consciente': 'Teste seus conhecimentos sobre água e consumo consciente! Quantas '
-                              'você consegue acertar?\n'
-                              '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Meio ambiente e reciclagem': 'Teste seus conhecimentos sobre meio ambiente e reciclagem! Quantas '
-                               'você consegue acertar?\n'
-                               '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Animais e seus habitats': 'Teste seus conhecimentos sobre animais e seus habitats! Quantas você '
-                            'consegue acertar?\n'
-                            '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Plantas e cuidados com a natureza': 'Teste seus conhecimentos sobre plantas e cuidados com a '
-                                      'natureza! Quantas você consegue acertar?\n'
-                                      '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Corpo humano e hábitos de saúde': 'Teste seus conhecimentos sobre corpo humano e hábitos de '
-                                    'saúde! Quantas você consegue acertar?\n'
-                                    '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Segurança no trânsito': 'Teste seus conhecimentos sobre segurança no trânsito! Quantas você '
-                          'consegue acertar?\n'
-                          '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Meios de transporte': 'Teste seus conhecimentos sobre meios de transporte! Quantas você consegue '
-                        'acertar?\n'
-                        '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Profissões e cotidiano': 'Teste seus conhecimentos sobre profissões e cotidiano! Quantas você '
+LEGENDAS = {'Biomas brasileiros': 'Teste seus conhecimentos sobre biomas brasileiros! Quantas você consegue '
+                       'acertar?\n'
+                       '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Sistema Solar e exploração espacial': 'Teste seus conhecimentos sobre sistema solar e exploração '
+                                        'espacial! Quantas você consegue acertar?\n'
+                                        '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Oceanos e vida marinha': 'Teste seus conhecimentos sobre oceanos e vida marinha! Quantas você '
                            'consegue acertar?\n'
                            '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Comunicação e meios de informação': 'Teste seus conhecimentos sobre comunicação e meios de '
-                                      'informação! Quantas você consegue acertar?\n'
-                                      '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Dinheiro e educação financeira': 'Teste seus conhecimentos sobre dinheiro e educação financeira! '
-                                   'Quantas você consegue acertar?\n'
-                                   '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Invenções que mudaram o mundo': 'Teste seus conhecimentos sobre invenções que mudaram o mundo! '
+ 'Relevo e formação das paisagens': 'Teste seus conhecimentos sobre relevo e formação das '
+                                    'paisagens! Quantas você consegue acertar?\n'
+                                    '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Fontes de energia renovável': 'Teste seus conhecimentos sobre fontes de energia renovável! '
+                                'Quantas você consegue acertar?\n'
+                                '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Mapas e orientação geográfica': 'Teste seus conhecimentos sobre mapas e orientação geográfica! '
                                   'Quantas você consegue acertar?\n'
                                   '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Cultura e festas brasileiras': 'Teste seus conhecimentos sobre cultura e festas brasileiras! '
+ 'Folclore brasileiro': 'Teste seus conhecimentos sobre folclore brasileiro! Quantas você consegue '
+                        'acertar?\n'
+                        '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Monumentos e patrimônios mundiais': 'Teste seus conhecimentos sobre monumentos e patrimônios '
+                                      'mundiais! Quantas você consegue acertar?\n'
+                                      '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Cinema e animação': 'Teste seus conhecimentos sobre cinema e animação! Quantas você consegue '
+                      'acertar?\n'
+                      '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Fotografia e linguagem visual': 'Teste seus conhecimentos sobre fotografia e linguagem visual! '
+                                  'Quantas você consegue acertar?\n'
+                                  '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Jogos de lógica e estratégia': 'Teste seus conhecimentos sobre jogos de lógica e estratégia! '
                                  'Quantas você consegue acertar?\n'
                                  '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Cidadania e convivência': 'Teste seus conhecimentos sobre cidadania e convivência! Quantas você '
-                            'consegue acertar?\n'
-                            '#JuhQuiz #Quiz #Aprendizado #Desafio',
- 'Tecnologia no dia a dia': 'Teste seus conhecimentos sobre tecnologia no dia a dia! Quantas você '
-                            'consegue acertar?\n'
-                            '#JuhQuiz #Quiz #Aprendizado #Desafio'}
+ 'Medidas e unidades do cotidiano': 'Teste seus conhecimentos sobre medidas e unidades do '
+                                    'cotidiano! Quantas você consegue acertar?\n'
+                                    '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Geometria no dia a dia': 'Teste seus conhecimentos sobre geometria no dia a dia! Quantas você '
+                           'consegue acertar?\n'
+                           '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Eletricidade e circuitos básicos': 'Teste seus conhecimentos sobre eletricidade e circuitos '
+                                     'básicos! Quantas você consegue acertar?\n'
+                                     '#JuhQuiz #Quiz #Aprendizado #Desafio',
+ 'Vulcões, terremotos e fenômenos da Terra': 'Teste seus conhecimentos sobre vulcões, terremotos e '
+                                             'fenômenos da terra! Quantas você consegue acertar?\n'
+                                             '#JuhQuiz #Quiz #Aprendizado #Desafio'}
