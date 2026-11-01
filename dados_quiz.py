@@ -1,436 +1,430 @@
 # -*- coding: utf-8 -*-
-"""Quiz 17: 15 disciplinas, 45 perguntas e 45 caricaturas transparentes."""
+"""15 temas atuais, 45 perguntas e 45 caricaturas com fundo."""
 
-QUIZZES = {'Português — Palavras que confundem': [{'pergunta': 'Complete: Quero estudar, ___ estou cansado.',
-                                         'alternativas': ['mas', 'mais', 'más'],
-                                         'correta': 0,
-                                         'imagem': 'tema01_pergunta01.png',
-                                         'imagem_path': 'imagens_perguntas/tema01_pergunta01.png',
-                                         'legenda': 'Português — Palavras que confundem: você acerta as '
-                                                    'três?\n'
-                                                    '#JuhQuiz #Quiz #Escola #Desafio'},
-                                        {'pergunta': 'Complete: Hoje acordei passando ___.',
-                                         'alternativas': ['mau', 'mal', 'mão'],
-                                         'correta': 1,
-                                         'imagem': 'tema01_pergunta02.png',
-                                         'imagem_path': 'imagens_perguntas/tema01_pergunta02.png',
-                                         'legenda': 'Português — Palavras que confundem: você acerta as '
-                                                    'três?\n'
-                                                    '#JuhQuiz #Quiz #Escola #Desafio'},
-                                        {'pergunta': 'Qual forma completa uma pergunta direta: ___ você '
-                                                     'faltou?',
-                                         'alternativas': ['Porque', 'Porquê', 'Por que'],
-                                         'correta': 2,
-                                         'imagem': 'tema01_pergunta03.png',
-                                         'imagem_path': 'imagens_perguntas/tema01_pergunta03.png',
-                                         'legenda': 'Português — Palavras que confundem: você acerta as '
-                                                    'três?\n'
-                                                    '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Matemática — Porcentagem nas compras': [{'pergunta': 'Um produto de R$ 200 tem 25% de desconto. '
-                                                       'Quanto você paga?',
-                                           'alternativas': ['R$ 175', 'R$ 150', 'R$ 125'],
-                                           'correta': 1,
-                                           'imagem': 'tema02_pergunta01.png',
-                                           'imagem_path': 'imagens_perguntas/tema02_pergunta01.png',
-                                           'legenda': 'Matemática — Porcentagem nas compras: você '
-                                                      'acerta as três?\n'
-                                                      '#JuhQuiz #Quiz #Escola #Desafio'},
-                                          {'pergunta': 'Uma mochila de R$ 80 ficou 10% mais cara. Qual '
-                                                       'é o novo preço?',
-                                           'alternativas': ['R$ 88', 'R$ 90', 'R$ 98'],
+QUIZZES = {'Inteligência artificial no dia a dia': [{'pergunta': 'Uma resposta de IA pode conter informação inventada?',
+                                           'alternativas': ['Sim, por isso precisa ser conferida',
+                                                            'Não, ela sempre consulta fontes',
+                                                            'Só quando está sem internet'],
                                            'correta': 0,
-                                           'imagem': 'tema02_pergunta02.png',
-                                           'imagem_path': 'imagens_perguntas/tema02_pergunta02.png',
-                                           'legenda': 'Matemática — Porcentagem nas compras: você '
-                                                      'acerta as três?\n'
-                                                      '#JuhQuiz #Quiz #Escola #Desafio'},
-                                          {'pergunta': 'Um tênis custa R$ 120. Com 50% de desconto, '
-                                                       'qual é a economia?',
-                                           'alternativas': ['R$ 30', 'R$ 50', 'R$ 60'],
-                                           'correta': 2,
-                                           'imagem': 'tema02_pergunta03.png',
-                                           'imagem_path': 'imagens_perguntas/tema02_pergunta03.png',
-                                           'legenda': 'Matemática — Porcentagem nas compras: você '
-                                                      'acerta as três?\n'
-                                                      '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Biologia — Relações entre seres vivos': [{'pergunta': 'Que relação ocorre quando um leão caça uma '
-                                                        'zebra para se alimentar?',
-                                            'alternativas': ['Mutualismo', 'Competição', 'Predação'],
-                                            'correta': 2,
-                                            'imagem': 'tema03_pergunta01.png',
-                                            'imagem_path': 'imagens_perguntas/tema03_pergunta01.png',
-                                            'legenda': 'Biologia — Relações entre seres vivos: você '
-                                                       'acerta as três?\n'
-                                                       '#JuhQuiz #Quiz #Escola #Desafio'},
-                                           {'pergunta': 'Abelhas obtêm néctar e ajudam a polinizar '
-                                                        'flores. Ambos se beneficiam. Qual é a relação?',
-                                            'alternativas': ['Mutualismo', 'Parasitismo', 'Predação'],
-                                            'correta': 0,
-                                            'imagem': 'tema03_pergunta02.png',
-                                            'imagem_path': 'imagens_perguntas/tema03_pergunta02.png',
-                                            'legenda': 'Biologia — Relações entre seres vivos: você '
-                                                       'acerta as três?\n'
-                                                       '#JuhQuiz #Quiz #Escola #Desafio'},
-                                           {'pergunta': 'Dois pássaros disputam o mesmo alimento. Que '
-                                                        'relação ocorre?',
-                                            'alternativas': ['Comensalismo', 'Competição', 'Mutualismo'],
-                                            'correta': 1,
-                                            'imagem': 'tema03_pergunta03.png',
-                                            'imagem_path': 'imagens_perguntas/tema03_pergunta03.png',
-                                            'legenda': 'Biologia — Relações entre seres vivos: você '
-                                                       'acerta as três?\n'
-                                                       '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Química — Misturas e transformações': [{'pergunta': 'Como é classificada a mistura de água e óleo '
-                                                      'após ficar em repouso?',
-                                          'alternativas': ['Homogênea',
-                                                           'Heterogênea',
-                                                           'Substância pura'],
-                                          'correta': 1,
-                                          'imagem': 'tema04_pergunta01.png',
-                                          'imagem_path': 'imagens_perguntas/tema04_pergunta01.png',
-                                          'legenda': 'Química — Misturas e transformações: você acerta '
-                                                     'as três?\n'
-                                                     '#JuhQuiz #Quiz #Escola #Desafio'},
-                                         {'pergunta': 'Qual situação representa uma transformação '
-                                                      'química?',
-                                          'alternativas': ['Derreter gelo',
-                                                           'Rasgar papel',
-                                                           'Enferrujar um prego'],
-                                          'correta': 2,
-                                          'imagem': 'tema04_pergunta02.png',
-                                          'imagem_path': 'imagens_perguntas/tema04_pergunta02.png',
-                                          'legenda': 'Química — Misturas e transformações: você acerta '
-                                                     'as três?\n'
-                                                     '#JuhQuiz #Quiz #Escola #Desafio'},
-                                         {'pergunta': 'Sal totalmente dissolvido em água forma uma '
-                                                      'mistura de que tipo?',
-                                          'alternativas': ['Homogênea', 'Heterogênea', 'Com três fases'],
-                                          'correta': 0,
-                                          'imagem': 'tema04_pergunta03.png',
-                                          'imagem_path': 'imagens_perguntas/tema04_pergunta03.png',
-                                          'legenda': 'Química — Misturas e transformações: você acerta '
-                                                     'as três?\n'
-                                                     '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Física — Calor e temperatura': [{'pergunta': 'Calor é energia transferida espontaneamente em que '
-                                               'sentido?',
-                                   'alternativas': ['Do corpo frio para o quente',
-                                                    'Entre corpos só de mesma temperatura',
-                                                    'Do corpo quente para o frio'],
-                                   'correta': 2,
-                                   'imagem': 'tema05_pergunta01.png',
-                                   'imagem_path': 'imagens_perguntas/tema05_pergunta01.png',
-                                   'legenda': 'Física — Calor e temperatura: você acerta as três?\n'
-                                              '#JuhQuiz #Quiz #Escola #Desafio'},
-                                  {'pergunta': 'Como se chama a passagem do estado sólido para o '
-                                               'líquido?',
-                                   'alternativas': ['Condensação', 'Fusão', 'Sublimação'],
-                                   'correta': 1,
-                                   'imagem': 'tema05_pergunta02.png',
-                                   'imagem_path': 'imagens_perguntas/tema05_pergunta02.png',
-                                   'legenda': 'Física — Calor e temperatura: você acerta as três?\n'
-                                              '#JuhQuiz #Quiz #Escola #Desafio'},
-                                  {'pergunta': 'Qual grandeza é medida em graus Celsius?',
-                                   'alternativas': ['Temperatura', 'Massa', 'Velocidade'],
-                                   'correta': 0,
-                                   'imagem': 'tema05_pergunta03.png',
-                                   'imagem_path': 'imagens_perguntas/tema05_pergunta03.png',
-                                   'legenda': 'Física — Calor e temperatura: você acerta as três?\n'
-                                              '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'História — Brasil Colônia': [{'pergunta': 'Qual atividade econômica ganhou destaque no litoral no '
-                                            'século XVI?',
-                                'alternativas': ['Cultivo de café',
-                                                 'Produção de açúcar',
-                                                 'Fabricação de automóveis'],
-                                'correta': 1,
-                                'imagem': 'tema06_pergunta01.png',
-                                'imagem_path': 'imagens_perguntas/tema06_pergunta01.png',
-                                'legenda': 'História — Brasil Colônia: você acerta as três?\n'
-                                           '#JuhQuiz #Quiz #Escola #Desafio'},
-                               {'pergunta': 'As capitanias hereditárias eram grandes faixas de terra '
-                                            'entregues a quem?',
-                                'alternativas': ['Donatários', 'Presidentes', 'Imperadores'],
-                                'correta': 0,
-                                'imagem': 'tema06_pergunta02.png',
-                                'imagem_path': 'imagens_perguntas/tema06_pergunta02.png',
-                                'legenda': 'História — Brasil Colônia: você acerta as três?\n'
-                                           '#JuhQuiz #Quiz #Escola #Desafio'},
-                               {'pergunta': 'Em qual região a mineração de ouro ganhou destaque no '
-                                            'século XVIII?',
-                                'alternativas': ['Acre', 'Rio Grande do Sul', 'Minas Gerais'],
-                                'correta': 2,
-                                'imagem': 'tema06_pergunta03.png',
-                                'imagem_path': 'imagens_perguntas/tema06_pergunta03.png',
-                                'legenda': 'História — Brasil Colônia: você acerta as três?\n'
-                                           '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Geografia — Climas e paisagens': [{'pergunta': 'Qual clima predomina em grande parte da Amazônia '
-                                                 'brasileira?',
-                                     'alternativas': ['Equatorial', 'Polar', 'Desértico'],
-                                     'correta': 0,
-                                     'imagem': 'tema07_pergunta01.png',
-                                     'imagem_path': 'imagens_perguntas/tema07_pergunta01.png',
-                                     'legenda': 'Geografia — Climas e paisagens: você acerta as três?\n'
-                                                '#JuhQuiz #Quiz #Escola #Desafio'},
-                                    {'pergunta': 'Qual vegetação é adaptada à longa estação seca do '
-                                                 'semiárido brasileiro?',
-                                     'alternativas': ['Floresta de araucárias', 'Caatinga', 'Tundra'],
-                                     'correta': 1,
-                                     'imagem': 'tema07_pergunta02.png',
-                                     'imagem_path': 'imagens_perguntas/tema07_pergunta02.png',
-                                     'legenda': 'Geografia — Climas e paisagens: você acerta as três?\n'
-                                                '#JuhQuiz #Quiz #Escola #Desafio'},
-                                    {'pergunta': 'Qual fenômeno costuma ocorrer em áreas altas do Sul '
-                                                 'durante noites muito frias?',
-                                     'alternativas': ['Monção', 'Tempestade de areia', 'Geada'],
-                                     'correta': 2,
-                                     'imagem': 'tema07_pergunta03.png',
-                                     'imagem_path': 'imagens_perguntas/tema07_pergunta03.png',
-                                     'legenda': 'Geografia — Climas e paisagens: você acerta as três?\n'
-                                                '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Ciências — Sistema Solar e Terra': [{'pergunta': 'Qual movimento da Terra está diretamente ligado à '
-                                                   'alternância entre dia e noite?',
-                                       'alternativas': ['Translação', 'Rotação', 'Precessão'],
-                                       'correta': 1,
-                                       'imagem': 'tema08_pergunta01.png',
-                                       'imagem_path': 'imagens_perguntas/tema08_pergunta01.png',
-                                       'legenda': 'Ciências — Sistema Solar e Terra: você acerta as '
-                                                  'três?\n'
-                                                  '#JuhQuiz #Quiz #Escola #Desafio'},
-                                      {'pergunta': 'Qual planeta é conhecido como Planeta Vermelho?',
-                                       'alternativas': ['Marte', 'Vênus', 'Netuno'],
-                                       'correta': 0,
-                                       'imagem': 'tema08_pergunta02.png',
-                                       'imagem_path': 'imagens_perguntas/tema08_pergunta02.png',
-                                       'legenda': 'Ciências — Sistema Solar e Terra: você acerta as '
-                                                  'três?\n'
-                                                  '#JuhQuiz #Quiz #Escola #Desafio'},
-                                      {'pergunta': 'As estações do ano resultam principalmente da '
-                                                   'translação combinada com o quê?',
-                                       'alternativas': ['A distância da Lua',
-                                                        'A mudança de tamanho do Sol',
-                                                        'A inclinação do eixo terrestre'],
-                                       'correta': 2,
-                                       'imagem': 'tema08_pergunta03.png',
-                                       'imagem_path': 'imagens_perguntas/tema08_pergunta03.png',
-                                       'legenda': 'Ciências — Sistema Solar e Terra: você acerta as '
-                                                  'três?\n'
-                                                  '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Literatura — Obras brasileiras': [{'pergunta': 'Quem escreveu Dom Casmurro?',
-                                     'alternativas': ['José de Alencar',
-                                                      'Carlos Drummond de Andrade',
-                                                      'Machado de Assis'],
-                                     'correta': 2,
-                                     'imagem': 'tema09_pergunta01.png',
-                                     'imagem_path': 'imagens_perguntas/tema09_pergunta01.png',
-                                     'legenda': 'Literatura — Obras brasileiras: você acerta as três?\n'
-                                                '#JuhQuiz #Quiz #Escola #Desafio'},
-                                    {'pergunta': 'Em qual obra aparecem Fabiano, Sinhá Vitória e a '
-                                                 'cachorra Baleia?',
-                                     'alternativas': ['Vidas Secas', 'O Cortiço', 'Iracema'],
-                                     'correta': 0,
-                                     'imagem': 'tema09_pergunta02.png',
-                                     'imagem_path': 'imagens_perguntas/tema09_pergunta02.png',
-                                     'legenda': 'Literatura — Obras brasileiras: você acerta as três?\n'
-                                                '#JuhQuiz #Quiz #Escola #Desafio'},
-                                    {'pergunta': 'Quem criou o Sítio do Picapau Amarelo?',
-                                     'alternativas': ['Cecília Meireles',
-                                                      'Monteiro Lobato',
-                                                      'Manuel Bandeira'],
-                                     'correta': 1,
-                                     'imagem': 'tema09_pergunta03.png',
-                                     'imagem_path': 'imagens_perguntas/tema09_pergunta03.png',
-                                     'legenda': 'Literatura — Obras brasileiras: você acerta as três?\n'
-                                                '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Inglês — Falsos cognatos': [{'pergunta': 'Em inglês, o que significa actually?',
-                               'alternativas': ['Atualmente', 'Na verdade', 'Ativamente'],
-                               'correta': 1,
-                               'imagem': 'tema10_pergunta01.png',
-                               'imagem_path': 'imagens_perguntas/tema10_pergunta01.png',
-                               'legenda': 'Inglês — Falsos cognatos: você acerta as três?\n'
-                                          '#JuhQuiz #Quiz #Escola #Desafio'},
-                              {'pergunta': 'Qual é a tradução de library?',
-                               'alternativas': ['Livraria', 'Laboratório', 'Biblioteca'],
-                               'correta': 2,
-                               'imagem': 'tema10_pergunta02.png',
-                               'imagem_path': 'imagens_perguntas/tema10_pergunta02.png',
-                               'legenda': 'Inglês — Falsos cognatos: você acerta as três?\n'
-                                          '#JuhQuiz #Quiz #Escola #Desafio'},
-                              {'pergunta': 'O que significa pretend em inglês?',
-                               'alternativas': ['Fingir', 'Pretender', 'Prevenir'],
-                               'correta': 0,
-                               'imagem': 'tema10_pergunta03.png',
-                               'imagem_path': 'imagens_perguntas/tema10_pergunta03.png',
-                               'legenda': 'Inglês — Falsos cognatos: você acerta as três?\n'
-                                          '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Artes — Técnicas e materiais': [{'pergunta': 'Qual técnica reúne recortes de materiais colados em uma '
-                                               'superfície?',
-                                   'alternativas': ['Aquarela', 'Escultura', 'Colagem'],
-                                   'correta': 2,
-                                   'imagem': 'tema11_pergunta01.png',
-                                   'imagem_path': 'imagens_perguntas/tema11_pergunta01.png',
-                                   'legenda': 'Artes — Técnicas e materiais: você acerta as três?\n'
-                                              '#JuhQuiz #Quiz #Escola #Desafio'},
-                                  {'pergunta': 'A aquarela utiliza principalmente qual líquido para '
-                                               'diluir a tinta?',
-                                   'alternativas': ['Óleo', 'Água', 'Álcool'],
-                                   'correta': 1,
-                                   'imagem': 'tema11_pergunta02.png',
-                                   'imagem_path': 'imagens_perguntas/tema11_pergunta02.png',
-                                   'legenda': 'Artes — Técnicas e materiais: você acerta as três?\n'
-                                              '#JuhQuiz #Quiz #Escola #Desafio'},
-                                  {'pergunta': 'Modelar uma peça de argila é uma forma de produzir o '
-                                               'quê?',
-                                   'alternativas': ['Escultura', 'Gravura', 'Fotografia'],
-                                   'correta': 0,
-                                   'imagem': 'tema11_pergunta03.png',
-                                   'imagem_path': 'imagens_perguntas/tema11_pergunta03.png',
-                                   'legenda': 'Artes — Técnicas e materiais: você acerta as três?\n'
-                                              '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Educação Física — Esportes olímpicos': [{'pergunta': 'Quantos jogadores de uma equipe de vôlei ficam '
-                                                       'em quadra no formato tradicional?',
-                                           'alternativas': ['Cinco', 'Seis', 'Sete'],
+                                           'imagem': 'tema01_pergunta01.jpg',
+                                           'imagem_path': 'imagens_perguntas/tema01_pergunta01.jpg',
+                                           'legenda': 'Inteligência artificial no dia a dia: você acerta as '
+                                                      'três?\n'
+                                                      '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                                          {'pergunta': 'Qual pedido tende a orientar melhor uma IA?',
+                                           'alternativas': ['Uma palavra sem contexto',
+                                                            'Uma instrução clara com contexto',
+                                                            'Um texto sem objetivo'],
                                            'correta': 1,
-                                           'imagem': 'tema12_pergunta01.png',
-                                           'imagem_path': 'imagens_perguntas/tema12_pergunta01.png',
-                                           'legenda': 'Educação Física — Esportes olímpicos: você '
-                                                      'acerta as três?\n'
-                                                      '#JuhQuiz #Quiz #Escola #Desafio'},
-                                          {'pergunta': 'Na natação, em qual estilo o atleta nada de '
-                                                       'barriga para cima?',
-                                           'alternativas': ['Costas', 'Peito', 'Borboleta'],
-                                           'correta': 0,
-                                           'imagem': 'tema12_pergunta02.png',
-                                           'imagem_path': 'imagens_perguntas/tema12_pergunta02.png',
-                                           'legenda': 'Educação Física — Esportes olímpicos: você '
-                                                      'acerta as três?\n'
-                                                      '#JuhQuiz #Quiz #Escola #Desafio'},
-                                          {'pergunta': 'Qual prova do atletismo combina corrida, saltos '
-                                                       'e lançamentos em dez disputas?',
-                                           'alternativas': ['Triatlo', 'Pentatlo', 'Decatlo'],
+                                           'imagem': 'tema01_pergunta02.jpg',
+                                           'imagem_path': 'imagens_perguntas/tema01_pergunta02.jpg',
+                                           'legenda': 'Inteligência artificial no dia a dia: você acerta as '
+                                                      'três?\n'
+                                                      '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                                          {'pergunta': 'O que é um prompt?',
+                                           'alternativas': ['Uma bateria especial',
+                                                            'Um defeito do computador',
+                                                            'Uma instrução enviada à IA'],
                                            'correta': 2,
-                                           'imagem': 'tema12_pergunta03.png',
-                                           'imagem_path': 'imagens_perguntas/tema12_pergunta03.png',
-                                           'legenda': 'Educação Física — Esportes olímpicos: você '
-                                                      'acerta as três?\n'
-                                                      '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Filosofia — Lógica e argumentos': [{'pergunta': 'Todos os mamíferos são vertebrados. A baleia é '
-                                                  'mamífero. Logo, ela é o quê?',
-                                      'alternativas': ['Invertebrada', 'Um peixe', 'Vertebrada'],
-                                      'correta': 2,
-                                      'imagem': 'tema13_pergunta01.png',
-                                      'imagem_path': 'imagens_perguntas/tema13_pergunta01.png',
-                                      'legenda': 'Filosofia — Lógica e argumentos: você acerta as '
-                                                 'três?\n'
-                                                 '#JuhQuiz #Quiz #Escola #Desafio'},
-                                     {'pergunta': 'Atacar a pessoa em vez de discutir seu argumento é '
-                                                  'exemplo de quê?',
-                                      'alternativas': ['Ad hominem', 'Analogia', 'Dedução válida'],
-                                      'correta': 0,
-                                      'imagem': 'tema13_pergunta02.png',
-                                      'imagem_path': 'imagens_perguntas/tema13_pergunta02.png',
-                                      'legenda': 'Filosofia — Lógica e argumentos: você acerta as '
-                                                 'três?\n'
-                                                 '#JuhQuiz #Quiz #Escola #Desafio'},
-                                     {'pergunta': 'Qual conclusão decorre de: todo quadrado é '
-                                                  'retângulo; esta figura é um quadrado?',
-                                      'alternativas': ['Ela é um círculo',
-                                                       'Ela é um retângulo',
-                                                       'Ela tem três lados'],
-                                      'correta': 1,
-                                      'imagem': 'tema13_pergunta03.png',
-                                      'imagem_path': 'imagens_perguntas/tema13_pergunta03.png',
-                                      'legenda': 'Filosofia — Lógica e argumentos: você acerta as '
-                                                 'três?\n'
-                                                 '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Sociologia — Cultura e diversidade': [{'pergunta': 'O que é etnocentrismo?',
-                                         'alternativas': ['Conhecer diferentes idiomas',
-                                                          'Julgar outras culturas pelos padrões da '
-                                                          'própria',
-                                                          'Misturar ritmos musicais'],
-                                         'correta': 1,
-                                         'imagem': 'tema14_pergunta01.png',
-                                         'imagem_path': 'imagens_perguntas/tema14_pergunta01.png',
-                                         'legenda': 'Sociologia — Cultura e diversidade: você acerta as '
-                                                    'três?\n'
-                                                    '#JuhQuiz #Quiz #Escola #Desafio'},
-                                        {'pergunta': 'Qual atitude demonstra respeito à diversidade '
-                                                     'cultural?',
-                                         'alternativas': ['Exigir costumes iguais',
-                                                          'Ridicularizar tradições',
-                                                          'Conhecer costumes sem inferiorizá-los'],
+                                           'imagem': 'tema01_pergunta03.jpg',
+                                           'imagem_path': 'imagens_perguntas/tema01_pergunta03.jpg',
+                                           'legenda': 'Inteligência artificial no dia a dia: você acerta as '
+                                                      'três?\n'
+                                                      '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Deepfakes e vozes clonadas': [{'pergunta': 'O que é um deepfake?',
+                                 'alternativas': ['Um arquivo sempre verdadeiro',
+                                                  'Uma edição que simula identidade com IA',
+                                                  'Um tipo de carregador'],
+                                 'correta': 1,
+                                 'imagem': 'tema02_pergunta01.jpg',
+                                 'imagem_path': 'imagens_perguntas/tema02_pergunta01.jpg',
+                                 'legenda': 'Deepfakes e vozes clonadas: você acerta as três?\n'
+                                            '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                                {'pergunta': 'Uma voz familiar em áudio prova quem enviou?',
+                                 'alternativas': ['Sim, se falar seu nome',
+                                                  'Sim, sem exceção',
+                                                  'Não, a voz pode ser clonada'],
+                                 'correta': 2,
+                                 'imagem': 'tema02_pergunta02.jpg',
+                                 'imagem_path': 'imagens_perguntas/tema02_pergunta02.jpg',
+                                 'legenda': 'Deepfakes e vozes clonadas: você acerta as três?\n'
+                                            '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                                {'pergunta': 'Como avaliar um vídeo surpreendente?',
+                                 'alternativas': ['Buscar origem e fontes independentes',
+                                                  'Confiar no número de curtidas',
+                                                  'Olhar apenas os comentários'],
+                                 'correta': 0,
+                                 'imagem': 'tema02_pergunta03.jpg',
+                                 'imagem_path': 'imagens_perguntas/tema02_pergunta03.jpg',
+                                 'legenda': 'Deepfakes e vozes clonadas: você acerta as três?\n'
+                                            '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Robôs humanoides': [{'pergunta': 'Um robô com aparência humana necessariamente compreende emoções?',
+                       'alternativas': ['Sim, basta ter rosto',
+                                        'Sim, basta falar',
+                                        'Não, aparência não comprova compreensão'],
+                       'correta': 2,
+                       'imagem': 'tema03_pergunta01.jpg',
+                       'imagem_path': 'imagens_perguntas/tema03_pergunta01.jpg',
+                       'legenda': 'Robôs humanoides: você acerta as três?\n'
+                                  '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                      {'pergunta': 'Para que servem sensores em robôs?',
+                       'alternativas': ['Captar informações do ambiente',
+                                        'Substituir toda fonte de energia',
+                                        'Enfeitar a estrutura'],
+                       'correta': 0,
+                       'imagem': 'tema03_pergunta02.jpg',
+                       'imagem_path': 'imagens_perguntas/tema03_pergunta02.jpg',
+                       'legenda': 'Robôs humanoides: você acerta as três?\n'
+                                  '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                      {'pergunta': 'Um vídeo de robô fazendo uma tarefa prova autonomia total?',
+                       'alternativas': ['Sim, em qualquer ambiente',
+                                        'Não, pode haver controle ou condições limitadas',
+                                        'Sim, se parecer humano'],
+                       'correta': 1,
+                       'imagem': 'tema03_pergunta03.jpg',
+                       'imagem_path': 'imagens_perguntas/tema03_pergunta03.jpg',
+                       'legenda': 'Robôs humanoides: você acerta as três?\n'
+                                  '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Óculos inteligentes': [{'pergunta': 'O que a realidade aumentada faz?',
+                          'alternativas': ['Sobrepõe elementos digitais ao ambiente real',
+                                           'Apaga o mundo real',
+                                           'Cria energia para o celular'],
+                          'correta': 0,
+                          'imagem': 'tema04_pergunta01.jpg',
+                          'imagem_path': 'imagens_perguntas/tema04_pergunta01.jpg',
+                          'legenda': 'Óculos inteligentes: você acerta as três?\n'
+                                     '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                         {'pergunta': 'Qual cuidado importa ao usar óculos com câmera?',
+                          'alternativas': ['Filmar qualquer pessoa escondido',
+                                           'Respeitar a privacidade das pessoas',
+                                           'Publicar todas as gravações'],
+                          'correta': 1,
+                          'imagem': 'tema04_pergunta02.jpg',
+                          'imagem_path': 'imagens_perguntas/tema04_pergunta02.jpg',
+                          'legenda': 'Óculos inteligentes: você acerta as três?\n'
+                                     '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                         {'pergunta': 'Realidade virtual e aumentada são iguais?',
+                          'alternativas': ['Só muda a cor dos óculos',
+                                           'Sim, são sinônimos',
+                                           'Não, a virtual costuma criar um ambiente imersivo'],
+                          'correta': 2,
+                          'imagem': 'tema04_pergunta03.jpg',
+                          'imagem_path': 'imagens_perguntas/tema04_pergunta03.jpg',
+                          'legenda': 'Óculos inteligentes: você acerta as três?\n'
+                                     '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Carros elétricos e híbridos': [{'pergunta': 'O que caracteriza um carro totalmente elétrico?',
+                                  'alternativas': ['Uso exclusivo de diesel',
+                                                   'Tração por motor elétrico',
+                                                   'Ausência de bateria'],
+                                  'correta': 1,
+                                  'imagem': 'tema05_pergunta01.jpg',
+                                  'imagem_path': 'imagens_perguntas/tema05_pergunta01.jpg',
+                                  'legenda': 'Carros elétricos e híbridos: você acerta as três?\n'
+                                             '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                                 {'pergunta': 'Um carro híbrido combina quais tecnologias?',
+                                  'alternativas': ['Motor a vapor e pedal',
+                                                   'Dois motores a gasolina obrigatoriamente',
+                                                   'Motor a combustão e motor elétrico'],
+                                  'correta': 2,
+                                  'imagem': 'tema05_pergunta02.jpg',
+                                  'imagem_path': 'imagens_perguntas/tema05_pergunta02.jpg',
+                                  'legenda': 'Carros elétricos e híbridos: você acerta as três?\n'
+                                             '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                                 {'pergunta': 'Todo carro híbrido precisa carregar na tomada?',
+                                  'alternativas': ['Não, isso depende do tipo de híbrido',
+                                                   'Sim, diariamente',
+                                                   'Sim, em qualquer modelo'],
+                                  'correta': 0,
+                                  'imagem': 'tema05_pergunta03.jpg',
+                                  'imagem_path': 'imagens_perguntas/tema05_pergunta03.jpg',
+                                  'legenda': 'Carros elétricos e híbridos: você acerta as três?\n'
+                                             '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Tecnologia quântica': [{'pergunta': 'Como se chama a unidade de informação quântica?',
+                          'alternativas': ['Litro', 'Pixel', 'Qubit'],
+                          'correta': 2,
+                          'imagem': 'tema06_pergunta01.jpg',
+                          'imagem_path': 'imagens_perguntas/tema06_pergunta01.jpg',
+                          'legenda': 'Tecnologia quântica: você acerta as três?\n'
+                                     '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                         {'pergunta': 'Um computador quântico é mais rápido em qualquer tarefa?',
+                          'alternativas': ['Não, a vantagem depende do problema',
+                                           'Sim, até desligado',
+                                           'Sim, sempre'],
+                          'correta': 0,
+                          'imagem': 'tema06_pergunta02.jpg',
+                          'imagem_path': 'imagens_perguntas/tema06_pergunta02.jpg',
+                          'legenda': 'Tecnologia quântica: você acerta as três?\n'
+                                     '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                         {'pergunta': 'Qual área estuda fenômenos usados na computação quântica?',
+                          'alternativas': ['Botânica', 'Física quântica', 'Geologia'],
+                          'correta': 1,
+                          'imagem': 'tema06_pergunta03.jpg',
+                          'imagem_path': 'imagens_perguntas/tema06_pergunta03.jpg',
+                          'legenda': 'Tecnologia quântica: você acerta as três?\n'
+                                     '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Enem e interpretação': [{'pergunta': 'Qual atitude ajuda a interpretar uma questão?',
+                           'alternativas': ['Ler o comando e relacioná-lo ao texto',
+                                            'Escolher a alternativa mais longa',
+                                            'Ignorar palavras de negação'],
+                           'correta': 0,
+                           'imagem': 'tema07_pergunta01.jpg',
+                           'imagem_path': 'imagens_perguntas/tema07_pergunta01.jpg',
+                           'legenda': 'Enem e interpretação: você acerta as três?\n'
+                                      '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                          {'pergunta': 'Em um gráfico, o que convém verificar?',
+                           'alternativas': ['Somente as cores',
+                                            'Eixos, escala e unidades',
+                                            'Apenas o tamanho da imagem'],
+                           'correta': 1,
+                           'imagem': 'tema07_pergunta02.jpg',
+                           'imagem_path': 'imagens_perguntas/tema07_pergunta02.jpg',
+                           'legenda': 'Enem e interpretação: você acerta as três?\n'
+                                      '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                          {'pergunta': 'Uma conclusão baseada no texto deve se apoiar em quê?',
+                           'alternativas': ['A alternativa mais bonita',
+                                            'Uma opinião sem relação',
+                                            'Informações e relações presentes no texto'],
+                           'correta': 2,
+                           'imagem': 'tema07_pergunta03.jpg',
+                           'imagem_path': 'imagens_perguntas/tema07_pergunta03.jpg',
+                           'legenda': 'Enem e interpretação: você acerta as três?\n'
+                                      '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Chuvas de meteoros': [{'pergunta': 'O risco luminoso de um meteoro ocorre principalmente em qual região?',
+                         'alternativas': ['No fundo do oceano', 'Na atmosfera terrestre', 'Dentro da Lua'],
+                         'correta': 1,
+                         'imagem': 'tema08_pergunta01.jpg',
+                         'imagem_path': 'imagens_perguntas/tema08_pergunta01.jpg',
+                         'legenda': 'Chuvas de meteoros: você acerta as três?\n'
+                                    '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                        {'pergunta': 'Todo fragmento espacial que entra na atmosfera chega ao solo?',
+                         'alternativas': ['Sim, todos chegam intactos',
+                                          'Só os que entram de dia',
+                                          'Não, muitos se desintegram antes'],
+                         'correta': 2,
+                         'imagem': 'tema08_pergunta02.jpg',
+                         'imagem_path': 'imagens_perguntas/tema08_pergunta02.jpg',
+                         'legenda': 'Chuvas de meteoros: você acerta as três?\n'
+                                    '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                        {'pergunta': 'Qual condição favorece observar meteoros?',
+                         'alternativas': ['Céu escuro e pouca poluição luminosa',
+                                          'Céu encoberto e luz forte',
+                                          'Observar por trás de uma parede'],
+                         'correta': 0,
+                         'imagem': 'tema08_pergunta03.jpg',
+                         'imagem_path': 'imagens_perguntas/tema08_pergunta03.jpg',
+                         'legenda': 'Chuvas de meteoros: você acerta as três?\n'
+                                    '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Mudanças climáticas': [{'pergunta': 'Tempo e clima significam a mesma coisa?',
+                          'alternativas': ['Sim, são a previsão de amanhã',
+                                           'Sim, ambos mudam a cada minuto',
+                                           'Não, clima envolve padrões de longo prazo'],
+                          'correta': 2,
+                          'imagem': 'tema09_pergunta01.jpg',
+                          'imagem_path': 'imagens_perguntas/tema09_pergunta01.jpg',
+                          'legenda': 'Mudanças climáticas: você acerta as três?\n'
+                                     '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                         {'pergunta': 'O que é uma ilha de calor urbana?',
+                          'alternativas': ['Uma área urbana mais quente que seus arredores',
+                                           'Um reservatório de água gelada',
+                                           'Uma ilha cercada por lava'],
+                          'correta': 0,
+                          'imagem': 'tema09_pergunta02.jpg',
+                          'imagem_path': 'imagens_perguntas/tema09_pergunta02.jpg',
+                          'legenda': 'Mudanças climáticas: você acerta as três?\n'
+                                     '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                         {'pergunta': 'Um único dia frio refuta o aquecimento global?',
+                          'alternativas': ['Sim, em qualquer cidade',
+                                           'Não, é preciso analisar tendências de longo prazo',
+                                           'Sim, se chover'],
+                          'correta': 1,
+                          'imagem': 'tema09_pergunta03.jpg',
+                          'imagem_path': 'imagens_perguntas/tema09_pergunta03.jpg',
+                          'legenda': 'Mudanças climáticas: você acerta as três?\n'
+                                     '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Lixo eletrônico': [{'pergunta': 'Qual é o destino adequado de eletrônicos sem uso?',
+                      'alternativas': ['Pontos de coleta ou logística reversa',
+                                       'Qualquer terreno vazio',
+                                       'O vaso sanitário'],
+                      'correta': 0,
+                      'imagem': 'tema10_pergunta01.jpg',
+                      'imagem_path': 'imagens_perguntas/tema10_pergunta01.jpg',
+                      'legenda': 'Lixo eletrônico: você acerta as três?\n'
+                                 '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                     {'pergunta': 'Antes de doar um celular, o que fazer com os dados?',
+                      'alternativas': ['Deixar todas as contas abertas',
+                                       'Fazer backup e apagar os dados com segurança',
+                                       'Publicar as senhas'],
+                      'correta': 1,
+                      'imagem': 'tema10_pergunta02.jpg',
+                      'imagem_path': 'imagens_perguntas/tema10_pergunta02.jpg',
+                      'legenda': 'Lixo eletrônico: você acerta as três?\n'
+                                 '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                     {'pergunta': 'Baterias devem ser colocadas no lixo comum?',
+                      'alternativas': ['Somente quando estiverem quentes',
+                                       'Sim, sempre',
+                                       'Não, precisam de destinação adequada'],
+                      'correta': 2,
+                      'imagem': 'tema10_pergunta03.jpg',
+                      'imagem_path': 'imagens_perguntas/tema10_pergunta03.jpg',
+                      'legenda': 'Lixo eletrônico: você acerta as três?\n'
+                                 '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Algoritmos das redes sociais': [{'pergunta': 'O que é um algoritmo de recomendação?',
+                                   'alternativas': ['Um funcionário lendo cada tela',
+                                                    'Um sistema que seleciona conteúdos por critérios',
+                                                    'Uma peça física da câmera'],
+                                   'correta': 1,
+                                   'imagem': 'tema11_pergunta01.jpg',
+                                   'imagem_path': 'imagens_perguntas/tema11_pergunta01.jpg',
+                                   'legenda': 'Algoritmos das redes sociais: você acerta as três?\n'
+                                              '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                                  {'pergunta': 'Assistir a muitos vídeos de um assunto pode fazer o quê?',
+                                   'alternativas': ['Desligar o aplicativo',
+                                                    'Apagar sua conta automaticamente',
+                                                    'Influenciar recomendações futuras'],
+                                   'correta': 2,
+                                   'imagem': 'tema11_pergunta02.jpg',
+                                   'imagem_path': 'imagens_perguntas/tema11_pergunta02.jpg',
+                                   'legenda': 'Algoritmos das redes sociais: você acerta as três?\n'
+                                              '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                                  {'pergunta': 'Um vídeo muito recomendado é necessariamente verdadeiro?',
+                                   'alternativas': ['Não, alcance não comprova veracidade',
+                                                    'Sim, se tiver música',
+                                                    'Sim, se tiver muitos comentários'],
+                                   'correta': 0,
+                                   'imagem': 'tema11_pergunta03.jpg',
+                                   'imagem_path': 'imagens_perguntas/tema11_pergunta03.jpg',
+                                   'legenda': 'Algoritmos das redes sociais: você acerta as três?\n'
+                                              '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Golpes com inteligência artificial': [{'pergunta': 'Um pedido urgente de dinheiro com voz conhecida merece '
+                                                     'qual atitude?',
+                                         'alternativas': ['Compartilhar a própria senha',
+                                                          'Transferir sem verificar',
+                                                          'Confirmar por outro canal confiável'],
                                          'correta': 2,
-                                         'imagem': 'tema14_pergunta02.png',
-                                         'imagem_path': 'imagens_perguntas/tema14_pergunta02.png',
-                                         'legenda': 'Sociologia — Cultura e diversidade: você acerta as '
+                                         'imagem': 'tema12_pergunta01.jpg',
+                                         'imagem_path': 'imagens_perguntas/tema12_pergunta01.jpg',
+                                         'legenda': 'Golpes com inteligência artificial: você acerta as '
                                                     'três?\n'
-                                                    '#JuhQuiz #Quiz #Escola #Desafio'},
-                                        {'pergunta': 'Costumes, conhecimentos e valores aprendidos e '
-                                                     'compartilhados integram o quê?',
-                                         'alternativas': ['A cultura', 'A herança genética', 'O clima'],
+                                                    '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                                        {'pergunta': 'Por que golpistas criam sensação de urgência?',
+                                         'alternativas': ['Para reduzir o tempo de reflexão',
+                                                          'Para atualizar o aplicativo',
+                                                          'Para melhorar o sinal do celular'],
                                          'correta': 0,
-                                         'imagem': 'tema14_pergunta03.png',
-                                         'imagem_path': 'imagens_perguntas/tema14_pergunta03.png',
-                                         'legenda': 'Sociologia — Cultura e diversidade: você acerta as '
+                                         'imagem': 'tema12_pergunta02.jpg',
+                                         'imagem_path': 'imagens_perguntas/tema12_pergunta02.jpg',
+                                         'legenda': 'Golpes com inteligência artificial: você acerta as '
                                                     'três?\n'
-                                                    '#JuhQuiz #Quiz #Escola #Desafio'}],
- 'Informática — Segurança digital': [{'pergunta': 'Uma mensagem falsa tenta obter sua senha ao imitar '
-                                                  'um serviço. Como se chama esse golpe?',
-                                      'alternativas': ['Backup', 'Phishing', 'Download'],
-                                      'correta': 1,
-                                      'imagem': 'tema15_pergunta01.png',
-                                      'imagem_path': 'imagens_perguntas/tema15_pergunta01.png',
-                                      'legenda': 'Informática — Segurança digital: você acerta as '
-                                                 'três?\n'
-                                                 '#JuhQuiz #Quiz #Escola #Desafio'},
-                                     {'pergunta': 'Qual opção oferece uma camada extra de proteção além '
-                                                  'da senha?',
-                                      'alternativas': ['Reutilizar a senha',
-                                                       'Publicar a senha',
-                                                       'Ativar autenticação em dois fatores'],
-                                      'correta': 2,
-                                      'imagem': 'tema15_pergunta02.png',
-                                      'imagem_path': 'imagens_perguntas/tema15_pergunta02.png',
-                                      'legenda': 'Informática — Segurança digital: você acerta as '
-                                                 'três?\n'
-                                                 '#JuhQuiz #Quiz #Escola #Desafio'},
-                                     {'pergunta': 'Antes de abrir um link suspeito, qual é a melhor '
-                                                  'atitude?',
-                                      'alternativas': ['Confirmar a origem por um canal confiável',
-                                                       'Clicar para ver se funciona',
-                                                       'Encaminhar para todos os contatos'],
-                                      'correta': 0,
-                                      'imagem': 'tema15_pergunta03.png',
-                                      'imagem_path': 'imagens_perguntas/tema15_pergunta03.png',
-                                      'legenda': 'Informática — Segurança digital: você acerta as '
-                                                 'três?\n'
-                                                 '#JuhQuiz #Quiz #Escola #Desafio'}]}
+                                                    '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                                        {'pergunta': 'Um selo ou logotipo numa mensagem garante '
+                                                     'autenticidade?',
+                                         'alternativas': ['Sim, em qualquer site',
+                                                          'Não, ele pode ser copiado',
+                                                          'Sim, se for colorido'],
+                                         'correta': 1,
+                                         'imagem': 'tema12_pergunta03.jpg',
+                                         'imagem_path': 'imagens_perguntas/tema12_pergunta03.jpg',
+                                         'legenda': 'Golpes com inteligência artificial: você acerta as '
+                                                    'três?\n'
+                                                    '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Influenciadores e publicidade': [{'pergunta': 'Como uma publicidade deve ser apresentada ao público?',
+                                    'alternativas': ['De forma identificável como publicidade',
+                                                     'Sempre escondida',
+                                                     'Como notícia independente obrigatória'],
+                                    'correta': 0,
+                                    'imagem': 'tema13_pergunta01.jpg',
+                                    'imagem_path': 'imagens_perguntas/tema13_pergunta01.jpg',
+                                    'legenda': 'Influenciadores e publicidade: você acerta as três?\n'
+                                               '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                                   {'pergunta': 'O que é um link de afiliado?',
+                                    'alternativas': ['Um link sem endereço',
+                                                     'Um link que pode gerar comissão por conversão',
+                                                     'Um antivírus gratuito obrigatório'],
+                                    'correta': 1,
+                                    'imagem': 'tema13_pergunta02.jpg',
+                                    'imagem_path': 'imagens_perguntas/tema13_pergunta02.jpg',
+                                    'legenda': 'Influenciadores e publicidade: você acerta as três?\n'
+                                               '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                                   {'pergunta': 'Muitos seguidores comprovam que um produto funciona?',
+                                    'alternativas': ['Sim, se houver promoção',
+                                                     'Sim, para qualquer produto',
+                                                     'Não, popularidade não comprova eficácia'],
+                                    'correta': 2,
+                                    'imagem': 'tema13_pergunta03.jpg',
+                                    'imagem_path': 'imagens_perguntas/tema13_pergunta03.jpg',
+                                    'legenda': 'Influenciadores e publicidade: você acerta as três?\n'
+                                               '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Sono na era das telas': [{'pergunta': 'Além da luz, o que pode atrasar o sono ao usar o celular?',
+                            'alternativas': ['A cor da capinha',
+                                             'Conteúdo estimulante e prolongamento do uso',
+                                             'O tamanho do carregador'],
+                            'correta': 1,
+                            'imagem': 'tema14_pergunta01.jpg',
+                            'imagem_path': 'imagens_perguntas/tema14_pergunta01.jpg',
+                            'legenda': 'Sono na era das telas: você acerta as três?\n'
+                                       '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                           {'pergunta': 'Qual hábito costuma ajudar a organizar o sono?',
+                            'alternativas': ['Deixar notificações tocando sempre',
+                                             'Mudar radicalmente os horários todo dia',
+                                             'Manter horários regulares'],
+                            'correta': 2,
+                            'imagem': 'tema14_pergunta02.jpg',
+                            'imagem_path': 'imagens_perguntas/tema14_pergunta02.jpg',
+                            'legenda': 'Sono na era das telas: você acerta as três?\n'
+                                       '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                           {'pergunta': 'O modo noturno garante que o celular não atrapalhe o sono?',
+                            'alternativas': ['Não, tempo de uso e conteúdo também importam',
+                                             'Sim, em qualquer situação',
+                                             'Sim, mesmo usando a noite inteira'],
+                            'correta': 0,
+                            'imagem': 'tema14_pergunta03.jpg',
+                            'imagem_path': 'imagens_perguntas/tema14_pergunta03.jpg',
+                            'legenda': 'Sono na era das telas: você acerta as três?\n'
+                                       '#JuhQuiz #Quiz #Atualidades #Desafio'}],
+ 'Alimentos virais': [{'pergunta': 'Uma receita viral é necessariamente nutricionalmente equilibrada?',
+                       'alternativas': ['Sim, se aparecer em vídeo curto',
+                                        'Sim, se tiver muitas curtidas',
+                                        'Não, isso depende dos ingredientes e porções'],
+                       'correta': 2,
+                       'imagem': 'tema15_pergunta01.jpg',
+                       'imagem_path': 'imagens_perguntas/tema15_pergunta01.jpg',
+                       'legenda': 'Alimentos virais: você acerta as três?\n'
+                                  '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                      {'pergunta': 'Qual ingrediente é a base tradicional do guacamole?',
+                       'alternativas': ['Abacate', 'Arroz', 'Batata'],
+                       'correta': 0,
+                       'imagem': 'tema15_pergunta02.jpg',
+                       'imagem_path': 'imagens_perguntas/tema15_pergunta02.jpg',
+                       'legenda': 'Alimentos virais: você acerta as três?\n'
+                                  '#JuhQuiz #Quiz #Atualidades #Desafio'},
+                      {'pergunta': 'O que permite comparar melhor dois rótulos de alimentos?',
+                       'alternativas': ['A cor da embalagem',
+                                        'Valores para a mesma quantidade de alimento',
+                                        'O número de seguidores da marca'],
+                       'correta': 1,
+                       'imagem': 'tema15_pergunta03.jpg',
+                       'imagem_path': 'imagens_perguntas/tema15_pergunta03.jpg',
+                       'legenda': 'Alimentos virais: você acerta as três?\n'
+                                  '#JuhQuiz #Quiz #Atualidades #Desafio'}]}
 
-LEGENDAS = {'Português — Palavras que confundem': 'Português — Palavras que confundem: você acerta as três?\n'
-                                       '#JuhQuiz #Quiz #Escola #Desafio',
- 'Matemática — Porcentagem nas compras': 'Matemática — Porcentagem nas compras: você acerta as três?\n'
-                                         '#JuhQuiz #Quiz #Escola #Desafio',
- 'Biologia — Relações entre seres vivos': 'Biologia — Relações entre seres vivos: você acerta as três?\n'
-                                          '#JuhQuiz #Quiz #Escola #Desafio',
- 'Química — Misturas e transformações': 'Química — Misturas e transformações: você acerta as três?\n'
-                                        '#JuhQuiz #Quiz #Escola #Desafio',
- 'Física — Calor e temperatura': 'Física — Calor e temperatura: você acerta as três?\n'
-                                 '#JuhQuiz #Quiz #Escola #Desafio',
- 'História — Brasil Colônia': 'História — Brasil Colônia: você acerta as três?\n'
-                              '#JuhQuiz #Quiz #Escola #Desafio',
- 'Geografia — Climas e paisagens': 'Geografia — Climas e paisagens: você acerta as três?\n'
-                                   '#JuhQuiz #Quiz #Escola #Desafio',
- 'Ciências — Sistema Solar e Terra': 'Ciências — Sistema Solar e Terra: você acerta as três?\n'
-                                     '#JuhQuiz #Quiz #Escola #Desafio',
- 'Literatura — Obras brasileiras': 'Literatura — Obras brasileiras: você acerta as três?\n'
-                                   '#JuhQuiz #Quiz #Escola #Desafio',
- 'Inglês — Falsos cognatos': 'Inglês — Falsos cognatos: você acerta as três?\n'
-                             '#JuhQuiz #Quiz #Escola #Desafio',
- 'Artes — Técnicas e materiais': 'Artes — Técnicas e materiais: você acerta as três?\n'
-                                 '#JuhQuiz #Quiz #Escola #Desafio',
- 'Educação Física — Esportes olímpicos': 'Educação Física — Esportes olímpicos: você acerta as três?\n'
-                                         '#JuhQuiz #Quiz #Escola #Desafio',
- 'Filosofia — Lógica e argumentos': 'Filosofia — Lógica e argumentos: você acerta as três?\n'
-                                    '#JuhQuiz #Quiz #Escola #Desafio',
- 'Sociologia — Cultura e diversidade': 'Sociologia — Cultura e diversidade: você acerta as três?\n'
-                                       '#JuhQuiz #Quiz #Escola #Desafio',
- 'Informática — Segurança digital': 'Informática — Segurança digital: você acerta as três?\n'
-                                    '#JuhQuiz #Quiz #Escola #Desafio'}
+LEGENDAS = {'Inteligência artificial no dia a dia': 'Inteligência artificial no dia a dia: você acerta as três?\n'
+                                         '#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Deepfakes e vozes clonadas': 'Deepfakes e vozes clonadas: você acerta as três?\n'
+                               '#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Robôs humanoides': 'Robôs humanoides: você acerta as três?\n#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Óculos inteligentes': 'Óculos inteligentes: você acerta as três?\n#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Carros elétricos e híbridos': 'Carros elétricos e híbridos: você acerta as três?\n'
+                                '#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Tecnologia quântica': 'Tecnologia quântica: você acerta as três?\n#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Enem e interpretação': 'Enem e interpretação: você acerta as três?\n#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Chuvas de meteoros': 'Chuvas de meteoros: você acerta as três?\n#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Mudanças climáticas': 'Mudanças climáticas: você acerta as três?\n#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Lixo eletrônico': 'Lixo eletrônico: você acerta as três?\n#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Algoritmos das redes sociais': 'Algoritmos das redes sociais: você acerta as três?\n'
+                                 '#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Golpes com inteligência artificial': 'Golpes com inteligência artificial: você acerta as três?\n'
+                                       '#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Influenciadores e publicidade': 'Influenciadores e publicidade: você acerta as três?\n'
+                                  '#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Sono na era das telas': 'Sono na era das telas: você acerta as três?\n#JuhQuiz #Quiz #Atualidades #Desafio',
+ 'Alimentos virais': 'Alimentos virais: você acerta as três?\n#JuhQuiz #Quiz #Atualidades #Desafio'}
